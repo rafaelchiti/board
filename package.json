@@ -1,0 +1,22 @@
+{
+  "name": "board",
+  "version": "0.0.1",
+  "description": "Card Board",
+  "dependencies": {
+    "express": "~3.5.0",
+    "backbone": "~1.1.2",
+    "react": "~0.9.0",
+    "reactify": "~0.10.0",
+    "jquery": "~2.1.0",
+    "underscore": "~1.6.0",
+    "hbs":"~2.5.0",
+    "stylus": "~0.42.3",
+    "browserify": "~3.33.0",
+    "browserify-middleware": "~2.4.0"
+  },
+  "author": "Rafael Fabricio Chiti",
+  "license": "MIT",
+  "engines": {
+    "node": "0.10.x"
+  }
+}
