@@ -7,7 +7,7 @@ var app = express();
 
 app.engine('html', hbs.__express);
 app.set('view engine', 'hbs');
-app.set('views', __dirname + '/web/server/views');
+app.set('views', __dirname + '/webapp/server/views');
 app.use(express.logger());
 
 
@@ -19,15 +19,15 @@ browserify.settings({
   grep: /\.jsx?$/
 })
 
-app.use('/js', browserify('./web/client'));
+app.use('/js', browserify('./webapp/client'));
 
 app.use(stylus.middleware({
-  src: __dirname + '/web/assets/stylesheets',
-  dest: __dirname + '/web/public',
+  src: __dirname + '/webapp/assets/stylesheets',
+  dest: __dirname + '/webapp/public',
   linenos: true
 }));
 
-app.use(express.static(__dirname + '/web/public'));
+app.use(express.static(__dirname + '/webapp/public'));
 
 app.get('/', function(req, res) {
   res.render('index');
@@ -48,7 +48,8 @@ cards = [
 
 
 app.get('/api/cards', function(req, res) {
-  res.send(cards);
+  res.setHeader('Content-Type', 'application/json');
+  res.send(JSON.stringify(cards));
 });
 
 

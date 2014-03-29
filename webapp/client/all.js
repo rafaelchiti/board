@@ -1,0 +1,1 @@
+require('./board/views/cards_board');
