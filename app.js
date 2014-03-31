@@ -33,27 +33,6 @@ app.get('/', function(req, res) {
   res.render('index');
 });
 
-cards = [
-  {
-    id: 1,
-    title: 'Issue 1',
-    description: 'This is the issue 1'
-  },
-  {
-    id: 2,
-    title: 'Issue 2',
-    description: 'This is the issue 2'
-  }
-];
-
-
-app.get('/api/cards', function(req, res) {
-  res.setHeader('Content-Type', 'application/json');
-  res.send(JSON.stringify(cards));
-});
-
-
-
 
 var port = process.env.PORT || 4000;
 app.listen(port);

@@ -1,4 +1,6 @@
 .card
+  display inline-block
+  position relative
   min-width 5rem
   max-width 10rem
   min-height 5rem
@@ -11,3 +13,12 @@
     margin 0
     border-bottom 1px solid gray
     margin-bottom 1rem
+
+  .card__description
+    display block
+
+  .card__remove
+    position absolute
+    top .5rem
+    right .5rem
+    cursor pointer

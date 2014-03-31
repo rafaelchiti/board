@@ -7,10 +7,14 @@ var CardsList = React.createComponent({
     cards: 'collection'
   },
 
+  onRemove: function(cardCID) {
+    this.props.onRemove(cardCID);
+  },
+
   render: function() {
     var cards = this.props.cards.map(function(card) {
-      return <Card card={card} />;
-    });
+      return <Card card={card} onRemove={this.onRemove} />;
+    }, this);
 
     return (
       <div className="cardsList js-cards-list">
