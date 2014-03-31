@@ -14,7 +14,7 @@ I'm building a Cards app (like Trello) with the main motivation of trying the fo
 
 To run the app just:
 ```
-$ git clone ${app_url}
+$ git clone git@github.com:rafaelchiti/board.git
 $ npm install
 $ node app.js
 $ Open your browser at localhost:4000
