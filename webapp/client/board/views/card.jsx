@@ -6,8 +6,8 @@ var Card = React.createComponent({
     card: 'model'
   },
 
-  click: function() {
-    console.log('asdasd');
+  remove: function() {
+    this.props.onRemove(this.props.card.cid);
   },
 
   render: function() {
@@ -16,6 +16,8 @@ var Card = React.createComponent({
         <h4 className="card__title">{this.props.card.get('title')}</h4>
         <span className="card__description">{this.props.card.get('description')}</span>
         <input/>
+
+        <span className="card__remove" onClick={this.remove}>x</span>
       </div>
     );
   }
