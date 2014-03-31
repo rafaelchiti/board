@@ -3,8 +3,8 @@ Backbone.$ = require('jquery');
 
 var Card = Backbone.Model.extend({
   defaults: {
-    title: 'Title 1',
-    description: 'Description 1'
+    title: 'Default Title',
+    description: 'Lorem ipsum amet'
   }
 
 });
