@@ -13,7 +13,7 @@ var CardsList = React.createComponent({
 
   render: function() {
     var cards = this.props.cards.map(function(card) {
-      return <Card card={card} onRemove={this.onRemove} />;
+      return <Card key={card.cid} card={card} onRemove={this.onRemove} />;
     }, this);
 
     return (

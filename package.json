@@ -12,6 +12,7 @@
     "underscore": "~1.6.0",
     "hbs":"~2.5.0",
     "stylus": "~0.42.3",
+    "nib": "~1.0.2",
     "browserify": "~3.33.0",
     "browserify-middleware": "~2.4.0"
   },
