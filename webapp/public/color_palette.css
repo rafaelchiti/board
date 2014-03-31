@@ -1,0 +1,60 @@
+
+/* line 36 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/color_palette.styl */
+
+/* line 1 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/stylus/lib/functions/index.styl */
+
+/* line 293 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/stylus/lib/functions/index.styl */
+
+/* line 1 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/colors.styl */
+
+/* line 3 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/color_palette.styl */
+.paletteBox {
+  box-sizing: border-box;
+  padding: 1rem;
+  width: 10rem;
+  height: 10rem;
+  margin: 1rem;
+  float: left;
+  text-transform: uppercase;
+}
+
+/* line 12 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/color_palette.styl */
+.black {
+  color: #fff;
+  background-color: #1f1f21;
+}
+
+/* line 16 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/color_palette.styl */
+.dark-gray {
+  background-color: #bdbec2;
+}
+
+/* line 19 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/color_palette.styl */
+.gray {
+  background-color: #d7d7d7;
+}
+
+/* line 22 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/color_palette.styl */
+.light-gray {
+  background-color: #f7f7f7;
+}
+
+/* line 25 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/color_palette.styl */
+.red {
+  background-color: #ff3a2d;
+}
+
+/* line 28 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/color_palette.styl */
+.strong-red {
+  background-color: #ff1300;
+}
+
+/* line 31 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/color_palette.styl */
+.blue {
+  background-color: #007aff;
+}
+
+/* line 34 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/color_palette.styl */
+.green {
+  background-color: #4cd964;
+}

@@ -4,32 +4,37 @@
   width 15rem
   height 10rem
   border-radius 5px
-  border 1px solid board-blue
-  padding 1rem
+  background-color white
   margin 1rem
+  border 1px solid app-gray
 
   .card__title
-    padding 0
+    padding .5rem
     margin 0
-    margin-bottom 1rem
 
   .card__description
     display block
+    padding .5rem
+    border-bottom 1px solid app-gray
+    border-top 1px solid app-gray
+    background-color app-light-gray
+    height 6.5rem
 
   .card__remove
+    color app-gray
     position absolute
     top 0.2rem
-    right 0.2rem
-    font-size .6rem
+    right 0.5rem
     cursor pointer
-    background-color board-gray
-    padding .3rem
-    border-radius 3px
+    transition(color, .5s)
+
+    &:hover
+      color app-red
 
   input
     margin-top 1rem
     border none
-    border-bottom 1px solid board-gray
+    border-bottom 1px solid app-gray
 
     &:focus
       outline none
