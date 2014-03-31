@@ -1,11 +1,376 @@
 
-/* line 4 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/all.styl */
+/* line 11 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/all.styl */
 
 /* line 1 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/stylus/lib/functions/index.styl */
 
 /* line 293 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/stylus/lib/functions/index.styl */
 
-/* line 293 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/base.styl */
+/* line 293 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+/* normalize.css v3.0.1 | MIT License | git.io/normalize */
+
+/* line 43 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+html {
+  font-family: sans-serif;
+/* 1 */
+  -ms-text-size-adjust: 100%;
+/* 2 */
+  -webkit-text-size-adjust: 100%;
+/* 2 */
+}
+
+/* line 53 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+body {
+  margin: 0;
+}
+
+/* line 66 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/* line 75 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+/* 1 */
+  vertical-align: baseline;
+/* 2 */
+}
+
+/* line 85 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* line 95 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+[hidden],
+template {
+  display: none;
+}
+
+/* line 106 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+a {
+  background: transparent;
+}
+
+/* line 114 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* line 125 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/* line 133 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+b,
+strong {
+  font-weight: bold;
+}
+
+/* line 141 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+dfn {
+  font-style: italic;
+}
+
+/* line 150 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* line 159 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/* line 168 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+small {
+  font-size: 80%;
+}
+
+/* line 176 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 183 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+sup {
+  top: -0.5em;
+}
+
+/* line 187 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 198 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+img {
+  border: 0;
+}
+
+/* line 206 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* line 217 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+figure {
+  margin: 1em 40px;
+}
+
+/* line 225 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/* line 235 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+pre {
+  overflow: auto;
+}
+
+/* line 243 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* line 263 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+/* 1 */
+  font: inherit;
+/* 2 */
+  margin: 0;
+/* 3 */
+}
+
+/* line 273 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+button {
+  overflow: visible;
+}
+
+/* line 284 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+button,
+select {
+  text-transform: none;
+}
+
+/* line 296 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+button,
+html input[type="button"],
+* 1 */,
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+/* 2 */
+  cursor: pointer;
+/* 3 */
+}
+
+/* line 306 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/* line 314 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 324 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+input {
+  line-height: normal;
+}
+
+/* line 336 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+/* 1 */
+  padding: 0;
+/* 2 */
+}
+
+/* line 347 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/* line 357 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+input[type="search"] {
+  -webkit-appearance: textfield;
+/* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+/* 2 */
+  box-sizing: content-box;
+}
+
+/* line 370 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 378 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/* line 389 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+legend {
+  border: 0;
+/* 1 */
+  padding: 0;
+/* 2 */
+}
+
+/* line 398 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+textarea {
+  overflow: auto;
+}
+
+/* line 407 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+optgroup {
+  font-weight: bold;
+}
+
+/* line 418 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 423 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+td,
+th {
+  padding: 0;
+}
+
+/* line 426 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+
+/* line 14 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/index.styl */
+
+/* line 14 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/index.styl */
+
+/* line 2 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/border.styl */
+
+/* line 12 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/border.styl */
+
+/* line 3 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/clearfix.styl */
+
+/* line 31 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/clearfix.styl */
+
+/* line 2 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/color-image.styl */
+
+/* line 6 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/color-image.styl */
+
+/* line 6 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/flex.styl */
+
+/* line 197 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/flex.styl */
+
+/* line 94 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/gradients.styl */
+
+/* line 94 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/gradients.styl */
+
+/* line 94 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/config.styl */
+
+/* line 12 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/config.styl */
+
+/* line 2 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/iconic.styl */
+
+/* line 9 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/iconic.styl */
+
+/* line 2 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/image.styl */
+
+/* line 27 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/image.styl */
+
+/* line 27 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/overflow.styl */
+
+/* line 23 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/overflow.styl */
+
+/* line 9 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/positions.styl */
+
+/* line 73 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/positions.styl */
+
+/* line 15 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/reset.styl */
+
+/* line 79 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/reset.styl */
+
+/* line 5 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/text/index.styl */
+
+/* line 5 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/text/index.styl */
+
+/* line 2 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/text/aliases.styl */
+
+/* line 14 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/text/aliases.styl */
+
+/* line 2 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/text/ellipsis.styl */
+
+/* line 11 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/text/ellipsis.styl */
+
+/* line 11 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/text/hide-text.styl */
+
+/* line 9 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/text/hide-text.styl */
+
+/* line 9 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/text/replace-text.styl */
+
+/* line 10 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/text/replace-text.styl */
+
+/* line undefined : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/vendor.styl */
+
+/* line 576 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/vendor.styl */
+
+/* line 576 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/config.styl */
+
+/* line 12 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/config.styl */
+
+/* line 12 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/size.styl */
+
+/* line 33 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/size.styl */
+
+/* line 1 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/colors.styl */
+
+/* line 5 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/colors.styl */
+
+/* line 5 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/base.styl */
 
 /* line 1 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/base.styl */
 html {
@@ -21,35 +386,53 @@ body {
   color: #616161;
 }
 
-/* line 10 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/base.styl */
+/* line 11 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/base.styl */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
-/* line 10 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/cards_board.styl */
+/* line 13 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/base.styl */
+
+/* line 13 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/top_toolbar.styl */
+
+/* line 1 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/top_toolbar.styl */
+.topToolbar {
+  border-bottom: 1px solid #e74c3c;
+  padding: 0.5rem;
+  height: 2rem;
+}
+
+/* line 5 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/top_toolbar.styl */
+
+/* line 5 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/cards_board.styl */
 
 /* line 1 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/cards_board.styl */
 .cardsBoard {
   padding: 1rem;
-  outline: 1px solid rgba(1,1,1,0.2);
 }
 
-/* line 5 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/cards_board.styl */
+/* line 4 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/cards_board.styl */
 .cardsBoard .cadsBoard__toolbar {
-  outline: 1px solid rgba(1,1,1,0.2);
-  height: 2rem;
   padding: 1rem;
 }
 
-/* line 9 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/cards_board.styl */
+/* line 6 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/cards_board.styl */
 
-/* line 9 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card.styl */
+/* line 6 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card.styl */
 
 /* line 1 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card.styl */
 .card {
   display: inline-block;
   position: relative;
-  min-width: 5rem;
-  max-width: 10rem;
-  min-height: 5rem;
-  outline: 1px solid #808080;
+  width: 15rem;
+  height: 10rem;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #3f5765;
   padding: 1rem;
   margin: 1rem;
 }
@@ -58,19 +441,35 @@ body {
 .card .card__title {
   padding: 0;
   margin: 0;
-  border-bottom: 1px solid #808080;
   margin-bottom: 1rem;
 }
 
-/* line 17 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card.styl */
+/* line 16 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card.styl */
 .card .card__description {
   display: block;
 }
 
-/* line 20 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card.styl */
+/* line 19 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card.styl */
 .card .card__remove {
   position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
+  top: 0.2rem;
+  right: 0.2rem;
+  font-size: 0.6rem;
   cursor: pointer;
+  background-color: #efefef;
+  padding: 0.3rem;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/* line 29 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card.styl */
+.card input {
+  margin-top: 1rem;
+  border: none;
+  border-bottom: 1px solid #efefef;
+}
+
+/* line 34 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card.styl */
+.card input:focus {
+  outline: none;
 }
