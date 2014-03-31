@@ -12,10 +12,13 @@ I'm building a Cards app (like Trello) with the main motivation of trying the fo
 - Stylus (my css precompiler)
 
 
-To run the app just:
+#### To run the app just:
 ```
 $ git clone git@github.com:rafaelchiti/board.git
 $ npm install
 $ node app.js
 $ Open your browser at localhost:4000
 ```
+
+#### Try it on heroku
+http://board-board.herokuapp.com/
