@@ -15,9 +15,8 @@ var Card = React.createComponent({
       <div className="card js-card">
         <h4 className="card__title">{this.props.card.get('title')}</h4>
         <span className="card__description">{this.props.card.get('description')}</span>
-        <input/>
 
-        <span className="card__remove" onClick={this.remove}>x</span>
+        <span className="card__remove" onClick={this.remove}><i className="fi-trash"></i></span>
       </div>
     );
   }
