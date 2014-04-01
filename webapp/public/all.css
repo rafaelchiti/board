@@ -2089,9 +2089,9 @@ th {
 
 /* line 1 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/colors.styl */
 
-/* line 13 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/colors.styl */
+/* line 20 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/colors.styl */
 
-/* line 13 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/base.styl */
+/* line 20 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/base.styl */
 
 /* line 1 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/base.styl */
 html {
@@ -2125,7 +2125,7 @@ body {
 .topToolbar {
   padding: 0.7rem;
   height: 2.5rem;
-  border-bottom: 1px solid #ff3a2d;
+  border-bottom: 1px solid #ff3b30;
   background-color: #fff;
 }
 
@@ -2192,7 +2192,7 @@ body {
 
 /* line 31 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card.styl */
 .card .card__remove:hover {
-  color: #ff3a2d;
+  color: #ff3b30;
 }
 
 /* line 34 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card.styl */
@@ -2236,6 +2236,6 @@ body {
   margin-right: 1rem;
   outline: none;
   border: none;
-  border-bottom: 1px solid #ff3a2d;
+  border-bottom: 1px solid #ff3b30;
   background: transparent;
 }
