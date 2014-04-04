@@ -1,5 +1,5 @@
 
-/* line 13 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/all.styl */
+/* line 15 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/all.styl */
 
 /* line 1 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/stylus/lib/functions/index.styl */
 
@@ -2145,71 +2145,7 @@ body {
 
 /* line 6 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/cards_board.styl */
 
-/* line 6 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card.styl */
-
-/* line 1 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card.styl */
-.card {
-  display: inline-block;
-  position: relative;
-  width: 15rem;
-  height: 10rem;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  background-color: #fff;
-  margin: 1rem;
-  border: 1px solid #d7d7d7;
-}
-
-/* line 11 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card.styl */
-.card .card__title {
-  padding: 0.5rem;
-  margin: 0;
-}
-
-/* line 15 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card.styl */
-.card .card__description {
-  display: block;
-  padding: 0.5rem;
-  border-bottom: 1px solid #d7d7d7;
-  border-top: 1px solid #d7d7d7;
-  background-color: #f7f7f7;
-  height: 6.5rem;
-}
-
-/* line 23 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card.styl */
-.card .card__remove {
-  color: #d7d7d7;
-  position: absolute;
-  top: 0.2rem;
-  right: 0.5rem;
-  cursor: pointer;
-  -webkit-transition: color 0.5s;
-  -moz-transition: color 0.5s;
-  -o-transition: color 0.5s;
-  -ms-transition: color 0.5s;
-  transition: color 0.5s;
-}
-
-/* line 31 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card.styl */
-.card .card__remove:hover {
-  color: #ff3b30;
-}
-
-/* line 34 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card.styl */
-.card input {
-  margin-top: 1rem;
-  border: none;
-  border-bottom: 1px solid #d7d7d7;
-}
-
-/* line 39 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card.styl */
-.card input:focus {
-  outline: none;
-}
-
-/* line 41 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card.styl */
-
-/* line 41 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card_form.styl */
+/* line 6 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card_form.styl */
 
 /* line 1 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card_form.styl */
 .cardForm {
@@ -2238,4 +2174,131 @@ body {
   border: none;
   border-bottom: 1px solid #ff3b30;
   background: transparent;
+}
+
+/* line 21 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card_form.styl */
+
+/* line 21 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card.styl */
+
+/* line 1 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card.styl */
+.card {
+  display: inline-block;
+  position: relative;
+  width: 15rem;
+  height: 10rem;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #fff;
+  margin: 1rem;
+  border: 1px solid #d7d7d7;
+}
+
+/* line 11 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card.styl */
+.card .card__title {
+  padding: 0.5rem;
+  margin: 0;
+}
+
+/* line 15 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card.styl */
+.card .card__description {
+  display: block;
+  padding: 0.5rem;
+  border-bottom: 1px solid #d7d7d7;
+  border-top: 1px solid #d7d7d7;
+  background-color: #f7f7f7;
+  height: 6.5rem;
+}
+
+/* line 23 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card.styl */
+.card .card__remove {
+  color: #d7d7d7;
+  position: absolute;
+  top: 0.2rem;
+  right: 0.5rem;
+  cursor: pointer;
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  -ms-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+/* line 31 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card.styl */
+.card .card__remove:hover {
+  color: #ff3b30;
+}
+
+/* line 34 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card.styl */
+.card input {
+  margin-top: 1rem;
+  border: none;
+  border-bottom: 1px solid #d7d7d7;
+}
+
+/* line 39 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card.styl */
+.card input:focus {
+  outline: none;
+}
+
+/* line 41 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card.styl */
+
+/* line 41 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card_label.styl */
+
+/* line 1 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card_label.styl */
+.cardLabel {
+  width: 1rem;
+  height: 1rem;
+  background-color: #ff3b30;
+  -webkit-border-bottom-left-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
+  -webkit-border-top-right-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+  margin: 0.2rem;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+/* line 11 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card_label.styl */
+.cardLabel.selected {
+  -webkit-transform: rotate(180deg) scale(1.5) translate(0.2rem, -0.2rem);
+  -moz-transform: rotate(180deg) scale(1.5) translate(0.2rem, -0.2rem);
+  -o-transform: rotate(180deg) scale(1.5) translate(0.2rem, -0.2rem);
+  -ms-transform: rotate(180deg) scale(1.5) translate(0.2rem, -0.2rem);
+  transform: rotate(180deg) scale(1.5) translate(0.2rem, -0.2rem);
+  -webkit-box-shadow: 2px -2px 7px 0.3px rgba(1,1,1,0.3);
+  box-shadow: 2px -2px 7px 0.3px rgba(1,1,1,0.3);
+}
+
+/* line 14 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card_label.styl */
+
+/* line 14 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/labels_selector.styl */
+
+/* line 1 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/labels_selector.styl */
+.labelsSelector {
+  position: absolute;
+  bottom: -2rem;
+  left: 2rem;
+  height: 5rem;
+  outline: 1px solid #f00;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  width: 0;
+}
+
+/* line 11 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/labels_selector.styl */
+.labelsSelector.displayed {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  width: 5rem;
 }

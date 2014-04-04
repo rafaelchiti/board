@@ -1,5 +1,5 @@
 var React = require('../../shims/react');
-var Card = require('./card');
+var Card = require('./card/card');
 
 var CardsList = React.createComponent({
 
