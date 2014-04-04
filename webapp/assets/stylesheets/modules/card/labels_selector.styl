@@ -1,13 +1,35 @@
 .labelsSelector
   position absolute
-  bottom -2rem
-  left 2rem
-  height 5rem
-  outline 1px solid red
-  transition all .5s ease
+  bottom -3rem
+  left .8rem
+  transition width .5s, opacity .5s, transform .5s
   opacity 0
   width 0
 
   &.displayed
     opacity 1
     width 5rem
+    transform translateX(1rem)
+
+
+.labelsSelector__label
+    width 100%
+    display block
+    height 1rem
+    margin .5rem
+    opacity .5
+    border-radius(5px)
+    transition opacity .5s
+    cursor pointer
+
+    &:hover
+      opacity 1
+
+    &.label1
+      background-color app-red
+    &.label2
+      background-color app-green
+    &.label3
+      background-color app-yellow
+    &.label4
+      background-color app-blue

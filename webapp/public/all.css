@@ -2255,11 +2255,11 @@ body {
   border-top-right-radius: 0.3rem;
   margin: 0.2rem;
   cursor: pointer;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  -moz-transition: -moz-transform 0.5s ease;
+  -o-transition: -o-transform 0.5s ease;
+  -ms-transition: -ms-transform 0.5s ease;
+  transition: transform 0.5s ease;
 }
 
 /* line 11 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card_label.styl */
@@ -2269,36 +2269,83 @@ body {
   -o-transform: rotate(180deg) scale(1.5) translate(0.2rem, -0.2rem);
   -ms-transform: rotate(180deg) scale(1.5) translate(0.2rem, -0.2rem);
   transform: rotate(180deg) scale(1.5) translate(0.2rem, -0.2rem);
-  -webkit-box-shadow: 2px -2px 7px 0.3px rgba(1,1,1,0.3);
-  box-shadow: 2px -2px 7px 0.3px rgba(1,1,1,0.3);
 }
 
-/* line 14 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card_label.styl */
+/* line 13 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card_label.styl */
 
-/* line 14 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/labels_selector.styl */
+/* line 13 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/labels_selector.styl */
 
 /* line 1 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/labels_selector.styl */
 .labelsSelector {
   position: absolute;
-  bottom: -2rem;
-  left: 2rem;
-  height: 5rem;
-  outline: 1px solid #f00;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  bottom: -3rem;
+  left: 0.8rem;
+  -webkit-transition: width 0.5s, opacity 0.5s, -webkit-transform 0.5s;
+  -moz-transition: width 0.5s, opacity 0.5s, -moz-transform 0.5s;
+  -o-transition: width 0.5s, opacity 0.5s, -o-transform 0.5s;
+  -ms-transition: width 0.5s, opacity 0.5s, -ms-transform 0.5s;
+  transition: width 0.5s, opacity 0.5s, transform 0.5s;
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
   width: 0;
 }
 
-/* line 11 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/labels_selector.styl */
+/* line 9 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/labels_selector.styl */
 .labelsSelector.displayed {
   opacity: 1;
   -ms-filter: none;
   filter: none;
   width: 5rem;
+  -webkit-transform: translateX(1rem);
+  -moz-transform: translateX(1rem);
+  -o-transform: translateX(1rem);
+  -ms-transform: translateX(1rem);
+  transform: translateX(1rem);
+}
+
+/* line 15 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/labels_selector.styl */
+.labelsSelector__label {
+  width: 100%;
+  display: block;
+  height: 1rem;
+  margin: 0.5rem;
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  -ms-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+  cursor: pointer;
+}
+
+/* line 25 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/labels_selector.styl */
+.labelsSelector__label:hover {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+}
+
+/* line 28 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/labels_selector.styl */
+.labelsSelector__label.label1 {
+  background-color: #ff3b30;
+}
+
+/* line 30 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/labels_selector.styl */
+.labelsSelector__label.label2 {
+  background-color: #4cd964;
+}
+
+/* line 32 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/labels_selector.styl */
+.labelsSelector__label.label3 {
+  background-color: #fc0;
+}
+
+/* line 34 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/labels_selector.styl */
+.labelsSelector__label.label4 {
+  background-color: #007aff;
 }
