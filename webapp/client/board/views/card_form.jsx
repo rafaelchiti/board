@@ -1,4 +1,4 @@
-var React = require('../../shims/react');
+var React = require('react');
 
 
 var CardForm = React.createComponent({
