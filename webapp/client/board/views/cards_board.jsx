@@ -1,9 +1,12 @@
 var _ = require('underscore');
-var React = require('../../shims/react');
+var React = require('react');
 var CardsList = require('./cards_list');
 var CardForm = require('./card_form');
 
-var cards = require('../models/cards').demoCards;;
+var Cards = require('../models/cards').Cards;
+var cards = new Cards();
+
+cards.fetch();
 
 var CardsBoard = React.createComponent({
 
@@ -12,11 +15,13 @@ var CardsBoard = React.createComponent({
   },
 
   onCardSubmit: function(card) {
-    cards.add(card);
+    var card = cards.add(card);
+    card.save();
   },
 
   onRemove: function(cardCID) {
-    cards.remove(cards.get(cardCID));
+    var card = cards.get(cardCID);
+    card.destroy();
   },
 
   render: function() {
