@@ -3,6 +3,7 @@ var express = require('express');
 var stylus = require('stylus');
 var nib = require('nib');
 var browserify = require('browserify-middleware');
+var reactify = require('reactify');
 
 var app = express();
 
@@ -15,16 +16,19 @@ app.set('views', __dirname + '/webapp/server/views');
 
 app.use(express.logger());
 
+var reactifyES6 = function(file) {
+  return reactify(file, {'es6': true});
+};
 
 browserify.settings.development('basedir', __dirname);
 
 browserify.settings({
-  transform: ['reactify'],
+  transform: [reactifyES6, 'es6ify'],
   extensions: ['.js', '.jsx'],
   grep: /\.jsx?$/
 })
 
-app.use('/js', browserify('./webapp/client'));
+app.get('/js/all.js', browserify('./webapp/client/all.js'));
 
 
 function compile(str, path) {
