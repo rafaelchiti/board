@@ -16,7 +16,7 @@ I'm building a Cards app (like Trello) with the main motivation of trying the fo
 ```
 $ git clone git@github.com:rafaelchiti/board.git
 $ npm install
-$ gulp
+$ gulp (you might need to install it globally if you don't have it yet)
 ```
 
 #### Try it on heroku
