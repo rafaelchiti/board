@@ -29,7 +29,9 @@
     "reactify": "~0.10.0",
     "glob": "~3.2.9",
     "gulp-open": "~0.2.8",
-    "gulp-chug": "~0.1.10"
+    "gulp-chug": "~0.1.10",
+    "gulp-nodemon": "~1.0.2",
+    "open": "0.0.5"
   },
   "browserify": {
     "transform": [
