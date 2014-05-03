@@ -14,8 +14,7 @@
     "hbs": "~2.5.0",
     "stylus": "~0.42.3",
     "nib": "~1.0.2",
-    "browserify": "~3.33.0",
-    "browserify-middleware": "~2.4.0"
+    "browserify": "~3.33.0"
   },
   "author": "Rafael Fabricio Chiti",
   "license": "MIT",
@@ -30,7 +29,8 @@
     "es6ify": "~1.1.0",
     "glob": "~3.2.9",
     "browserify-shim": "~3.4.1",
-    "gulp-open": "~0.2.8"
+    "gulp-open": "~0.2.8",
+    "gulp-chug": "~0.1.10"
   },
   "browserify": {
     "transform": [

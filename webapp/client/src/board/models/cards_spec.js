@@ -16,7 +16,4 @@ describe('Card model', () => {
     expect(card.get('title')).to.equal('Title');
   });
 
-  it('fails', () => fail());
-
-
 });
