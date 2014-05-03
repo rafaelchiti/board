@@ -6,7 +6,6 @@ var CardForm = require('./card_form');
 var Cards = require('../models/cards').Cards;
 var cards = new Cards();
 
-cards.fetch();
 
 var CardsBoard = React.createComponent({
 
@@ -37,7 +36,11 @@ var CardsBoard = React.createComponent({
   }
 });
 
-React.renderComponent(
-  <CardsBoard/>,
-  document.querySelector('.js-application-container')
-);
+module.exports.start = () => {
+  cards.fetch();
+
+  React.renderComponent(
+    <CardsBoard/>,
+    document.querySelector('.js-application-container')
+  );
+}
