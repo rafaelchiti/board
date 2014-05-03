@@ -10,6 +10,9 @@ lib-cov
 pids
 logs
 results
+tmp
+webapp/tmp
+webapp/public/js
 
 npm-debug.log
 node_modules

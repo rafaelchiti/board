@@ -1,6 +1,5 @@
 var React = require('react');
 
-
 var CardForm = React.createComponent({
 
   handleSubmit: function() {

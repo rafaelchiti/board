@@ -7,19 +7,39 @@
     "backbone": "~1.1.2",
     "backbone.localstorage": "~1.1.7",
     "react": "~0.9.0",
-    "reactify": "~0.10.0",
     "jquery": "~2.1.0",
     "jquery-ui": "~1.10.5",
     "underscore": "~1.6.0",
-    "hbs":"~2.5.0",
+    "hbs": "~2.5.0",
     "stylus": "~0.42.3",
     "nib": "~1.0.2",
-    "browserify": "~3.33.0",
-    "browserify-middleware": "~2.4.0"
+    "browserify": "~3.33.0"
   },
   "author": "Rafael Fabricio Chiti",
   "license": "MIT",
   "engines": {
     "node": "0.10.x"
+  },
+  "devDependencies": {
+    "gulp": "~3.6.2",
+    "mocha": "~1.18.2",
+    "chai": "~1.9.1",
+    "vinyl-source-stream": "~0.1.1",
+    "es6ify": "~1.1.0",
+    "reactify": "~0.10.0",
+    "glob": "~3.2.9",
+    "gulp-open": "~0.2.8",
+    "gulp-chug": "~0.1.10"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "reactify",
+        {
+          "es6": "true"
+        }
+      ],
+      "es6ify"
+    ]
   }
 }
