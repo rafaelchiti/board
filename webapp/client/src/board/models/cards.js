@@ -9,6 +9,7 @@ var Card = Backbone.Model.extend({
 
 });
 
+
 var Cards = Backbone.Collection.extend({
 
   localStorage: new Backbone.LocalStorage("Cards"),
