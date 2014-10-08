@@ -17,6 +17,5 @@ var Cards = Backbone.Collection.extend({
   model: Card
 });
 
-
 exports.Card = Card;
 exports.Cards = Cards;
