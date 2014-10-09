@@ -35,19 +35,32 @@ webpackJsonp([0],{
 	var CardsList = __webpack_require__(/*! ./cards_list */ 52);
 	var CardForm = __webpack_require__(/*! ./card_form */ 53);
 	
-	var Cards = __webpack_require__(/*! ../models/cards */ 164).Cards;
-	var cards = new Cards();
+	var CardStore = __webpack_require__(/*! ../stores/card_store */ 54);
 	
 	
-	var CardsBoard = React.createComponent({
+	function getCardsState() {
+	  return {
+	    allCards: CardStore.getAll()
+	  };
+	}
+	
+	
+	var CardsBoard = React.createClass({displayName: 'CardsBoard',
 	
 	  getInitialState: function() {
-	    return {data: cards};
+	    return getCardsState();
 	  },
 	
-	  onCardSubmit: function(card) {
-	    var card = cards.add(card);
-	    card.save();
+	  componentDidMount: function() {
+	    CardStore.addChangeListener(this._onChange);
+	  },
+	
+	  componentWillUnmount: function() {
+	    CardStore.removeChangeListener(this._onChange);
+	  },
+	
+	  _onChange: function() {
+	    this.setState(getCardsState());
 	  },
 	
 	  onRemove: function(cardCID) {
@@ -59,17 +72,16 @@ webpackJsonp([0],{
 	    return (
 	      React.DOM.div({className: "js-cards-board cardsBoard"}, 
 	        React.DOM.div({className: "cadsBoard__toolbar"}, 
-	          CardForm({onCardSubmit: this.onCardSubmit})
+	          CardForm(null)
 	        ), 
 	
-	        CardsList({cards: this.state.data, onRemove: this.onRemove})
+	        CardsList({cards: this.state.allCards, onRemove: this.onRemove})
 	      )
 	    );
 	  }
 	});
 	
 	module.exports.start = function()  {
-	  cards.fetch();
 	
 	  React.renderComponent(
 	    CardsBoard(null),
@@ -98,20 +110,18 @@ webpackJsonp([0],{
 
 	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 51);
 	var Card = __webpack_require__(/*! ./card/card */ 115);
+	var CardActions = __webpack_require__(/*! ../actions/card_actions */ 116);
+	var _ = __webpack_require__(/*! underscore */ 4);
 	
-	var CardsList = React.createComponent({
-	
-	  updateOnProps: {
-	    cards: 'collection'
-	  },
+	var CardsList = React.createClass({displayName: 'CardsList',
 	
 	  onRemove: function(cardCID) {
-	    this.props.onRemove(cardCID);
+	    CardActions.destroy(cardCID);
 	  },
 	
 	  render: function() {
-	    var cards = this.props.cards.map(function(card) {
-	      return Card({key: card.cid, card: card, onRemove: this.onRemove});
+	    var cards = _(this.props.cards).map(function(card) {
+	      return Card({key: card.id, card: card, onRemove: this.onRemove});
 	    }, this);
 	
 	    return (
@@ -174,6 +184,128 @@ webpackJsonp([0],{
 
 /***/ },
 
+/***/ 54:
+/*!******************************************************!*\
+  !*** ./webapp/client/src/board/stores/card_store.js ***!
+  \******************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var AppDispatcher = __webpack_require__(/*! ../dispatcher/app_dispatcher */ 117);
+	var EventEmitter = __webpack_require__(/*! events */ 119).EventEmitter;
+	var CardConstants = __webpack_require__(/*! ../constants/card_constants */ 118);
+	var merge = __webpack_require__(/*! react/lib/merge */ 40);
+	
+	var CHANGE_EVENT = 'change';
+	
+	var _cards = {};
+	
+	function randomId() {
+	  return (+new Date() + Math.floor(Math.random() * 999999)).toString(36);
+	};
+	
+	var id = randomId();
+	_cards[id] = {
+	  id: id,
+	  title: 'Demo 1',
+	  description: 'Demo card'
+	};
+	
+	var id = randomId();
+	_cards[id] = {
+	  id: id,
+	  title: 'Demo 2',
+	  description: 'Demo card'
+	};
+	
+	/**
+	 * Create a Card item.
+	 * @param  {string} text The content of the Card
+	 */
+	function create(title, description) {
+	
+	  // Hand waving here -- not showing how this interacts with XHR or persistent
+	  // server-side storage.
+	  // Using the current timestamp + random number in place of a real id.
+	  var id = randomId();
+	  _cards[id] = {
+	    id: id,
+	    title: title,
+	    description: description
+	  };
+	}
+	
+	/**
+	 * Delete a Card item.
+	 * @param  {string} id
+	 */
+	function destroy(id) {
+	  delete _cards[id];
+	}
+	
+	
+	var CardStore = merge(EventEmitter.prototype, {
+	
+	  /**
+	   * Get the entire collection of Cards.
+	   * @return {object}
+	   */
+	  getAll: function() {
+	    return _cards;
+	  },
+	
+	  emitChange: function() {
+	    this.emit(CHANGE_EVENT);
+	  },
+	
+	  /**
+	   * @param {function} callback
+	   */
+	  addChangeListener: function(callback) {
+	    this.on(CHANGE_EVENT, callback);
+	  },
+	
+	  /**
+	   * @param {function} callback
+	   */
+	  removeChangeListener: function(callback) {
+	    this.removeListener(CHANGE_EVENT, callback);
+	  }
+	});
+	
+	// Register to handle all updates
+	AppDispatcher.register(function(payload) {
+	  var action = payload.action;
+	  var title, description;
+	
+	  switch(action.actionType) {
+	    case CardConstants.CARD_CREATE:
+	      title = action.title ? action.title.trim() : '';
+	      description = action.description ? action.description.trim() : '';
+	      create(title, description);
+	      break;
+	
+	    case CardConstants.CARD_DESTROY:
+	      destroy(action.id);
+	      break;
+	
+	    default:
+	      return true;
+	  }
+	
+	  // This often goes in each case that should trigger a UI change. This store
+	  // needs to trigger a UI change after every view action, so we can make the
+	  // code less repetitive by putting it here.  We need the default case,
+	  // however, to make sure this only gets called after one of the cases above.
+	  CardStore.emitChange();
+	
+	  return true; // No errors.  Needed by promise in Dispatcher.
+	});
+	
+	module.exports = CardStore;
+
+/***/ },
+
 /***/ 115:
 /*!*****************************************************!*\
   !*** ./webapp/client/src/board/views/card/card.jsx ***!
@@ -186,25 +318,21 @@ webpackJsonp([0],{
 	
 	var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
 	
-	var Card = React.createComponent({
-	
-	  updateOnProps: {
-	    card: 'model'
-	  },
+	var Card = React.createClass({displayName: 'Card',
 	
 	  getInitialState: function() {
 	    return {labelsSelectorShown: false};
 	  },
 	
 	  remove: function() {
-	    this.props.onRemove(this.props.card.cid);
+	    this.props.onRemove(this.props.card.id);
 	  },
 	
 	  render: function() {
 	    return (
 	      React.DOM.div({className: "card"}, 
-	        React.DOM.h4({className: "card__title"}, this.props.card.get('title')), 
-	        React.DOM.span({className: "card__description"}, this.props.card.get('description')), 
+	        React.DOM.h4({className: "card__title"}, this.props.card.title), 
+	        React.DOM.span({className: "card__description"}, this.props.card.description), 
 	
 	        React.DOM.span({className: "card__remove", onClick: this.remove}, React.DOM.i({className: "fi-trash"})), 
 	
@@ -314,6 +442,317 @@ webpackJsonp([0],{
 
 /***/ },
 
+/***/ 119:
+/*!********************************************************!*\
+  !*** (webpack)/~/node-libs-browser/~/events/events.js ***!
+  \********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	// Copyright Joyent, Inc. and other Node contributors.
+	//
+	// Permission is hereby granted, free of charge, to any person obtaining a
+	// copy of this software and associated documentation files (the
+	// "Software"), to deal in the Software without restriction, including
+	// without limitation the rights to use, copy, modify, merge, publish,
+	// distribute, sublicense, and/or sell copies of the Software, and to permit
+	// persons to whom the Software is furnished to do so, subject to the
+	// following conditions:
+	//
+	// The above copyright notice and this permission notice shall be included
+	// in all copies or substantial portions of the Software.
+	//
+	// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+	// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+	// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+	// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+	// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+	// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+	// USE OR OTHER DEALINGS IN THE SOFTWARE.
+	
+	function EventEmitter() {
+	  this._events = this._events || {};
+	  this._maxListeners = this._maxListeners || undefined;
+	}
+	module.exports = EventEmitter;
+	
+	// Backwards-compat with node 0.10.x
+	EventEmitter.EventEmitter = EventEmitter;
+	
+	EventEmitter.prototype._events = undefined;
+	EventEmitter.prototype._maxListeners = undefined;
+	
+	// By default EventEmitters will print a warning if more than 10 listeners are
+	// added to it. This is a useful default which helps finding memory leaks.
+	EventEmitter.defaultMaxListeners = 10;
+	
+	// Obviously not all Emitters should be limited to 10. This function allows
+	// that to be increased. Set to zero for unlimited.
+	EventEmitter.prototype.setMaxListeners = function(n) {
+	  if (!isNumber(n) || n < 0 || isNaN(n))
+	    throw TypeError('n must be a positive number');
+	  this._maxListeners = n;
+	  return this;
+	};
+	
+	EventEmitter.prototype.emit = function(type) {
+	  var er, handler, len, args, i, listeners;
+	
+	  if (!this._events)
+	    this._events = {};
+	
+	  // If there is no 'error' event listener then throw.
+	  if (type === 'error') {
+	    if (!this._events.error ||
+	        (isObject(this._events.error) && !this._events.error.length)) {
+	      er = arguments[1];
+	      if (er instanceof Error) {
+	        throw er; // Unhandled 'error' event
+	      }
+	      throw TypeError('Uncaught, unspecified "error" event.');
+	    }
+	  }
+	
+	  handler = this._events[type];
+	
+	  if (isUndefined(handler))
+	    return false;
+	
+	  if (isFunction(handler)) {
+	    switch (arguments.length) {
+	      // fast cases
+	      case 1:
+	        handler.call(this);
+	        break;
+	      case 2:
+	        handler.call(this, arguments[1]);
+	        break;
+	      case 3:
+	        handler.call(this, arguments[1], arguments[2]);
+	        break;
+	      // slower
+	      default:
+	        len = arguments.length;
+	        args = new Array(len - 1);
+	        for (i = 1; i < len; i++)
+	          args[i - 1] = arguments[i];
+	        handler.apply(this, args);
+	    }
+	  } else if (isObject(handler)) {
+	    len = arguments.length;
+	    args = new Array(len - 1);
+	    for (i = 1; i < len; i++)
+	      args[i - 1] = arguments[i];
+	
+	    listeners = handler.slice();
+	    len = listeners.length;
+	    for (i = 0; i < len; i++)
+	      listeners[i].apply(this, args);
+	  }
+	
+	  return true;
+	};
+	
+	EventEmitter.prototype.addListener = function(type, listener) {
+	  var m;
+	
+	  if (!isFunction(listener))
+	    throw TypeError('listener must be a function');
+	
+	  if (!this._events)
+	    this._events = {};
+	
+	  // To avoid recursion in the case that type === "newListener"! Before
+	  // adding it to the listeners, first emit "newListener".
+	  if (this._events.newListener)
+	    this.emit('newListener', type,
+	              isFunction(listener.listener) ?
+	              listener.listener : listener);
+	
+	  if (!this._events[type])
+	    // Optimize the case of one listener. Don't need the extra array object.
+	    this._events[type] = listener;
+	  else if (isObject(this._events[type]))
+	    // If we've already got an array, just append.
+	    this._events[type].push(listener);
+	  else
+	    // Adding the second element, need to change to array.
+	    this._events[type] = [this._events[type], listener];
+	
+	  // Check for listener leak
+	  if (isObject(this._events[type]) && !this._events[type].warned) {
+	    var m;
+	    if (!isUndefined(this._maxListeners)) {
+	      m = this._maxListeners;
+	    } else {
+	      m = EventEmitter.defaultMaxListeners;
+	    }
+	
+	    if (m && m > 0 && this._events[type].length > m) {
+	      this._events[type].warned = true;
+	      console.error('(node) warning: possible EventEmitter memory ' +
+	                    'leak detected. %d listeners added. ' +
+	                    'Use emitter.setMaxListeners() to increase limit.',
+	                    this._events[type].length);
+	      if (typeof console.trace === 'function') {
+	        // not supported in IE 10
+	        console.trace();
+	      }
+	    }
+	  }
+	
+	  return this;
+	};
+	
+	EventEmitter.prototype.on = EventEmitter.prototype.addListener;
+	
+	EventEmitter.prototype.once = function(type, listener) {
+	  if (!isFunction(listener))
+	    throw TypeError('listener must be a function');
+	
+	  var fired = false;
+	
+	  function g() {
+	    this.removeListener(type, g);
+	
+	    if (!fired) {
+	      fired = true;
+	      listener.apply(this, arguments);
+	    }
+	  }
+	
+	  g.listener = listener;
+	  this.on(type, g);
+	
+	  return this;
+	};
+	
+	// emits a 'removeListener' event iff the listener was removed
+	EventEmitter.prototype.removeListener = function(type, listener) {
+	  var list, position, length, i;
+	
+	  if (!isFunction(listener))
+	    throw TypeError('listener must be a function');
+	
+	  if (!this._events || !this._events[type])
+	    return this;
+	
+	  list = this._events[type];
+	  length = list.length;
+	  position = -1;
+	
+	  if (list === listener ||
+	      (isFunction(list.listener) && list.listener === listener)) {
+	    delete this._events[type];
+	    if (this._events.removeListener)
+	      this.emit('removeListener', type, listener);
+	
+	  } else if (isObject(list)) {
+	    for (i = length; i-- > 0;) {
+	      if (list[i] === listener ||
+	          (list[i].listener && list[i].listener === listener)) {
+	        position = i;
+	        break;
+	      }
+	    }
+	
+	    if (position < 0)
+	      return this;
+	
+	    if (list.length === 1) {
+	      list.length = 0;
+	      delete this._events[type];
+	    } else {
+	      list.splice(position, 1);
+	    }
+	
+	    if (this._events.removeListener)
+	      this.emit('removeListener', type, listener);
+	  }
+	
+	  return this;
+	};
+	
+	EventEmitter.prototype.removeAllListeners = function(type) {
+	  var key, listeners;
+	
+	  if (!this._events)
+	    return this;
+	
+	  // not listening for removeListener, no need to emit
+	  if (!this._events.removeListener) {
+	    if (arguments.length === 0)
+	      this._events = {};
+	    else if (this._events[type])
+	      delete this._events[type];
+	    return this;
+	  }
+	
+	  // emit removeListener for all listeners on all events
+	  if (arguments.length === 0) {
+	    for (key in this._events) {
+	      if (key === 'removeListener') continue;
+	      this.removeAllListeners(key);
+	    }
+	    this.removeAllListeners('removeListener');
+	    this._events = {};
+	    return this;
+	  }
+	
+	  listeners = this._events[type];
+	
+	  if (isFunction(listeners)) {
+	    this.removeListener(type, listeners);
+	  } else {
+	    // LIFO order
+	    while (listeners.length)
+	      this.removeListener(type, listeners[listeners.length - 1]);
+	  }
+	  delete this._events[type];
+	
+	  return this;
+	};
+	
+	EventEmitter.prototype.listeners = function(type) {
+	  var ret;
+	  if (!this._events || !this._events[type])
+	    ret = [];
+	  else if (isFunction(this._events[type]))
+	    ret = [this._events[type]];
+	  else
+	    ret = this._events[type].slice();
+	  return ret;
+	};
+	
+	EventEmitter.listenerCount = function(emitter, type) {
+	  var ret;
+	  if (!emitter._events || !emitter._events[type])
+	    ret = 0;
+	  else if (isFunction(emitter._events[type]))
+	    ret = 1;
+	  else
+	    ret = emitter._events[type].length;
+	  return ret;
+	};
+	
+	function isFunction(arg) {
+	  return typeof arg === 'function';
+	}
+	
+	function isNumber(arg) {
+	  return typeof arg === 'number';
+	}
+	
+	function isObject(arg) {
+	  return typeof arg === 'object' && arg !== null;
+	}
+	
+	function isUndefined(arg) {
+	  return arg === void 0;
+	}
+
+/***/ },
+
 /***/ 148:
 /*!******************************************************!*\
   !*** ./webapp/client/src/board/views/card/label.jsx ***!
@@ -322,7 +761,7 @@ webpackJsonp([0],{
 
 	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 51);
 	
-	var Label = React.createComponent({
+	var Label = React.createClass({displayName: 'Label',
 	
 	  getInitialState: function() {
 	    return {selected: false};
@@ -361,7 +800,7 @@ webpackJsonp([0],{
 
 	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 51);
 	
-	var LabelsSelector = React.createComponent({
+	var LabelsSelector = React.createClass({displayName: 'LabelsSelector',
 	
 	  render: function() {
 	    var clazz;
@@ -727,37 +1166,6 @@ webpackJsonp([0],{
 	};
 	
 	module.exports = invariant;
-
-/***/ },
-
-/***/ 164:
-/*!*************************************************!*\
-  !*** ./webapp/client/src/board/models/cards.js ***!
-  \*************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var Backbone = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"backbone\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-	Backbone.$ = __webpack_require__(/*! jquery */ 5);
-	
-	var Card = Backbone.Model.extend({
-	  defaults: {
-	    title: 'Default Title',
-	    description: 'Lorem ipsum amet'
-	  }
-	
-	});
-	
-	
-	var Cards = Backbone.Collection.extend({
-	
-	  localStorage: new Backbone.LocalStorage("Cards"),
-	
-	  model: Card
-	});
-	
-	exports.Card = Card;
-	exports.Cards = Cards;
 
 /***/ }
 
