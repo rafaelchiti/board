@@ -4,25 +4,21 @@ var LabelsSelector = require('./labels_selector');
 
 var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
 
-var Card = React.createComponent({
-
-  updateOnProps: {
-    card: 'model'
-  },
+var Card = React.createClass({
 
   getInitialState: function() {
     return {labelsSelectorShown: false};
   },
 
   remove: function() {
-    this.props.onRemove(this.props.card.cid);
+    this.props.onRemove(this.props.card.id);
   },
 
   render: function() {
     return (
       <div className="card">
-        <h4 className="card__title">{this.props.card.get('title')}</h4>
-        <span className="card__description">{this.props.card.get('description')}</span>
+        <h4 className="card__title">{this.props.card.title}</h4>
+        <span className="card__description">{this.props.card.description}</span>
 
         <span className="card__remove" onClick={this.remove}><i className="fi-trash"></i></span>
 

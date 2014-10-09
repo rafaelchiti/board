@@ -12,7 +12,7 @@ logs
 results
 tmp
 webapp/tmp
+webapp/public
 npm-debug.log
 node_modules
-
 .DS_Store
