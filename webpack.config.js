@@ -3,8 +3,8 @@ var webpack = require('webpack');
 // webpack.config.js
 module.exports = {
   entry: {
-    app: ['./webapp/client/lib/lib.js', './webapp/client/client.js'],
-    vendor: ['jquery', 'jquery-ui', 'react/addons', 'underscore', 'backbone', 'backbone.localstorage']
+    app: ['./webapp/client/client.js'],
+    vendor: ['jquery', 'jquery-ui', 'react/addons', 'underscore']
   },
   output: {
     path: './webapp/public/js',

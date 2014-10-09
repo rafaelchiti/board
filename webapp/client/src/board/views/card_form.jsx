@@ -1,6 +1,7 @@
 var React = require('react');
+var CardActions = require('../actions/card_actions');
 
-var CardForm = React.createComponent({
+var CardForm = React.createClass({
 
   handleSubmit: function() {
     var card = {};
@@ -12,7 +13,7 @@ var CardForm = React.createComponent({
     if (description)
       card.description = description;
 
-    this.props.onCardSubmit(card);
+    CardActions.create(title, description);
 
     this.refs.title.getDOMNode().value = '';
     this.refs.description.getDOMNode().value = '';

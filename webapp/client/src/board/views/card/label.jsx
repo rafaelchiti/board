@@ -1,6 +1,6 @@
 var React = require('react');
 
-var Label = React.createComponent({
+var Label = React.createClass({
 
   getInitialState: function() {
     return {selected: false};

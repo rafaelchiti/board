@@ -1,6 +1,6 @@
 var React = require('react');
 
-var LabelsSelector = React.createComponent({
+var LabelsSelector = React.createClass({
 
   render: function() {
     var clazz;

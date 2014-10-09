@@ -3,19 +3,32 @@ var React = require('react');
 var CardsList = require('./cards_list');
 var CardForm = require('./card_form');
 
-var Cards = require('../models/cards').Cards;
-var cards = new Cards();
+var CardStore = require('../stores/card_store');
 
 
-var CardsBoard = React.createComponent({
+function getCardsState() {
+  return {
+    allCards: CardStore.getAll()
+  };
+}
+
+
+var CardsBoard = React.createClass({
 
   getInitialState: function() {
-    return {data: cards};
+    return getCardsState();
   },
 
-  onCardSubmit: function(card) {
-    var card = cards.add(card);
-    card.save();
+  componentDidMount: function() {
+    CardStore.addChangeListener(this._onChange);
+  },
+
+  componentWillUnmount: function() {
+    CardStore.removeChangeListener(this._onChange);
+  },
+
+  _onChange: function() {
+    this.setState(getCardsState());
   },
 
   onRemove: function(cardCID) {
@@ -27,17 +40,16 @@ var CardsBoard = React.createComponent({
     return (
       <div className="js-cards-board cardsBoard">
         <div className="cadsBoard__toolbar">
-          <CardForm onCardSubmit={this.onCardSubmit} />
+          <CardForm/>
         </div>
 
-        <CardsList cards={this.state.data} onRemove={this.onRemove} />
+        <CardsList cards={this.state.allCards} onRemove={this.onRemove} />
       </div>
     );
   }
 });
 
 module.exports.start = () => {
-  cards.fetch();
 
   React.renderComponent(
     <CardsBoard/>,
