@@ -1,74 +1,62 @@
 var AppDispatcher = require('../dispatcher/app_dispatcher');
 var EventEmitter = require('events').EventEmitter;
-var CardConstants = require('../constants/card_constants');
+var ListConstants = require('../constants/list_constants');
 var merge = require('react/lib/merge');
 var _ = require('underscore');
 
 var CHANGE_EVENT = 'change';
+var DEFAULT_TITLE = 'Enter title (click me)';
 
-var _cards = {};
+var _lists = {};
+
+
 
 function randomId() {
   return (+new Date() + Math.floor(Math.random() * 999999)).toString(36);
 };
 
-/**
- * Create a Card item.
- * @param  {string} text The content of the Card
- */
-function create(listId, title, description) {
 
+var id = randomId();
+_lists[id] = {
+  id: id,
+  title: DEFAULT_TITLE
+};
+
+function create(title) {
   // Hand waving here -- not showing how this interacts with XHR or persistent
   // server-side storage.
   // Using the current timestamp + random number in place of a real id.
   var id = randomId();
-  _cards[id] = {
+  _lists[id] = {
     id: id,
-    listId: listId,
-    title: title,
-    description: description
+    title: title
   };
 }
 
-/**
- * Delete a Card item.
- * @param  {string} id
- */
 function destroy(id) {
-  delete _cards[id];
+  delete _lists[id];
 }
 
+function updateTitle(id, title) {
+  var list = _(_lists).findWhere({id: id});
+  if (title)
+    list.title = title;
+}
 
-var CardStore = merge(EventEmitter.prototype, {
+var ListStore = merge(EventEmitter.prototype, {
 
-  /**
-   * Get the entire collection of Cards.
-   * @return {object}
-   */
   all: function() {
-    return _cards;
-  },
-
-  allForList: function(listId) {
-    var cards = _(_cards).where({listId: listId});
-
-    return cards;
+    return _lists;
   },
 
   emitChange: function() {
     this.emit(CHANGE_EVENT);
   },
 
-  /**
-   * @param {function} callback
-   */
   addChangeListener: function(callback) {
     this.on(CHANGE_EVENT, callback);
   },
 
-  /**
-   * @param {function} callback
-   */
   removeChangeListener: function(callback) {
     this.removeListener(CHANGE_EVENT, callback);
   }
@@ -77,17 +65,20 @@ var CardStore = merge(EventEmitter.prototype, {
 // Register to handle all updates
 AppDispatcher.register(function(payload) {
   var action = payload.action;
-  var title, description;
+  var title;
 
   switch(action.actionType) {
-    case CardConstants.CARD_CREATE:
-      title = action.title ? action.title.trim() : 'Enter title';
-      description = action.description ? action.description.trim() : 'Enter description';
-      create(action.listId, title, description);
+    case ListConstants.LIST_CREATE:
+      title = action.title ? action.title.trim() : DEFAULT_TITLE;
+      create(title);
       break;
 
-    case CardConstants.CARD_DESTROY:
+    case ListConstants.LIST_DESTROY:
       destroy(action.id);
+      break;
+
+    case ListConstants.LIST_UPDATE_TITLE:
+      updateTitle(action.id, action.title);
       break;
 
     default:
@@ -98,9 +89,9 @@ AppDispatcher.register(function(payload) {
   // needs to trigger a UI change after every view action, so we can make the
   // code less repetitive by putting it here.  We need the default case,
   // however, to make sure this only gets called after one of the cases above.
-  CardStore.emitChange();
+  ListStore.emitChange();
 
   return true; // No errors.  Needed by promise in Dispatcher.
 });
 
-module.exports = CardStore;
+module.exports = ListStore;

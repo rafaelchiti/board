@@ -1,0 +1,43 @@
+.cardList
+  width 282px
+  height 100%
+  float left
+  margin-right 10px
+  margin-bottom 10px
+  padding 15px 20px
+  overflow-y auto
+  background-color white
+  border 1px solid app-gray
+  border-radius(3px)
+
+  .cardListHeader
+    position relative
+    width 100%
+    padding-bottom 2px
+    margin-bottom 20px
+    border-bottom 1px solid app-gray
+
+    .cardListRemove
+      color app-gray
+      position absolute
+      top 0
+      right 0
+      cursor pointer
+      transition(color, .5s)
+
+      &:hover
+        color app-red
+
+    .cardListTitle
+      cursor pointer
+
+    .cardListAddCard
+      color app-gray
+      position absolute
+      top 0
+      right 20px
+      cursor pointer
+      transition(color, .5s)
+
+      &:hover
+        color app-green

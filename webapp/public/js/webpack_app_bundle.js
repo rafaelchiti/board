@@ -30,52 +30,41 @@ webpackJsonp([0],{
   \*******************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/** @jsx React.DOM */var _ = __webpack_require__(/*! underscore */ 4);
+	/** @jsx React.DOM */var _ = __webpack_require__(/*! underscore */ 3);
 	var React = __webpack_require__(/*! react */ 51);
-	var CardsList = __webpack_require__(/*! ./cards_list */ 52);
-	var CardForm = __webpack_require__(/*! ./card_form */ 53);
+	var CardListContainer = __webpack_require__(/*! ./card_list_container */ 52);
+	var ListStore = __webpack_require__(/*! ../stores/list_store */ 55);
 	
-	var CardStore = __webpack_require__(/*! ../stores/card_store */ 54);
+	window.listStore = ListStore;
 	
-	
-	function getCardsState() {
+	function getListsState() {
 	  return {
-	    allCards: CardStore.getAll()
+	    allLists: ListStore.all()
 	  };
 	}
-	
 	
 	var CardsBoard = React.createClass({displayName: 'CardsBoard',
 	
 	  getInitialState: function() {
-	    return getCardsState();
+	    return getListsState();
 	  },
 	
 	  componentDidMount: function() {
-	    CardStore.addChangeListener(this._onChange);
+	    ListStore.addChangeListener(this._onChange);
 	  },
 	
 	  componentWillUnmount: function() {
-	    CardStore.removeChangeListener(this._onChange);
+	    ListStore.removeChangeListener(this._onChange);
 	  },
 	
 	  _onChange: function() {
-	    this.setState(getCardsState());
-	  },
-	
-	  onRemove: function(cardCID) {
-	    var card = cards.get(cardCID);
-	    card.destroy();
+	    this.setState(getListsState());
 	  },
 	
 	  render: function() {
 	    return (
-	      React.DOM.div({className: "js-cards-board cardsBoard"}, 
-	        React.DOM.div({className: "cadsBoard__toolbar"}, 
-	          CardForm(null)
-	        ), 
-	
-	        CardsList({cards: this.state.allCards, onRemove: this.onRemove})
+	      React.DOM.div({className: "cardsBoard"}, 
+	        CardListContainer({className: "cardListContainer", lists: this.state.allLists})
 	      )
 	    );
 	  }
@@ -103,98 +92,195 @@ webpackJsonp([0],{
 /***/ },
 
 /***/ 52:
-/*!******************************************************!*\
-  !*** ./webapp/client/src/board/views/cards_list.jsx ***!
-  \******************************************************/
+/*!***************************************************************!*\
+  !*** ./webapp/client/src/board/views/card_list_container.jsx ***!
+  \***************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 51);
-	var Card = __webpack_require__(/*! ./card/card */ 115);
-	var CardActions = __webpack_require__(/*! ../actions/card_actions */ 116);
-	var _ = __webpack_require__(/*! underscore */ 4);
+	var _ = __webpack_require__(/*! underscore */ 3);
+	var CardList = __webpack_require__(/*! ./card_list */ 117);
+	var ListActions = __webpack_require__(/*! ../actions/list_actions */ 118);
+	var ListsToolbar = __webpack_require__(/*! ./lists_toolbar */ 54);
 	
-	var CardsList = React.createClass({displayName: 'CardsList',
+	var CardListContainer = React.createClass({displayName: 'CardListContainer',
 	
-	  onRemove: function(cardCID) {
-	    CardActions.destroy(cardCID);
+	  updateTitle: function(id, title) {
+	    ListActions.updateTitle(id, title);
+	  },
+	
+	  remove: function(id) {
+	    ListActions.destroy(id);
 	  },
 	
 	  render: function() {
-	    var cards = _(this.props.cards).map(function(card) {
-	      return Card({key: card.id, card: card, onRemove: this.onRemove});
-	    }, this);
+	    var lists = _(this.props.lists).map(function(list)  {
+	      return CardList({list: list, key: list.id, onUpdateTitle: this.updateTitle, onRemove: this.remove});
+	    }.bind(this), this);
 	
 	    return (
-	      React.DOM.div({className: "cardsList js-cards-list"}, 
-	        cards
+	      React.DOM.div({className: "cardListContainer"}, 
+	        lists, 
+	        ListsToolbar(null)
 	      )
 	    );
 	  }
 	
 	});
 	
-	module.exports = CardsList;
-
-/***/ },
-
-/***/ 53:
-/*!*****************************************************!*\
-  !*** ./webapp/client/src/board/views/card_form.jsx ***!
-  \*****************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 51);
-	var CardActions = __webpack_require__(/*! ../actions/card_actions */ 116);
-	
-	var CardForm = React.createClass({displayName: 'CardForm',
-	
-	  handleSubmit: function() {
-	    var card = {};
-	    var title = this.refs.title.getDOMNode().value.trim();
-	    var description = this.refs.description.getDOMNode().value.trim();
-	
-	    if (title)
-	      card.title = title;
-	    if (description)
-	      card.description = description;
-	
-	    CardActions.create(title, description);
-	
-	    this.refs.title.getDOMNode().value = '';
-	    this.refs.description.getDOMNode().value = '';
-	
-	    this.refs.title.getDOMNode().focus();
-	
-	    return false;
-	  },
-	
-	  render: function() {
-	    return (
-	      React.DOM.form({className: "cardForm", onSubmit: this.handleSubmit}, 
-	        React.DOM.input({ref: "title", placeholder: "Card title", type: "text", className: "js-title"}), 
-	        React.DOM.input({ref: "description", placeholder: "Card Desc.", type: "text", className: "js-description"}), 
-	        React.DOM.input({type: "submit", value: "add"})
-	      )
-	    );
-	  }
-	
-	});
-	
-	module.exports = CardForm;
+	module.exports = CardListContainer;
 
 /***/ },
 
 /***/ 54:
+/*!*********************************************************!*\
+  !*** ./webapp/client/src/board/views/lists_toolbar.jsx ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 51);
+	var ListActions = __webpack_require__(/*! ../actions/list_actions */ 118);
+	
+	
+	var ListsToolbar = React.createClass({displayName: 'ListsToolbar',
+	
+	  addList: function() {
+	    ListActions.create();
+	  },
+	
+	  render: function() {
+	    return (
+	      React.DOM.div({className: "listsToolbar", onClick: this.addList}, 
+	        React.DOM.span({className: "addList"}, "Add list...")
+	      )
+	    );
+	  }
+	
+	});
+	
+	module.exports = ListsToolbar;
+
+/***/ },
+
+/***/ 55:
+/*!******************************************************!*\
+  !*** ./webapp/client/src/board/stores/list_store.js ***!
+  \******************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var AppDispatcher = __webpack_require__(/*! ../dispatcher/app_dispatcher */ 120);
+	var EventEmitter = __webpack_require__(/*! events */ 123).EventEmitter;
+	var ListConstants = __webpack_require__(/*! ../constants/list_constants */ 121);
+	var merge = __webpack_require__(/*! react/lib/merge */ 39);
+	var _ = __webpack_require__(/*! underscore */ 3);
+	
+	var CHANGE_EVENT = 'change';
+	var DEFAULT_TITLE = 'Enter title (click me)';
+	
+	var _lists = {};
+	
+	
+	
+	function randomId() {
+	  return (+new Date() + Math.floor(Math.random() * 999999)).toString(36);
+	};
+	
+	
+	var id = randomId();
+	_lists[id] = {
+	  id: id,
+	  title: DEFAULT_TITLE
+	};
+	
+	function create(title) {
+	  // Hand waving here -- not showing how this interacts with XHR or persistent
+	  // server-side storage.
+	  // Using the current timestamp + random number in place of a real id.
+	  var id = randomId();
+	  _lists[id] = {
+	    id: id,
+	    title: title
+	  };
+	}
+	
+	function destroy(id) {
+	  delete _lists[id];
+	}
+	
+	function updateTitle(id, title) {
+	  var list = _(_lists).findWhere({id: id});
+	  if (title)
+	    list.title = title;
+	}
+	
+	var ListStore = merge(EventEmitter.prototype, {
+	
+	  all: function() {
+	    return _lists;
+	  },
+	
+	  emitChange: function() {
+	    this.emit(CHANGE_EVENT);
+	  },
+	
+	  addChangeListener: function(callback) {
+	    this.on(CHANGE_EVENT, callback);
+	  },
+	
+	  removeChangeListener: function(callback) {
+	    this.removeListener(CHANGE_EVENT, callback);
+	  }
+	});
+	
+	// Register to handle all updates
+	AppDispatcher.register(function(payload) {
+	  var action = payload.action;
+	  var title;
+	
+	  switch(action.actionType) {
+	    case ListConstants.LIST_CREATE:
+	      title = action.title ? action.title.trim() : DEFAULT_TITLE;
+	      create(title);
+	      break;
+	
+	    case ListConstants.LIST_DESTROY:
+	      destroy(action.id);
+	      break;
+	
+	    case ListConstants.LIST_UPDATE_TITLE:
+	      updateTitle(action.id, action.title);
+	      break;
+	
+	    default:
+	      return true;
+	  }
+	
+	  // This often goes in each case that should trigger a UI change. This store
+	  // needs to trigger a UI change after every view action, so we can make the
+	  // code less repetitive by putting it here.  We need the default case,
+	  // however, to make sure this only gets called after one of the cases above.
+	  ListStore.emitChange();
+	
+	  return true; // No errors.  Needed by promise in Dispatcher.
+	});
+	
+	module.exports = ListStore;
+
+/***/ },
+
+/***/ 56:
 /*!******************************************************!*\
   !*** ./webapp/client/src/board/stores/card_store.js ***!
   \******************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var AppDispatcher = __webpack_require__(/*! ../dispatcher/app_dispatcher */ 117);
-	var EventEmitter = __webpack_require__(/*! events */ 119).EventEmitter;
-	var CardConstants = __webpack_require__(/*! ../constants/card_constants */ 118);
-	var merge = __webpack_require__(/*! react/lib/merge */ 40);
+	var AppDispatcher = __webpack_require__(/*! ../dispatcher/app_dispatcher */ 120);
+	var EventEmitter = __webpack_require__(/*! events */ 123).EventEmitter;
+	var CardConstants = __webpack_require__(/*! ../constants/card_constants */ 122);
+	var merge = __webpack_require__(/*! react/lib/merge */ 39);
+	var _ = __webpack_require__(/*! underscore */ 3);
 	
 	var CHANGE_EVENT = 'change';
 	
@@ -204,25 +290,11 @@ webpackJsonp([0],{
 	  return (+new Date() + Math.floor(Math.random() * 999999)).toString(36);
 	};
 	
-	var id = randomId();
-	_cards[id] = {
-	  id: id,
-	  title: 'Demo 1',
-	  description: 'Demo card'
-	};
-	
-	var id = randomId();
-	_cards[id] = {
-	  id: id,
-	  title: 'Demo 2',
-	  description: 'Demo card'
-	};
-	
 	/**
 	 * Create a Card item.
 	 * @param  {string} text The content of the Card
 	 */
-	function create(title, description) {
+	function create(listId, title, description) {
 	
 	  // Hand waving here -- not showing how this interacts with XHR or persistent
 	  // server-side storage.
@@ -230,6 +302,7 @@ webpackJsonp([0],{
 	  var id = randomId();
 	  _cards[id] = {
 	    id: id,
+	    listId: listId,
 	    title: title,
 	    description: description
 	  };
@@ -250,8 +323,14 @@ webpackJsonp([0],{
 	   * Get the entire collection of Cards.
 	   * @return {object}
 	   */
-	  getAll: function() {
+	  all: function() {
 	    return _cards;
+	  },
+	
+	  allForList: function(listId) {
+	    var cards = _(_cards).where({listId: listId});
+	
+	    return cards;
 	  },
 	
 	  emitChange: function() {
@@ -280,9 +359,9 @@ webpackJsonp([0],{
 	
 	  switch(action.actionType) {
 	    case CardConstants.CARD_CREATE:
-	      title = action.title ? action.title.trim() : '';
-	      description = action.description ? action.description.trim() : '';
-	      create(title, description);
+	      title = action.title ? action.title.trim() : 'Enter title';
+	      description = action.description ? action.description.trim() : 'Enter description';
+	      create(action.listId, title, description);
 	      break;
 	
 	    case CardConstants.CARD_DESTROY:
@@ -306,71 +385,140 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 115:
+/***/ 117:
 /*!*****************************************************!*\
-  !*** ./webapp/client/src/board/views/card/card.jsx ***!
+  !*** ./webapp/client/src/board/views/card_list.jsx ***!
   \*****************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 51);
-	var Label = __webpack_require__(/*! ./label */ 148);
-	var LabelsSelector = __webpack_require__(/*! ./labels_selector */ 149);
+	var Card = __webpack_require__(/*! ./card/card */ 166);
+	var _ = __webpack_require__(/*! underscore */ 3);
 	
-	var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
+	var CardActions = __webpack_require__(/*! ../actions/card_actions */ 119);
+	var CardStore = __webpack_require__(/*! ../stores/card_store */ 56);
 	
-	var Card = React.createClass({displayName: 'Card',
+	function getCardsState(listId) {
+	  return {allCardsForList: CardStore.allForList(listId)};
+	};
+	
+	var CardList = React.createClass({displayName: 'CardList',
 	
 	  getInitialState: function() {
-	    return {labelsSelectorShown: false};
+	    return getCardsState();
 	  },
 	
-	  remove: function() {
-	    this.props.onRemove(this.props.card.id);
+	  componentDidMount: function() {
+	    CardStore.addChangeListener(this._onChange);
+	  },
+	
+	  componentWillUnmount: function() {
+	    CardStore.removeChangeListener(this._onChange);
+	  },
+	
+	  _onChange: function() {
+	    this.setState(getCardsState(this.props.list.id));
+	  },
+	
+	  onRemove: function(listId) {
+	    this.props.onRemove(this.props.list.id);
+	  },
+	
+	  onAddCard: function() {
+	    CardActions.create(this.props.list.id);
+	  },
+	
+	  onRemoveCard: function(cardId) {
+	    CardActions.destroy(cardId);
+	  },
+	
+	  updateTitle: function() {
+	    var title = prompt();
+	    this.props.onUpdateTitle(this.props.list.id, title);
 	  },
 	
 	  render: function() {
+	    var cards = _(this.state.allCardsForList).map(function(card)  {
+	      return Card({key: card.id, card: card, onRemove: this.onRemoveCard});
+	    }.bind(this), this);
+	
 	    return (
-	      React.DOM.div({className: "card"}, 
-	        React.DOM.h4({className: "card__title"}, this.props.card.title), 
-	        React.DOM.span({className: "card__description"}, this.props.card.description), 
-	
-	        React.DOM.span({className: "card__remove", onClick: this.remove}, React.DOM.i({className: "fi-trash"})), 
-	
-	        Label({onClick: this.onLabelClick}), 
-	
-	        LabelsSelector({shown: this.state.labelsSelectorShown})
+	      React.DOM.div({className: "cardList"}, 
+	        React.DOM.div({className: "cardListHeader"}, 
+	          React.DOM.span({className: "cardListTitle", onClick: this.updateTitle}, this.props.list.title), 
+	          React.DOM.span({className: "cardListRemove", onClick: this.onRemove}, React.DOM.i({className: "fi-trash"})), 
+	          React.DOM.span({className: "cardListAddCard", onClick: this.onAddCard}, React.DOM.i({className: "fi-plus"}))
+	        ), 
+	        cards
 	      )
 	    );
-	  },
-	
-	  onLabelClick: function() {
-	    this.setState({labelsSelectorShown: !this.state.labelsSelectorShown});
 	  }
+	
 	});
 	
-	module.exports = Card;
-
+	module.exports = CardList;
 
 /***/ },
 
-/***/ 116:
+/***/ 118:
+/*!*********************************************************!*\
+  !*** ./webapp/client/src/board/actions/list_actions.js ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var AppDispatcher = __webpack_require__(/*! ../dispatcher/app_dispatcher */ 120);
+	var ListConstants = __webpack_require__(/*! ../constants/list_constants */ 121);
+	
+	var ListActions = {
+	
+	  create: function(title) {
+	    AppDispatcher.handleViewAction({
+	      actionType: ListConstants.LIST_CREATE,
+	      title: title,
+	    });
+	  },
+	
+	  destroy: function(id) {
+	    AppDispatcher.handleViewAction({
+	      actionType: ListConstants.LIST_DESTROY,
+	      id: id
+	    });
+	  },
+	
+	  updateTitle: function(id, newTitle) {
+	    AppDispatcher.handleViewAction({
+	      actionType: ListConstants.LIST_UPDATE_TITLE,
+	      id: id,
+	      title: newTitle
+	    });
+	  }
+	
+	};
+	
+	module.exports = ListActions;
+
+/***/ },
+
+/***/ 119:
 /*!*********************************************************!*\
   !*** ./webapp/client/src/board/actions/card_actions.js ***!
   \*********************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var AppDispatcher = __webpack_require__(/*! ../dispatcher/app_dispatcher */ 117);
-	var CardConstants = __webpack_require__(/*! ../constants/card_constants */ 118);
+	var AppDispatcher = __webpack_require__(/*! ../dispatcher/app_dispatcher */ 120);
+	var CardConstants = __webpack_require__(/*! ../constants/card_constants */ 122);
 	
 	var CardActions = {
 	
 	  /**
 	   * @param  {string} text
 	   */
-	  create: function(title, description) {
+	  create: function(listId, title, description) {
 	    AppDispatcher.handleViewAction({
 	      actionType: CardConstants.CARD_CREATE,
+	      listId: listId,
 	      title: title,
 	      description: description
 	    });
@@ -392,15 +540,15 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 117:
+/***/ 120:
 /*!**************************************************************!*\
   !*** ./webapp/client/src/board/dispatcher/app_dispatcher.js ***!
   \**************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var Dispatcher = __webpack_require__(/*! flux */ 154).Dispatcher;
-	var copyProperties = __webpack_require__(/*! react/lib/copyProperties */ 50);
+	var Dispatcher = __webpack_require__(/*! flux */ 156).Dispatcher;
+	var copyProperties = __webpack_require__(/*! react/lib/copyProperties */ 49);
 	var AppDispatcher = copyProperties(new Dispatcher(), {
 	
 	  /**
@@ -421,28 +569,40 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 118:
+/***/ 121:
+/*!*************************************************************!*\
+  !*** ./webapp/client/src/board/constants/list_constants.js ***!
+  \*************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var keyMirror = __webpack_require__(/*! react/lib/keyMirror */ 65);
+	
+	module.exports = keyMirror({
+	  LIST_CREATE: null,
+	  LIST_DESTROY: null,
+	  LIST_UPDATE_TITLE: null
+	});
+
+/***/ },
+
+/***/ 122:
 /*!*************************************************************!*\
   !*** ./webapp/client/src/board/constants/card_constants.js ***!
   \*************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var keyMirror = __webpack_require__(/*! react/lib/keyMirror */ 63);
+	var keyMirror = __webpack_require__(/*! react/lib/keyMirror */ 65);
 	
 	module.exports = keyMirror({
 	  CARD_CREATE: null,
-	  CARD_COMPLETE: null,
-	  CARD_DESTROY: null,
-	  CARD_DESTROY_COMPLETED: null,
-	  CARD_TOGGLE_COMPLETE_ALL: null,
-	  CARD_UNDO_COMPLETE: null,
-	  CARD_UPDATE_TEXT: null
+	  CARD_DESTROY: null
 	});
 
 /***/ },
 
-/***/ 119:
+/***/ 123:
 /*!********************************************************!*\
   !*** (webpack)/~/node-libs-browser/~/events/events.js ***!
   \********************************************************/
@@ -753,80 +913,7 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 148:
-/*!******************************************************!*\
-  !*** ./webapp/client/src/board/views/card/label.jsx ***!
-  \******************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 51);
-	
-	var Label = React.createClass({displayName: 'Label',
-	
-	  getInitialState: function() {
-	    return {selected: false};
-	  },
-	
-	  render: function() {
-	    var clazz;
-	    if (this.state.selected)
-	      clazz = 'selected';
-	    else
-	      clazz = '';
-	
-	    return (
-	      React.DOM.div({className: 'cardLabel ' + clazz, onClick: this.handleClick}
-	      )
-	    );
-	  },
-	
-	  handleClick: function() {
-	    this.setState({selected: !this.state.selected});
-	    this.props.onClick();
-	  }
-	
-	});
-	
-	module.exports = Label;
-
-
-/***/ },
-
-/***/ 149:
-/*!****************************************************************!*\
-  !*** ./webapp/client/src/board/views/card/labels_selector.jsx ***!
-  \****************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 51);
-	
-	var LabelsSelector = React.createClass({displayName: 'LabelsSelector',
-	
-	  render: function() {
-	    var clazz;
-	    if (this.props.shown)
-	      clazz = 'displayed';
-	    else
-	      clazz = '';
-	
-	    return (
-	      React.DOM.div({className: 'labelsSelector ' + clazz}, 
-	        React.DOM.span({className: "labelsSelector__label label1"}), 
-	        React.DOM.span({className: "labelsSelector__label label2"}), 
-	        React.DOM.span({className: "labelsSelector__label label3"}), 
-	        React.DOM.span({className: "labelsSelector__label label4"})
-	      )
-	    );
-	  }
-	
-	});
-	
-	module.exports = LabelsSelector;
-
-
-/***/ },
-
-/***/ 154:
+/***/ 156:
 /*!*************************!*\
   !*** ./~/flux/index.js ***!
   \*************************/
@@ -842,11 +929,11 @@ webpackJsonp([0],{
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 */
 	
-	module.exports.Dispatcher = __webpack_require__(/*! ./lib/Dispatcher */ 157)
+	module.exports.Dispatcher = __webpack_require__(/*! ./lib/Dispatcher */ 159)
 
 /***/ },
 
-/***/ 157:
+/***/ 159:
 /*!**********************************!*\
   !*** ./~/flux/lib/Dispatcher.js ***!
   \**********************************/
@@ -867,7 +954,7 @@ webpackJsonp([0],{
 	
 	"use strict";
 	
-	var invariant = __webpack_require__(/*! ./invariant */ 159);
+	var invariant = __webpack_require__(/*! ./invariant */ 161);
 	
 	var _lastID = 1;
 	var _prefix = 'ID_';
@@ -1106,7 +1193,7 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 159:
+/***/ 161:
 /*!*********************************!*\
   !*** ./~/flux/lib/invariant.js ***!
   \*********************************/
@@ -1166,6 +1253,126 @@ webpackJsonp([0],{
 	};
 	
 	module.exports = invariant;
+
+/***/ },
+
+/***/ 166:
+/*!*****************************************************!*\
+  !*** ./webapp/client/src/board/views/card/card.jsx ***!
+  \*****************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 51);
+	var Label = __webpack_require__(/*! ./label */ 167);
+	var LabelsSelector = __webpack_require__(/*! ./labels_selector */ 168);
+	
+	var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
+	
+	var Card = React.createClass({displayName: 'Card',
+	
+	  getInitialState: function() {
+	    return {labelsSelectorShown: false};
+	  },
+	
+	  remove: function() {
+	    this.props.onRemove(this.props.card.id);
+	  },
+	
+	  render: function() {
+	    return (
+	      React.DOM.div({className: "card"}, 
+	        React.DOM.h4({className: "card__title"}, this.props.card.title), 
+	        React.DOM.span({className: "card__description"}, this.props.card.description), 
+	
+	        React.DOM.span({className: "card__remove", onClick: this.remove}, React.DOM.i({className: "fi-trash"})), 
+	
+	        Label({onClick: this.onLabelClick}), 
+	
+	        LabelsSelector({shown: this.state.labelsSelectorShown})
+	      )
+	    );
+	  },
+	
+	  onLabelClick: function() {
+	    this.setState({labelsSelectorShown: !this.state.labelsSelectorShown});
+	  }
+	});
+	
+	module.exports = Card;
+
+
+/***/ },
+
+/***/ 167:
+/*!******************************************************!*\
+  !*** ./webapp/client/src/board/views/card/label.jsx ***!
+  \******************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 51);
+	
+	var Label = React.createClass({displayName: 'Label',
+	
+	  getInitialState: function() {
+	    return {selected: false};
+	  },
+	
+	  render: function() {
+	    var clazz;
+	    if (this.state.selected)
+	      clazz = 'selected';
+	    else
+	      clazz = '';
+	
+	    return (
+	      React.DOM.div({className: 'cardLabel ' + clazz, onClick: this.handleClick}
+	      )
+	    );
+	  },
+	
+	  handleClick: function() {
+	    this.setState({selected: !this.state.selected});
+	    this.props.onClick();
+	  }
+	
+	});
+	
+	module.exports = Label;
+
+
+/***/ },
+
+/***/ 168:
+/*!****************************************************************!*\
+  !*** ./webapp/client/src/board/views/card/labels_selector.jsx ***!
+  \****************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 51);
+	
+	var LabelsSelector = React.createClass({displayName: 'LabelsSelector',
+	
+	  render: function() {
+	    var clazz;
+	    if (this.props.shown)
+	      clazz = 'displayed';
+	    else
+	      clazz = '';
+	
+	    return (
+	      React.DOM.div({className: 'labelsSelector ' + clazz}, 
+	        React.DOM.span({className: "labelsSelector__label label1"}), 
+	        React.DOM.span({className: "labelsSelector__label label2"}), 
+	        React.DOM.span({className: "labelsSelector__label label3"}), 
+	        React.DOM.span({className: "labelsSelector__label label4"})
+	      )
+	    );
+	  }
+	
+	});
+	
+	module.exports = LabelsSelector;
+
 
 /***/ }
 
