@@ -4,7 +4,7 @@
   border-radius 5px
   background-color white
   margin-top 10px
-  border 1px solid app-gray
+  box-shadow 1px 1px 1px 0px rgba(1, 1, 1, 0.1)
 
   .card__title
     padding .5rem
@@ -18,15 +18,20 @@
     font-size .8rem
 
   .card__remove
+    opacity 0
     color app-gray
     position absolute
     top 0.2rem
     right 0.5rem
     cursor pointer
-    transition(color, .5s)
+    transition color .5s, opacity .5s
 
     &:hover
       color app-red
+
+  &:hover
+    .card__remove
+      opacity 1
 
   input
     margin-top 1rem

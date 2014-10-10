@@ -31,9 +31,9 @@ webpackJsonp([0],{
 /***/ function(module, exports, __webpack_require__) {
 
 	/** @jsx React.DOM */var _ = __webpack_require__(/*! underscore */ 3);
-	var React = __webpack_require__(/*! react */ 51);
-	var CardListContainer = __webpack_require__(/*! ./card_list_container */ 52);
-	var ListStore = __webpack_require__(/*! ../stores/list_store */ 55);
+	var React = __webpack_require__(/*! react */ 40);
+	var CardListContainer = __webpack_require__(/*! ./card_list_container */ 41);
+	var ListStore = __webpack_require__(/*! ../stores/list_store */ 42);
 	
 	window.listStore = ListStore;
 	
@@ -80,7 +80,7 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 51:
+/***/ 40:
 /*!**************************!*\
   !*** ./~/react/react.js ***!
   \**************************/
@@ -91,17 +91,17 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 52:
+/***/ 41:
 /*!***************************************************************!*\
   !*** ./webapp/client/src/board/views/card_list_container.jsx ***!
   \***************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 51);
+	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 40);
 	var _ = __webpack_require__(/*! underscore */ 3);
-	var CardList = __webpack_require__(/*! ./card_list */ 117);
-	var ListActions = __webpack_require__(/*! ../actions/list_actions */ 118);
-	var ListsToolbar = __webpack_require__(/*! ./lists_toolbar */ 54);
+	var CardList = __webpack_require__(/*! ./card_list */ 105);
+	var ListActions = __webpack_require__(/*! ../actions/list_actions */ 115);
+	var ListsToolbar = __webpack_require__(/*! ./lists_toolbar */ 106);
 	
 	var CardListContainer = React.createClass({displayName: 'CardListContainer',
 	
@@ -132,47 +132,17 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 54:
-/*!*********************************************************!*\
-  !*** ./webapp/client/src/board/views/lists_toolbar.jsx ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 51);
-	var ListActions = __webpack_require__(/*! ../actions/list_actions */ 118);
-	
-	
-	var ListsToolbar = React.createClass({displayName: 'ListsToolbar',
-	
-	  addList: function() {
-	    ListActions.create();
-	  },
-	
-	  render: function() {
-	    return (
-	      React.DOM.div({className: "listsToolbar", onClick: this.addList}, 
-	        React.DOM.span({className: "addList"}, "Add list...")
-	      )
-	    );
-	  }
-	
-	});
-	
-	module.exports = ListsToolbar;
-
-/***/ },
-
-/***/ 55:
+/***/ 42:
 /*!******************************************************!*\
   !*** ./webapp/client/src/board/stores/list_store.js ***!
   \******************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var AppDispatcher = __webpack_require__(/*! ../dispatcher/app_dispatcher */ 120);
-	var EventEmitter = __webpack_require__(/*! events */ 123).EventEmitter;
-	var ListConstants = __webpack_require__(/*! ../constants/list_constants */ 121);
-	var merge = __webpack_require__(/*! react/lib/merge */ 39);
+	var AppDispatcher = __webpack_require__(/*! ../dispatcher/app_dispatcher */ 116);
+	var EventEmitter = __webpack_require__(/*! events */ 119).EventEmitter;
+	var ListConstants = __webpack_require__(/*! ../constants/list_constants */ 117);
+	var merge = __webpack_require__(/*! react/lib/merge */ 45);
 	var _ = __webpack_require__(/*! underscore */ 3);
 	
 	var CHANGE_EVENT = 'change';
@@ -269,134 +239,18 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 56:
-/*!******************************************************!*\
-  !*** ./webapp/client/src/board/stores/card_store.js ***!
-  \******************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var AppDispatcher = __webpack_require__(/*! ../dispatcher/app_dispatcher */ 120);
-	var EventEmitter = __webpack_require__(/*! events */ 123).EventEmitter;
-	var CardConstants = __webpack_require__(/*! ../constants/card_constants */ 122);
-	var merge = __webpack_require__(/*! react/lib/merge */ 39);
-	var _ = __webpack_require__(/*! underscore */ 3);
-	
-	var CHANGE_EVENT = 'change';
-	
-	var _cards = {};
-	
-	function randomId() {
-	  return (+new Date() + Math.floor(Math.random() * 999999)).toString(36);
-	};
-	
-	/**
-	 * Create a Card item.
-	 * @param  {string} text The content of the Card
-	 */
-	function create(listId, title, description) {
-	
-	  // Hand waving here -- not showing how this interacts with XHR or persistent
-	  // server-side storage.
-	  // Using the current timestamp + random number in place of a real id.
-	  var id = randomId();
-	  _cards[id] = {
-	    id: id,
-	    listId: listId,
-	    title: title,
-	    description: description
-	  };
-	}
-	
-	/**
-	 * Delete a Card item.
-	 * @param  {string} id
-	 */
-	function destroy(id) {
-	  delete _cards[id];
-	}
-	
-	
-	var CardStore = merge(EventEmitter.prototype, {
-	
-	  /**
-	   * Get the entire collection of Cards.
-	   * @return {object}
-	   */
-	  all: function() {
-	    return _cards;
-	  },
-	
-	  allForList: function(listId) {
-	    var cards = _(_cards).where({listId: listId});
-	
-	    return cards;
-	  },
-	
-	  emitChange: function() {
-	    this.emit(CHANGE_EVENT);
-	  },
-	
-	  /**
-	   * @param {function} callback
-	   */
-	  addChangeListener: function(callback) {
-	    this.on(CHANGE_EVENT, callback);
-	  },
-	
-	  /**
-	   * @param {function} callback
-	   */
-	  removeChangeListener: function(callback) {
-	    this.removeListener(CHANGE_EVENT, callback);
-	  }
-	});
-	
-	// Register to handle all updates
-	AppDispatcher.register(function(payload) {
-	  var action = payload.action;
-	  var title, description;
-	
-	  switch(action.actionType) {
-	    case CardConstants.CARD_CREATE:
-	      title = action.title ? action.title.trim() : 'Enter title';
-	      description = action.description ? action.description.trim() : 'Enter description';
-	      create(action.listId, title, description);
-	      break;
-	
-	    case CardConstants.CARD_DESTROY:
-	      destroy(action.id);
-	      break;
-	
-	    default:
-	      return true;
-	  }
-	
-	  // This often goes in each case that should trigger a UI change. This store
-	  // needs to trigger a UI change after every view action, so we can make the
-	  // code less repetitive by putting it here.  We need the default case,
-	  // however, to make sure this only gets called after one of the cases above.
-	  CardStore.emitChange();
-	
-	  return true; // No errors.  Needed by promise in Dispatcher.
-	});
-	
-	module.exports = CardStore;
-
-/***/ },
-
-/***/ 117:
+/***/ 105:
 /*!*****************************************************!*\
   !*** ./webapp/client/src/board/views/card_list.jsx ***!
   \*****************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 51);
-	var Card = __webpack_require__(/*! ./card/card */ 166);
+	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 40);
+	var Card = __webpack_require__(/*! ./card/card */ 150);
 	var _ = __webpack_require__(/*! underscore */ 3);
 	
-	var CardActions = __webpack_require__(/*! ../actions/card_actions */ 119);
-	var CardStore = __webpack_require__(/*! ../stores/card_store */ 56);
+	var CardActions = __webpack_require__(/*! ../actions/card_actions */ 147);
+	var CardStore = __webpack_require__(/*! ../stores/card_store */ 148);
 	
 	function getCardsState(listId) {
 	  return {allCardsForList: CardStore.allForList(listId)};
@@ -460,15 +314,45 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 118:
+/***/ 106:
+/*!*********************************************************!*\
+  !*** ./webapp/client/src/board/views/lists_toolbar.jsx ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 40);
+	var ListActions = __webpack_require__(/*! ../actions/list_actions */ 115);
+	
+	
+	var ListsToolbar = React.createClass({displayName: 'ListsToolbar',
+	
+	  addList: function() {
+	    ListActions.create();
+	  },
+	
+	  render: function() {
+	    return (
+	      React.DOM.div({className: "listsToolbar", onClick: this.addList}, 
+	        React.DOM.span({className: "addList"}, "Add list...")
+	      )
+	    );
+	  }
+	
+	});
+	
+	module.exports = ListsToolbar;
+
+/***/ },
+
+/***/ 115:
 /*!*********************************************************!*\
   !*** ./webapp/client/src/board/actions/list_actions.js ***!
   \*********************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var AppDispatcher = __webpack_require__(/*! ../dispatcher/app_dispatcher */ 120);
-	var ListConstants = __webpack_require__(/*! ../constants/list_constants */ 121);
+	var AppDispatcher = __webpack_require__(/*! ../dispatcher/app_dispatcher */ 116);
+	var ListConstants = __webpack_require__(/*! ../constants/list_constants */ 117);
 	
 	var ListActions = {
 	
@@ -500,55 +384,15 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 119:
-/*!*********************************************************!*\
-  !*** ./webapp/client/src/board/actions/card_actions.js ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var AppDispatcher = __webpack_require__(/*! ../dispatcher/app_dispatcher */ 120);
-	var CardConstants = __webpack_require__(/*! ../constants/card_constants */ 122);
-	
-	var CardActions = {
-	
-	  /**
-	   * @param  {string} text
-	   */
-	  create: function(listId, title, description) {
-	    AppDispatcher.handleViewAction({
-	      actionType: CardConstants.CARD_CREATE,
-	      listId: listId,
-	      title: title,
-	      description: description
-	    });
-	  },
-	
-	  /**
-	   * @param  {string} id
-	   */
-	  destroy: function(id) {
-	    AppDispatcher.handleViewAction({
-	      actionType: CardConstants.CARD_DESTROY,
-	      id: id
-	    });
-	  }
-	
-	};
-	
-	module.exports = CardActions;
-
-/***/ },
-
-/***/ 120:
+/***/ 116:
 /*!**************************************************************!*\
   !*** ./webapp/client/src/board/dispatcher/app_dispatcher.js ***!
   \**************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var Dispatcher = __webpack_require__(/*! flux */ 156).Dispatcher;
-	var copyProperties = __webpack_require__(/*! react/lib/copyProperties */ 49);
+	var Dispatcher = __webpack_require__(/*! flux */ 155).Dispatcher;
+	var copyProperties = __webpack_require__(/*! react/lib/copyProperties */ 53);
 	var AppDispatcher = copyProperties(new Dispatcher(), {
 	
 	  /**
@@ -569,14 +413,14 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 121:
+/***/ 117:
 /*!*************************************************************!*\
   !*** ./webapp/client/src/board/constants/list_constants.js ***!
   \*************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var keyMirror = __webpack_require__(/*! react/lib/keyMirror */ 65);
+	var keyMirror = __webpack_require__(/*! react/lib/keyMirror */ 62);
 	
 	module.exports = keyMirror({
 	  LIST_CREATE: null,
@@ -586,23 +430,7 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 122:
-/*!*************************************************************!*\
-  !*** ./webapp/client/src/board/constants/card_constants.js ***!
-  \*************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var keyMirror = __webpack_require__(/*! react/lib/keyMirror */ 65);
-	
-	module.exports = keyMirror({
-	  CARD_CREATE: null,
-	  CARD_DESTROY: null
-	});
-
-/***/ },
-
-/***/ 123:
+/***/ 119:
 /*!********************************************************!*\
   !*** (webpack)/~/node-libs-browser/~/events/events.js ***!
   \********************************************************/
@@ -913,7 +741,210 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 156:
+/***/ 147:
+/*!*********************************************************!*\
+  !*** ./webapp/client/src/board/actions/card_actions.js ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var AppDispatcher = __webpack_require__(/*! ../dispatcher/app_dispatcher */ 116);
+	var CardConstants = __webpack_require__(/*! ../constants/card_constants */ 156);
+	
+	var CardActions = {
+	
+	  /**
+	   * @param  {string} text
+	   */
+	  create: function(listId, title, description) {
+	    AppDispatcher.handleViewAction({
+	      actionType: CardConstants.CARD_CREATE,
+	      listId: listId,
+	      title: title,
+	      description: description
+	    });
+	  },
+	
+	  /**
+	   * @param  {string} id
+	   */
+	  destroy: function(id) {
+	    AppDispatcher.handleViewAction({
+	      actionType: CardConstants.CARD_DESTROY,
+	      id: id
+	    });
+	  }
+	
+	};
+	
+	module.exports = CardActions;
+
+/***/ },
+
+/***/ 148:
+/*!******************************************************!*\
+  !*** ./webapp/client/src/board/stores/card_store.js ***!
+  \******************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var AppDispatcher = __webpack_require__(/*! ../dispatcher/app_dispatcher */ 116);
+	var EventEmitter = __webpack_require__(/*! events */ 119).EventEmitter;
+	var CardConstants = __webpack_require__(/*! ../constants/card_constants */ 156);
+	var merge = __webpack_require__(/*! react/lib/merge */ 45);
+	var _ = __webpack_require__(/*! underscore */ 3);
+	
+	var CHANGE_EVENT = 'change';
+	
+	var _cards = {};
+	
+	function randomId() {
+	  return (+new Date() + Math.floor(Math.random() * 999999)).toString(36);
+	};
+	
+	/**
+	 * Create a Card item.
+	 * @param  {string} text The content of the Card
+	 */
+	function create(listId, title, description) {
+	
+	  // Hand waving here -- not showing how this interacts with XHR or persistent
+	  // server-side storage.
+	  // Using the current timestamp + random number in place of a real id.
+	  var id = randomId();
+	  _cards[id] = {
+	    id: id,
+	    listId: listId,
+	    title: title,
+	    description: description
+	  };
+	}
+	
+	/**
+	 * Delete a Card item.
+	 * @param  {string} id
+	 */
+	function destroy(id) {
+	  delete _cards[id];
+	}
+	
+	
+	var CardStore = merge(EventEmitter.prototype, {
+	
+	  /**
+	   * Get the entire collection of Cards.
+	   * @return {object}
+	   */
+	  all: function() {
+	    return _cards;
+	  },
+	
+	  allForList: function(listId) {
+	    var cards = _(_cards).where({listId: listId});
+	
+	    return cards;
+	  },
+	
+	  emitChange: function() {
+	    this.emit(CHANGE_EVENT);
+	  },
+	
+	  /**
+	   * @param {function} callback
+	   */
+	  addChangeListener: function(callback) {
+	    this.on(CHANGE_EVENT, callback);
+	  },
+	
+	  /**
+	   * @param {function} callback
+	   */
+	  removeChangeListener: function(callback) {
+	    this.removeListener(CHANGE_EVENT, callback);
+	  }
+	});
+	
+	// Register to handle all updates
+	AppDispatcher.register(function(payload) {
+	  var action = payload.action;
+	  var title, description;
+	
+	  switch(action.actionType) {
+	    case CardConstants.CARD_CREATE:
+	      title = action.title ? action.title.trim() : 'Enter title';
+	      description = action.description ? action.description.trim() : 'Enter description';
+	      create(action.listId, title, description);
+	      break;
+	
+	    case CardConstants.CARD_DESTROY:
+	      destroy(action.id);
+	      break;
+	
+	    default:
+	      return true;
+	  }
+	
+	  // This often goes in each case that should trigger a UI change. This store
+	  // needs to trigger a UI change after every view action, so we can make the
+	  // code less repetitive by putting it here.  We need the default case,
+	  // however, to make sure this only gets called after one of the cases above.
+	  CardStore.emitChange();
+	
+	  return true; // No errors.  Needed by promise in Dispatcher.
+	});
+	
+	module.exports = CardStore;
+
+/***/ },
+
+/***/ 150:
+/*!*****************************************************!*\
+  !*** ./webapp/client/src/board/views/card/card.jsx ***!
+  \*****************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 40);
+	var Label = __webpack_require__(/*! ./label */ 157);
+	var LabelsSelector = __webpack_require__(/*! ./labels_selector */ 158);
+	
+	var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
+	
+	var Card = React.createClass({displayName: 'Card',
+	
+	  getInitialState: function() {
+	    return {labelsSelectorShown: false};
+	  },
+	
+	  remove: function() {
+	    this.props.onRemove(this.props.card.id);
+	  },
+	
+	  render: function() {
+	    return (
+	      React.DOM.div({className: "card"}, 
+	        React.DOM.h4({className: "card__title"}, this.props.card.title), 
+	        React.DOM.span({className: "card__description"}, this.props.card.description), 
+	
+	        React.DOM.span({className: "card__remove", onClick: this.remove}, React.DOM.i({className: "fi-trash"})), 
+	
+	        Label({onClick: this.onLabelClick}), 
+	
+	        LabelsSelector({shown: this.state.labelsSelectorShown})
+	      )
+	    );
+	  },
+	
+	  onLabelClick: function() {
+	    this.setState({labelsSelectorShown: !this.state.labelsSelectorShown});
+	  }
+	});
+	
+	module.exports = Card;
+
+
+/***/ },
+
+/***/ 155:
 /*!*************************!*\
   !*** ./~/flux/index.js ***!
   \*************************/
@@ -929,11 +960,100 @@ webpackJsonp([0],{
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 */
 	
-	module.exports.Dispatcher = __webpack_require__(/*! ./lib/Dispatcher */ 159)
+	module.exports.Dispatcher = __webpack_require__(/*! ./lib/Dispatcher */ 161)
 
 /***/ },
 
-/***/ 159:
+/***/ 156:
+/*!*************************************************************!*\
+  !*** ./webapp/client/src/board/constants/card_constants.js ***!
+  \*************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var keyMirror = __webpack_require__(/*! react/lib/keyMirror */ 62);
+	
+	module.exports = keyMirror({
+	  CARD_CREATE: null,
+	  CARD_DESTROY: null
+	});
+
+/***/ },
+
+/***/ 157:
+/*!******************************************************!*\
+  !*** ./webapp/client/src/board/views/card/label.jsx ***!
+  \******************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 40);
+	
+	var Label = React.createClass({displayName: 'Label',
+	
+	  getInitialState: function() {
+	    return {selected: false};
+	  },
+	
+	  render: function() {
+	    var clazz;
+	    if (this.state.selected)
+	      clazz = 'selected';
+	    else
+	      clazz = '';
+	
+	    return (
+	      React.DOM.div({className: 'cardLabel ' + clazz, onClick: this.handleClick}
+	      )
+	    );
+	  },
+	
+	  handleClick: function() {
+	    this.setState({selected: !this.state.selected});
+	    this.props.onClick();
+	  }
+	
+	});
+	
+	module.exports = Label;
+
+
+/***/ },
+
+/***/ 158:
+/*!****************************************************************!*\
+  !*** ./webapp/client/src/board/views/card/labels_selector.jsx ***!
+  \****************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 40);
+	
+	var LabelsSelector = React.createClass({displayName: 'LabelsSelector',
+	
+	  render: function() {
+	    var clazz;
+	    if (this.props.shown)
+	      clazz = 'displayed';
+	    else
+	      clazz = '';
+	
+	    return (
+	      React.DOM.div({className: 'labelsSelector ' + clazz}, 
+	        React.DOM.span({className: "labelsSelector__label label1"}), 
+	        React.DOM.span({className: "labelsSelector__label label2"}), 
+	        React.DOM.span({className: "labelsSelector__label label3"}), 
+	        React.DOM.span({className: "labelsSelector__label label4"})
+	      )
+	    );
+	  }
+	
+	});
+	
+	module.exports = LabelsSelector;
+
+
+/***/ },
+
+/***/ 161:
 /*!**********************************!*\
   !*** ./~/flux/lib/Dispatcher.js ***!
   \**********************************/
@@ -954,7 +1074,7 @@ webpackJsonp([0],{
 	
 	"use strict";
 	
-	var invariant = __webpack_require__(/*! ./invariant */ 161);
+	var invariant = __webpack_require__(/*! ./invariant */ 163);
 	
 	var _lastID = 1;
 	var _prefix = 'ID_';
@@ -1193,7 +1313,7 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 161:
+/***/ 163:
 /*!*********************************!*\
   !*** ./~/flux/lib/invariant.js ***!
   \*********************************/
@@ -1253,126 +1373,6 @@ webpackJsonp([0],{
 	};
 	
 	module.exports = invariant;
-
-/***/ },
-
-/***/ 166:
-/*!*****************************************************!*\
-  !*** ./webapp/client/src/board/views/card/card.jsx ***!
-  \*****************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 51);
-	var Label = __webpack_require__(/*! ./label */ 167);
-	var LabelsSelector = __webpack_require__(/*! ./labels_selector */ 168);
-	
-	var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
-	
-	var Card = React.createClass({displayName: 'Card',
-	
-	  getInitialState: function() {
-	    return {labelsSelectorShown: false};
-	  },
-	
-	  remove: function() {
-	    this.props.onRemove(this.props.card.id);
-	  },
-	
-	  render: function() {
-	    return (
-	      React.DOM.div({className: "card"}, 
-	        React.DOM.h4({className: "card__title"}, this.props.card.title), 
-	        React.DOM.span({className: "card__description"}, this.props.card.description), 
-	
-	        React.DOM.span({className: "card__remove", onClick: this.remove}, React.DOM.i({className: "fi-trash"})), 
-	
-	        Label({onClick: this.onLabelClick}), 
-	
-	        LabelsSelector({shown: this.state.labelsSelectorShown})
-	      )
-	    );
-	  },
-	
-	  onLabelClick: function() {
-	    this.setState({labelsSelectorShown: !this.state.labelsSelectorShown});
-	  }
-	});
-	
-	module.exports = Card;
-
-
-/***/ },
-
-/***/ 167:
-/*!******************************************************!*\
-  !*** ./webapp/client/src/board/views/card/label.jsx ***!
-  \******************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 51);
-	
-	var Label = React.createClass({displayName: 'Label',
-	
-	  getInitialState: function() {
-	    return {selected: false};
-	  },
-	
-	  render: function() {
-	    var clazz;
-	    if (this.state.selected)
-	      clazz = 'selected';
-	    else
-	      clazz = '';
-	
-	    return (
-	      React.DOM.div({className: 'cardLabel ' + clazz, onClick: this.handleClick}
-	      )
-	    );
-	  },
-	
-	  handleClick: function() {
-	    this.setState({selected: !this.state.selected});
-	    this.props.onClick();
-	  }
-	
-	});
-	
-	module.exports = Label;
-
-
-/***/ },
-
-/***/ 168:
-/*!****************************************************************!*\
-  !*** ./webapp/client/src/board/views/card/labels_selector.jsx ***!
-  \****************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 51);
-	
-	var LabelsSelector = React.createClass({displayName: 'LabelsSelector',
-	
-	  render: function() {
-	    var clazz;
-	    if (this.props.shown)
-	      clazz = 'displayed';
-	    else
-	      clazz = '';
-	
-	    return (
-	      React.DOM.div({className: 'labelsSelector ' + clazz}, 
-	        React.DOM.span({className: "labelsSelector__label label1"}), 
-	        React.DOM.span({className: "labelsSelector__label label2"}), 
-	        React.DOM.span({className: "labelsSelector__label label3"}), 
-	        React.DOM.span({className: "labelsSelector__label label4"})
-	      )
-	    );
-	  }
-	
-	});
-	
-	module.exports = LabelsSelector;
-
 
 /***/ }
 
