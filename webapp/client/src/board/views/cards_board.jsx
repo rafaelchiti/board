@@ -1,49 +1,38 @@
 var _ = require('underscore');
 var React = require('react');
-var CardsList = require('./cards_list');
-var CardForm = require('./card_form');
+var CardListContainer = require('./card_list_container');
+var ListStore = require('../stores/list_store');
 
-var CardStore = require('../stores/card_store');
+window.listStore = ListStore;
 
-
-function getCardsState() {
+function getListsState() {
   return {
-    allCards: CardStore.getAll()
+    allLists: ListStore.all()
   };
 }
-
 
 var CardsBoard = React.createClass({
 
   getInitialState: function() {
-    return getCardsState();
+    return getListsState();
   },
 
   componentDidMount: function() {
-    CardStore.addChangeListener(this._onChange);
+    ListStore.addChangeListener(this._onChange);
   },
 
   componentWillUnmount: function() {
-    CardStore.removeChangeListener(this._onChange);
+    ListStore.removeChangeListener(this._onChange);
   },
 
   _onChange: function() {
-    this.setState(getCardsState());
-  },
-
-  onRemove: function(cardCID) {
-    var card = cards.get(cardCID);
-    card.destroy();
+    this.setState(getListsState());
   },
 
   render: function() {
     return (
-      <div className="js-cards-board cardsBoard">
-        <div className="cadsBoard__toolbar">
-          <CardForm/>
-        </div>
-
-        <CardsList cards={this.state.allCards} onRemove={this.onRemove} />
+      <div className="cardsBoard">
+        <CardListContainer className="cardListContainer" lists={this.state.allLists}  />
       </div>
     );
   }

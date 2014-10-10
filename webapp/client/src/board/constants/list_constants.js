@@ -1,6 +1,7 @@
 var keyMirror = require('react/lib/keyMirror');
 
 module.exports = keyMirror({
-  CARD_CREATE: null,
-  CARD_DESTROY: null
+  LIST_CREATE: null,
+  LIST_DESTROY: null,
+  LIST_UPDATE_TITLE: null
 });

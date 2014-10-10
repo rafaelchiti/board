@@ -1,5 +1,5 @@
 
-/* line 15 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/all.styl */
+/* line 18 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/all.styl */
 
 /* line 1 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/stylus/lib/functions/index.styl */
 
@@ -2109,7 +2109,7 @@ body {
   font-size: 100%;
   height: 100%;
   color: #616161;
-  background-color: #fff;
+  background-color: #f7f7f7;
 }
 
 /* line 12 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/base.styl */
@@ -2136,7 +2136,7 @@ body {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
   filter: alpha(opacity=70);
   border: 1px solid #d7d7d7;
-  background-color: #f7f7f7;
+  background-color: #fff;
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
@@ -2173,76 +2173,94 @@ body {
 
 /* line 6 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/cards_board.styl */
 
-/* line 6 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card_form.styl */
+/* line 6 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/lists_toolbar.styl */
 
-/* line 1 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card_form.styl */
-.cardForm {
-  position: fixed;
-  border: 1px solid #d7d7d7;
-  -webkit-border-top-left-radius: 4px;
-  border-top-left-radius: 4px;
-  -webkit-border-top-right-radius: 4px;
-  border-top-right-radius: 4px;
-  padding: 1rem;
+/* line 1 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/lists_toolbar.styl */
+.listsToolbar {
+  cursor: pointer;
+  float: left;
+  padding: 10px;
+  width: 280px;
   bottom: 0;
-  left: 50%;
-  width: 30rem;
-  height: 4rem;
-  margin-left: -15rem;
-  z-index: 1;
+  right: 10%;
   background-color: #fff;
-  -webkit-box-shadow: 0px 0px 1px 1px rgba(215,215,215,0.5);
-  box-shadow: 0px 0px 1px 1px rgba(215,215,215,0.5);
-}
-
-/* line 15 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card_form.styl */
-.cardForm input[type="text"] {
-  margin-right: 1rem;
-  outline: none;
-  border: none;
-  border-bottom: 1px solid #ff3b30;
-  background: transparent;
-}
-
-/* line 21 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card_form.styl */
-
-/* line 21 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card.styl */
-
-/* line 1 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card.styl */
-.card {
-  display: inline-block;
-  position: relative;
-  width: 15rem;
-  height: 10rem;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  background-color: #fff;
-  margin: 1rem;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
   border: 1px solid #d7d7d7;
+  -webkit-transition: background-color 0.2s, color 0.2s;
+  -moz-transition: background-color 0.2s, color 0.2s;
+  -o-transition: background-color 0.2s, color 0.2s;
+  -ms-transition: background-color 0.2s, color 0.2s;
+  transition: background-color 0.2s, color 0.2s;
 }
 
-/* line 11 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card.styl */
-.card .card__title {
-  padding: 0.5rem;
-  margin: 0;
+/* line 13 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/lists_toolbar.styl */
+.listsToolbar:hover {
+  background-color: #4cd964;
+  color: #fff;
 }
 
-/* line 15 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card.styl */
-.card .card__description {
-  display: block;
-  padding: 0.5rem;
+/* line 16 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/lists_toolbar.styl */
+
+/* line 16 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card_list_container.styl */
+
+/* line 1 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card_list_container.styl */
+.cardListContainer {
+  position: absolute;
+  right: 3%;
+  top: 70px;
+  bottom: 100px;
+  left: 3%;
+  padding: 10px;
+  zoom: 1;
+}
+
+/* line 24 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/clearfix.styl */
+.cardListContainer:before,
+.cardListContainer:after {
+  content: "";
+  display: table;
+}
+
+/* line 28 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/clearfix.styl */
+.cardListContainer:after {
+  clear: both;
+}
+
+/* line 9 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card_list_container.styl */
+
+/* line 9 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card_list.styl */
+
+/* line 1 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card_list.styl */
+.cardList {
+  width: 282px;
+  height: 100%;
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 15px 20px;
+  overflow-y: auto;
+  background-color: #fff;
+  border: 1px solid #d7d7d7;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/* line 13 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card_list.styl */
+.cardList .cardListHeader {
+  position: relative;
+  width: 100%;
+  padding-bottom: 2px;
+  margin-bottom: 20px;
   border-bottom: 1px solid #d7d7d7;
-  border-top: 1px solid #d7d7d7;
-  background-color: #f7f7f7;
-  height: 6.5rem;
 }
 
-/* line 23 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card.styl */
-.card .card__remove {
+/* line 20 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card_list.styl */
+.cardList .cardListHeader .cardListRemove {
   color: #d7d7d7;
   position: absolute;
-  top: 0.2rem;
-  right: 0.5rem;
+  top: 0;
+  right: 0;
   cursor: pointer;
   -webkit-transition: color 0.5s;
   -moz-transition: color 0.5s;
@@ -2251,26 +2269,38 @@ body {
   transition: color 0.5s;
 }
 
-/* line 31 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card.styl */
-.card .card__remove:hover {
+/* line 28 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card_list.styl */
+.cardList .cardListHeader .cardListRemove:hover {
   color: #ff3b30;
 }
 
-/* line 34 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card.styl */
-.card input {
-  margin-top: 1rem;
-  border: none;
-  border-bottom: 1px solid #d7d7d7;
+/* line 31 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card_list.styl */
+.cardList .cardListHeader .cardListTitle {
+  cursor: pointer;
 }
 
-/* line 39 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card.styl */
-.card input:focus {
-  outline: none;
+/* line 34 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card_list.styl */
+.cardList .cardListHeader .cardListAddCard {
+  color: #d7d7d7;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  cursor: pointer;
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  -ms-transition: color 0.5s;
+  transition: color 0.5s;
 }
 
-/* line 41 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card.styl */
+/* line 42 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card_list.styl */
+.cardList .cardListHeader .cardListAddCard:hover {
+  color: #4cd964;
+}
 
-/* line 41 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card_label.styl */
+/* line 44 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card_list.styl */
+
+/* line 44 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card_label.styl */
 
 /* line 1 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card_label.styl */
 .cardLabel {
@@ -2376,4 +2406,97 @@ body {
 /* line 34 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/labels_selector.styl */
 .labelsSelector__label.label4 {
   background-color: #007aff;
+}
+
+/* line 36 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/labels_selector.styl */
+
+/* line 36 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card.styl */
+
+/* line 1 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card.styl */
+.card {
+  position: relative;
+  width: 15rem;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #fff;
+  margin-top: 10px;
+  border: 1px solid #d7d7d7;
+}
+
+/* line 9 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card.styl */
+.card .card__title {
+  padding: 0.5rem;
+  margin: 0;
+  font-weight: normal;
+  font-size: 0.9rem;
+}
+
+/* line 15 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card.styl */
+.card .card__description {
+  display: block;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+}
+
+/* line 20 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card.styl */
+.card .card__remove {
+  color: #d7d7d7;
+  position: absolute;
+  top: 0.2rem;
+  right: 0.5rem;
+  cursor: pointer;
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  -ms-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+/* line 28 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card.styl */
+.card .card__remove:hover {
+  color: #ff3b30;
+}
+
+/* line 31 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card.styl */
+.card input {
+  margin-top: 1rem;
+  border: none;
+  border-bottom: 1px solid #d7d7d7;
+}
+
+/* line 36 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card.styl */
+.card input:focus {
+  outline: none;
+}
+
+/* line 38 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card.styl */
+
+/* line 38 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card_form.styl */
+
+/* line 1 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card_form.styl */
+.cardForm {
+  position: fixed;
+  border: 1px solid #d7d7d7;
+  -webkit-border-top-left-radius: 4px;
+  border-top-left-radius: 4px;
+  -webkit-border-top-right-radius: 4px;
+  border-top-right-radius: 4px;
+  padding: 1rem;
+  bottom: 0;
+  left: 10%;
+  width: 30rem;
+  height: 4rem;
+  z-index: 1;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 1px 1px rgba(215,215,215,0.5);
+  box-shadow: 0px 0px 1px 1px rgba(215,215,215,0.5);
+}
+
+/* line 14 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card_form.styl */
+.cardForm input[type="text"] {
+  margin-right: 1rem;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #ff3b30;
+  background: transparent;
 }

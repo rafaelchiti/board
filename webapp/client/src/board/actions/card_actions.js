@@ -6,9 +6,10 @@ var CardActions = {
   /**
    * @param  {string} text
    */
-  create: function(title, description) {
+  create: function(listId, title, description) {
     AppDispatcher.handleViewAction({
       actionType: CardConstants.CARD_CREATE,
+      listId: listId,
       title: title,
       description: description
     });
