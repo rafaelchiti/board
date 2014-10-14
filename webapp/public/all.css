@@ -2369,16 +2369,31 @@ body {
 
 /* line 24 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card_list.styl */
 .cardList ._addCardButton {
+  opacity: 0.4;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+  filter: alpha(opacity=40);
   background-color: #cfcfcf;
   padding: 3px;
   margin-top: 16px;
   font-size: 14px;
   cursor: pointer;
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  -ms-transition: opacity 0.3s;
+  transition: opacity 0.3s;
 }
 
-/* line 30 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card_list.styl */
+/* line 33 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card_list.styl */
+.cardList ._addCardButton:hover {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+}
 
-/* line 30 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card_label.styl */
+/* line 35 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card_list.styl */
+
+/* line 35 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card_label.styl */
 
 /* line 1 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card_label.styl */
 .cardLabel {
