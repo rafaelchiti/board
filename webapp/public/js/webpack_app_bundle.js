@@ -30,10 +30,10 @@ webpackJsonp([0],{
   \*******************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/** @jsx React.DOM */var _ = __webpack_require__(/*! underscore */ 3);
-	var React = __webpack_require__(/*! react */ 40);
-	var CardListContainer = __webpack_require__(/*! ./card_list_container */ 41);
-	var ListStore = __webpack_require__(/*! ../stores/list_store */ 42);
+	/** @jsx React.DOM */var _ = __webpack_require__(/*! underscore */ 5);
+	var React = __webpack_require__(/*! react */ 38);
+	var CardListContainer = __webpack_require__(/*! ./card_list_container */ 39);
+	var ListStore = __webpack_require__(/*! ../stores/list_store */ 40);
 	
 	window.listStore = ListStore;
 	
@@ -80,7 +80,7 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 40:
+/***/ 38:
 /*!**************************!*\
   !*** ./~/react/react.js ***!
   \**************************/
@@ -91,17 +91,17 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 41:
+/***/ 39:
 /*!***************************************************************!*\
   !*** ./webapp/client/src/board/views/card_list_container.jsx ***!
   \***************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 40);
-	var _ = __webpack_require__(/*! underscore */ 3);
-	var CardList = __webpack_require__(/*! ./card_list */ 105);
-	var ListActions = __webpack_require__(/*! ../actions/list_actions */ 115);
-	var ListsToolbar = __webpack_require__(/*! ./lists_toolbar */ 106);
+	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 38);
+	var _ = __webpack_require__(/*! underscore */ 5);
+	var CardList = __webpack_require__(/*! ./card_list */ 104);
+	var ListActions = __webpack_require__(/*! ../actions/list_actions */ 118);
+	var ListsToolbar = __webpack_require__(/*! ./lists_toolbar */ 105);
 	
 	var CardListContainer = React.createClass({displayName: 'CardListContainer',
 	
@@ -132,18 +132,18 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 42:
+/***/ 40:
 /*!******************************************************!*\
   !*** ./webapp/client/src/board/stores/list_store.js ***!
   \******************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var AppDispatcher = __webpack_require__(/*! ../dispatcher/app_dispatcher */ 116);
+	var AppDispatcher = __webpack_require__(/*! ../dispatcher/app_dispatcher */ 114);
 	var EventEmitter = __webpack_require__(/*! events */ 119).EventEmitter;
-	var ListConstants = __webpack_require__(/*! ../constants/list_constants */ 117);
+	var ListConstants = __webpack_require__(/*! ../constants/list_constants */ 115);
 	var merge = __webpack_require__(/*! react/lib/merge */ 45);
-	var _ = __webpack_require__(/*! underscore */ 3);
+	var _ = __webpack_require__(/*! underscore */ 5);
 	
 	var CHANGE_EVENT = 'change';
 	var DEFAULT_TITLE = 'Enter title (click me)';
@@ -239,15 +239,16 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 105:
+/***/ 104:
 /*!*****************************************************!*\
   !*** ./webapp/client/src/board/views/card_list.jsx ***!
   \*****************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 40);
+	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 38);
 	var Card = __webpack_require__(/*! ./card/card */ 150);
-	var _ = __webpack_require__(/*! underscore */ 3);
+	var _ = __webpack_require__(/*! underscore */ 5);
+	var EditInPlaceInput = __webpack_require__(/*! ./components/edit_in_place_input */ 151);
 	
 	var CardActions = __webpack_require__(/*! ../actions/card_actions */ 147);
 	var CardStore = __webpack_require__(/*! ../stores/card_store */ 148);
@@ -278,7 +279,7 @@ webpackJsonp([0],{
 	    this.props.onRemove(this.props.list.id);
 	  },
 	
-	  onAddCard: function() {
+	  addCard: function() {
 	    CardActions.create(this.props.list.id);
 	  },
 	
@@ -286,8 +287,7 @@ webpackJsonp([0],{
 	    CardActions.destroy(cardId);
 	  },
 	
-	  updateTitle: function() {
-	    var title = prompt();
+	  updateTitle: function(title) {
 	    this.props.onUpdateTitle(this.props.list.id, title);
 	  },
 	
@@ -298,30 +298,30 @@ webpackJsonp([0],{
 	
 	    return (
 	      React.DOM.div({className: "cardList"}, 
-	        React.DOM.div({className: "cardListHeader"}, 
-	          React.DOM.span({className: "cardListTitle", onClick: this.updateTitle}, this.props.list.title), 
-	          React.DOM.span({className: "cardListRemove", onClick: this.onRemove}, React.DOM.i({className: "fi-trash"})), 
-	          React.DOM.span({className: "cardListAddCard", onClick: this.onAddCard}, React.DOM.i({className: "fi-plus"}))
+	        React.DOM.div({className: "_header"}, 
+	          EditInPlaceInput({onEdit: this.updateTitle, text: this.props.list.title}), 
+	          React.DOM.span({className: "_title", onClick: this.updateTitle}, this.props.list.title)
 	        ), 
-	        cards
+	        cards, 
+	        React.DOM.div({className: "_addCardButton", onClick: this.addCard}, "Add card...")
 	      )
 	    );
 	  }
-	
 	});
 	
 	module.exports = CardList;
 
+
 /***/ },
 
-/***/ 106:
+/***/ 105:
 /*!*********************************************************!*\
   !*** ./webapp/client/src/board/views/lists_toolbar.jsx ***!
   \*********************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 40);
-	var ListActions = __webpack_require__(/*! ../actions/list_actions */ 115);
+	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 38);
+	var ListActions = __webpack_require__(/*! ../actions/list_actions */ 118);
 	
 	
 	var ListsToolbar = React.createClass({displayName: 'ListsToolbar',
@@ -344,15 +344,61 @@ webpackJsonp([0],{
 
 /***/ },
 
+/***/ 114:
+/*!**************************************************************!*\
+  !*** ./webapp/client/src/board/dispatcher/app_dispatcher.js ***!
+  \**************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var Dispatcher = __webpack_require__(/*! flux */ 156).Dispatcher;
+	var copyProperties = __webpack_require__(/*! react/lib/copyProperties */ 53);
+	var AppDispatcher = copyProperties(new Dispatcher(), {
+	
+	  /**
+	   * A bridge function between the views and the dispatcher, marking the action
+	   * as a view action.  Another variant here could be handleServerAction.
+	   * @param  {object} action The data coming from the view.
+	   */
+	  handleViewAction: function(action) {
+	    this.dispatch({
+	      source: 'VIEW_ACTION',
+	      action: action
+	    });
+	  }
+	
+	});
+	
+	module.exports = AppDispatcher;
+
+/***/ },
+
 /***/ 115:
+/*!*************************************************************!*\
+  !*** ./webapp/client/src/board/constants/list_constants.js ***!
+  \*************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var keyMirror = __webpack_require__(/*! react/lib/keyMirror */ 62);
+	
+	module.exports = keyMirror({
+	  LIST_CREATE: null,
+	  LIST_DESTROY: null,
+	  LIST_UPDATE_TITLE: null
+	});
+
+/***/ },
+
+/***/ 118:
 /*!*********************************************************!*\
   !*** ./webapp/client/src/board/actions/list_actions.js ***!
   \*********************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var AppDispatcher = __webpack_require__(/*! ../dispatcher/app_dispatcher */ 116);
-	var ListConstants = __webpack_require__(/*! ../constants/list_constants */ 117);
+	var AppDispatcher = __webpack_require__(/*! ../dispatcher/app_dispatcher */ 114);
+	var ListConstants = __webpack_require__(/*! ../constants/list_constants */ 115);
 	
 	var ListActions = {
 	
@@ -381,52 +427,6 @@ webpackJsonp([0],{
 	};
 	
 	module.exports = ListActions;
-
-/***/ },
-
-/***/ 116:
-/*!**************************************************************!*\
-  !*** ./webapp/client/src/board/dispatcher/app_dispatcher.js ***!
-  \**************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var Dispatcher = __webpack_require__(/*! flux */ 155).Dispatcher;
-	var copyProperties = __webpack_require__(/*! react/lib/copyProperties */ 53);
-	var AppDispatcher = copyProperties(new Dispatcher(), {
-	
-	  /**
-	   * A bridge function between the views and the dispatcher, marking the action
-	   * as a view action.  Another variant here could be handleServerAction.
-	   * @param  {object} action The data coming from the view.
-	   */
-	  handleViewAction: function(action) {
-	    this.dispatch({
-	      source: 'VIEW_ACTION',
-	      action: action
-	    });
-	  }
-	
-	});
-	
-	module.exports = AppDispatcher;
-
-/***/ },
-
-/***/ 117:
-/*!*************************************************************!*\
-  !*** ./webapp/client/src/board/constants/list_constants.js ***!
-  \*************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var keyMirror = __webpack_require__(/*! react/lib/keyMirror */ 62);
-	
-	module.exports = keyMirror({
-	  LIST_CREATE: null,
-	  LIST_DESTROY: null,
-	  LIST_UPDATE_TITLE: null
-	});
 
 /***/ },
 
@@ -748,8 +748,8 @@ webpackJsonp([0],{
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var AppDispatcher = __webpack_require__(/*! ../dispatcher/app_dispatcher */ 116);
-	var CardConstants = __webpack_require__(/*! ../constants/card_constants */ 156);
+	var AppDispatcher = __webpack_require__(/*! ../dispatcher/app_dispatcher */ 114);
+	var CardConstants = __webpack_require__(/*! ../constants/card_constants */ 157);
 	
 	var CardActions = {
 	
@@ -788,11 +788,11 @@ webpackJsonp([0],{
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var AppDispatcher = __webpack_require__(/*! ../dispatcher/app_dispatcher */ 116);
+	var AppDispatcher = __webpack_require__(/*! ../dispatcher/app_dispatcher */ 114);
 	var EventEmitter = __webpack_require__(/*! events */ 119).EventEmitter;
-	var CardConstants = __webpack_require__(/*! ../constants/card_constants */ 156);
+	var CardConstants = __webpack_require__(/*! ../constants/card_constants */ 157);
 	var merge = __webpack_require__(/*! react/lib/merge */ 45);
-	var _ = __webpack_require__(/*! underscore */ 3);
+	var _ = __webpack_require__(/*! underscore */ 5);
 	
 	var CHANGE_EVENT = 'change';
 	
@@ -903,9 +903,9 @@ webpackJsonp([0],{
   \*****************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 40);
-	var Label = __webpack_require__(/*! ./label */ 157);
-	var LabelsSelector = __webpack_require__(/*! ./labels_selector */ 158);
+	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 38);
+	var Label = __webpack_require__(/*! ./label */ 158);
+	var LabelsSelector = __webpack_require__(/*! ./labels_selector */ 159);
 	
 	var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
 	
@@ -944,7 +944,75 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 155:
+/***/ 151:
+/*!**************************************************************************!*\
+  !*** ./webapp/client/src/board/views/components/edit_in_place_input.jsx ***!
+  \**************************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 38);
+	
+	var EditInPlaceInput = React.createClass({displayName: 'EditInPlaceInput',
+	
+	  getInitialState: function() {
+	    return {editMode: false}
+	  },
+	
+	  render: function() {
+	    var clazz = this.state.editMode ? 'is-editing' : '';
+	
+	    return (
+	      React.DOM.div({className: "editInPlaceInput " + clazz}, 
+	        React.DOM.span({className: "_readOnlyText", onClick: this.enterEditMode}, this.props.text), 
+	        React.DOM.input({type: "text", ref: "text", className: "_input", onKeyDown: this.handleInputKeyDown}), 
+	        React.DOM.div({className: "_editControls"}, 
+	          React.DOM.span({className: "_control _save", onClick: this.saveEdition}, React.DOM.i({className: "fi-check"})), 
+	          React.DOM.span({className: "_control _cancel", onClick: this.cancelEdition}, React.DOM.i({className: "fi-x"}))
+	        )
+	      )
+	    );
+	  },
+	
+	  handleInputKeyDown: function (event) {
+	      if (event.which === 13) {
+	        this.saveEdition();
+	      }
+	
+	      if (event.which === 27) {
+	        this.escapeEdition();
+	      }
+	  },
+	
+	  saveEdition: function() {
+	    var text = this.refs.text.getDOMNode().value;
+	    this.setState({editMode: false, dirtyText: undefined});
+	    this.props.onEdit(text);
+	  },
+	
+	  escapeEdition: function() {
+	    var text = this.refs.text.getDOMNode().value;
+	    this.setState({editMode: false, dirtyText: text});
+	  },
+	
+	  cancelEdition: function(event, options) {
+	    this.refs.text.getDOMNode().value = "";
+	    this.setState({editMode: false, dirtyText: undefined});
+	  },
+	
+	  enterEditMode: function(event) {
+	    var input = this.refs.text.getDOMNode();
+	
+	    input.value = this.state.dirtyText ?  this.state.dirtyText: this.props.text;
+	    this.setState({editMode: true}, function()  {return input.select();});
+	  }
+	
+	});
+	
+	module.exports = EditInPlaceInput;
+
+/***/ },
+
+/***/ 156:
 /*!*************************!*\
   !*** ./~/flux/index.js ***!
   \*************************/
@@ -960,11 +1028,11 @@ webpackJsonp([0],{
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 */
 	
-	module.exports.Dispatcher = __webpack_require__(/*! ./lib/Dispatcher */ 161)
+	module.exports.Dispatcher = __webpack_require__(/*! ./lib/Dispatcher */ 162)
 
 /***/ },
 
-/***/ 156:
+/***/ 157:
 /*!*************************************************************!*\
   !*** ./webapp/client/src/board/constants/card_constants.js ***!
   \*************************************************************/
@@ -980,13 +1048,13 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 157:
+/***/ 158:
 /*!******************************************************!*\
   !*** ./webapp/client/src/board/views/card/label.jsx ***!
   \******************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 40);
+	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 38);
 	
 	var Label = React.createClass({displayName: 'Label',
 	
@@ -1019,13 +1087,13 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 158:
+/***/ 159:
 /*!****************************************************************!*\
   !*** ./webapp/client/src/board/views/card/labels_selector.jsx ***!
   \****************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 40);
+	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 38);
 	
 	var LabelsSelector = React.createClass({displayName: 'LabelsSelector',
 	
@@ -1053,7 +1121,7 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 161:
+/***/ 162:
 /*!**********************************!*\
   !*** ./~/flux/lib/Dispatcher.js ***!
   \**********************************/
@@ -1074,7 +1142,7 @@ webpackJsonp([0],{
 	
 	"use strict";
 	
-	var invariant = __webpack_require__(/*! ./invariant */ 163);
+	var invariant = __webpack_require__(/*! ./invariant */ 166);
 	
 	var _lastID = 1;
 	var _prefix = 'ID_';
@@ -1313,7 +1381,7 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 163:
+/***/ 166:
 /*!*********************************!*\
   !*** ./~/flux/lib/invariant.js ***!
   \*********************************/
