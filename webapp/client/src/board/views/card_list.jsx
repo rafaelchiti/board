@@ -1,6 +1,7 @@
 var React = require('react');
 var Card = require('./card/card');
 var _ = require('underscore');
+var EditInPlaceInput = require('./components/edit_in_place_input');
 
 var CardActions = require('../actions/card_actions');
 var CardStore = require('../stores/card_store');
@@ -31,7 +32,7 @@ var CardList = React.createClass({
     this.props.onRemove(this.props.list.id);
   },
 
-  onAddCard: function() {
+  addCard: function() {
     CardActions.create(this.props.list.id);
   },
 
@@ -39,8 +40,7 @@ var CardList = React.createClass({
     CardActions.destroy(cardId);
   },
 
-  updateTitle: function() {
-    var title = prompt();
+  updateTitle: function(title) {
     this.props.onUpdateTitle(this.props.list.id, title);
   },
 
@@ -51,16 +51,15 @@ var CardList = React.createClass({
 
     return (
       <div className="cardList">
-        <div className="cardListHeader">
-          <span className="cardListTitle"  onClick={this.updateTitle}>{this.props.list.title}</span>
-          <span className="cardListRemove" onClick={this.onRemove}><i className="fi-trash"></i></span>
-          <span className="cardListAddCard" onClick={this.onAddCard}><i className="fi-plus"></i></span>
+        <div className="_header">
+          <EditInPlaceInput onEdit={this.updateTitle} text={this.props.list.title}/>
+          <span className="_title"  onClick={this.updateTitle}>{this.props.list.title}</span>
         </div>
         {cards}
+        <div className="_addCardButton" onClick={this.addCard}>Add card...</div>
       </div>
     );
   }
-
 });
 
 module.exports = CardList;
