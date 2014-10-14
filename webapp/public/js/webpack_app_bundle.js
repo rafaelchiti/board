@@ -31,9 +31,9 @@ webpackJsonp([0],{
 /***/ function(module, exports, __webpack_require__) {
 
 	/** @jsx React.DOM */var _ = __webpack_require__(/*! underscore */ 4);
-	var React = __webpack_require__(/*! react */ 16);
-	var CardListContainer = __webpack_require__(/*! ./card_list_container */ 17);
-	var ListStore = __webpack_require__(/*! ../stores/list_store */ 18);
+	var React = __webpack_require__(/*! react */ 51);
+	var CardListContainer = __webpack_require__(/*! ./card_list_container */ 52);
+	var ListStore = __webpack_require__(/*! ../stores/list_store */ 53);
 	
 	window.listStore = ListStore;
 	
@@ -80,7 +80,7 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 16:
+/***/ 51:
 /*!**************************!*\
   !*** ./~/react/react.js ***!
   \**************************/
@@ -91,17 +91,17 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 17:
+/***/ 52:
 /*!***************************************************************!*\
   !*** ./webapp/client/src/board/views/card_list_container.jsx ***!
   \***************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 16);
+	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 51);
 	var _ = __webpack_require__(/*! underscore */ 4);
-	var CardList = __webpack_require__(/*! ./card_list */ 54);
+	var CardList = __webpack_require__(/*! ./card_list */ 114);
 	var ListActions = __webpack_require__(/*! ../actions/list_actions */ 116);
-	var ListsToolbar = __webpack_require__(/*! ./lists_toolbar */ 55);
+	var ListsToolbar = __webpack_require__(/*! ./lists_toolbar */ 115);
 	
 	var CardListContainer = React.createClass({displayName: 'CardListContainer',
 	
@@ -132,7 +132,7 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 18:
+/***/ 53:
 /*!******************************************************!*\
   !*** ./webapp/client/src/board/stores/list_store.js ***!
   \******************************************************/
@@ -142,7 +142,7 @@ webpackJsonp([0],{
 	var AppDispatcher = __webpack_require__(/*! ../dispatcher/app_dispatcher */ 117);
 	var EventEmitter = __webpack_require__(/*! events */ 119).EventEmitter;
 	var ListConstants = __webpack_require__(/*! ../constants/list_constants */ 118);
-	var merge = __webpack_require__(/*! react/lib/merge */ 43);
+	var merge = __webpack_require__(/*! react/lib/merge */ 40);
 	var _ = __webpack_require__(/*! underscore */ 4);
 	
 	var CHANGE_EVENT = 'change';
@@ -239,19 +239,19 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 54:
+/***/ 114:
 /*!*****************************************************!*\
   !*** ./webapp/client/src/board/views/card_list.jsx ***!
   \*****************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 16);
+	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 51);
 	var Card = __webpack_require__(/*! ./card/card */ 150);
 	var _ = __webpack_require__(/*! underscore */ 4);
 	var EditInPlaceInput = __webpack_require__(/*! ./components/edit_in_place_input */ 151);
 	
-	var CardActions = __webpack_require__(/*! ../actions/card_actions */ 120);
-	var CardStore = __webpack_require__(/*! ../stores/card_store */ 121);
+	var CardActions = __webpack_require__(/*! ../actions/card_actions */ 148);
+	var CardStore = __webpack_require__(/*! ../stores/card_store */ 149);
 	
 	function getCardsState(listId) {
 	  return {allCardsForList: CardStore.allForList(listId)};
@@ -314,13 +314,13 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 55:
+/***/ 115:
 /*!*********************************************************!*\
   !*** ./webapp/client/src/board/views/lists_toolbar.jsx ***!
   \*********************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 16);
+	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 51);
 	var ListActions = __webpack_require__(/*! ../actions/list_actions */ 116);
 	
 	
@@ -391,8 +391,8 @@ webpackJsonp([0],{
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var Dispatcher = __webpack_require__(/*! flux */ 153).Dispatcher;
-	var copyProperties = __webpack_require__(/*! react/lib/copyProperties */ 53);
+	var Dispatcher = __webpack_require__(/*! flux */ 157).Dispatcher;
+	var copyProperties = __webpack_require__(/*! react/lib/copyProperties */ 50);
 	var AppDispatcher = copyProperties(new Dispatcher(), {
 	
 	  /**
@@ -420,7 +420,7 @@ webpackJsonp([0],{
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var keyMirror = __webpack_require__(/*! react/lib/keyMirror */ 64);
+	var keyMirror = __webpack_require__(/*! react/lib/keyMirror */ 62);
 	
 	module.exports = keyMirror({
 	  LIST_CREATE: null,
@@ -741,7 +741,7 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 120:
+/***/ 148:
 /*!*********************************************************!*\
   !*** ./webapp/client/src/board/actions/card_actions.js ***!
   \*********************************************************/
@@ -749,7 +749,7 @@ webpackJsonp([0],{
 
 	"use strict";
 	var AppDispatcher = __webpack_require__(/*! ../dispatcher/app_dispatcher */ 117);
-	var CardConstants = __webpack_require__(/*! ../constants/card_constants */ 152);
+	var CardConstants = __webpack_require__(/*! ../constants/card_constants */ 156);
 	
 	var CardActions = {
 	
@@ -781,7 +781,7 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 121:
+/***/ 149:
 /*!******************************************************!*\
   !*** ./webapp/client/src/board/stores/card_store.js ***!
   \******************************************************/
@@ -790,8 +790,8 @@ webpackJsonp([0],{
 	"use strict";
 	var AppDispatcher = __webpack_require__(/*! ../dispatcher/app_dispatcher */ 117);
 	var EventEmitter = __webpack_require__(/*! events */ 119).EventEmitter;
-	var CardConstants = __webpack_require__(/*! ../constants/card_constants */ 152);
-	var merge = __webpack_require__(/*! react/lib/merge */ 43);
+	var CardConstants = __webpack_require__(/*! ../constants/card_constants */ 156);
+	var merge = __webpack_require__(/*! react/lib/merge */ 40);
 	var _ = __webpack_require__(/*! underscore */ 4);
 	
 	var CHANGE_EVENT = 'change';
@@ -903,7 +903,7 @@ webpackJsonp([0],{
   \*****************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 16);
+	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 51);
 	var Label = __webpack_require__(/*! ./label */ 158);
 	var LabelsSelector = __webpack_require__(/*! ./labels_selector */ 159);
 	
@@ -950,7 +950,7 @@ webpackJsonp([0],{
   \**************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 16);
+	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 51);
 	
 	var EditInPlaceInput = React.createClass({displayName: 'EditInPlaceInput',
 	
@@ -1012,14 +1012,14 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 152:
+/***/ 156:
 /*!*************************************************************!*\
   !*** ./webapp/client/src/board/constants/card_constants.js ***!
   \*************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var keyMirror = __webpack_require__(/*! react/lib/keyMirror */ 64);
+	var keyMirror = __webpack_require__(/*! react/lib/keyMirror */ 62);
 	
 	module.exports = keyMirror({
 	  CARD_CREATE: null,
@@ -1028,7 +1028,7 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 153:
+/***/ 157:
 /*!*************************!*\
   !*** ./~/flux/index.js ***!
   \*************************/
@@ -1054,7 +1054,7 @@ webpackJsonp([0],{
   \******************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 16);
+	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 51);
 	
 	var Label = React.createClass({displayName: 'Label',
 	
@@ -1093,7 +1093,7 @@ webpackJsonp([0],{
   \****************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 16);
+	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 51);
 	
 	var LabelsSelector = React.createClass({displayName: 'LabelsSelector',
 	

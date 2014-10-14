@@ -2170,12 +2170,12 @@ body {
 
 /* line 26 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
 .editInPlaceInput ._editControls ._control {
+  font-size: 12px;
   cursor: pointer;
   position: absolute;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
   padding: 2px 4px;
   top: 22px;
+  height: 18px;
   background-color: #fff;
   -webkit-transition: background 0.2s, color 0.2s;
   -moz-transition: background 0.2s, color 0.2s;
@@ -2186,51 +2186,51 @@ body {
   box-shadow: 1px 1px 1px 1px #d7d7d7;
 }
 
-/* line 36 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
+/* line 37 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
 .editInPlaceInput ._editControls ._save {
-  right: 23px;
+  right: 18px;
 }
 
-/* line 38 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
+/* line 39 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
 .editInPlaceInput ._editControls ._save:hover {
   background-color: #4cd964;
   color: #fff;
 }
 
-/* line 42 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
+/* line 43 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
 .editInPlaceInput ._editControls ._cancel {
   right: -1px;
 }
 
-/* line 44 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
+/* line 45 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
 .editInPlaceInput ._editControls ._cancel:hover {
   background-color: #ff3b30;
   color: #fff;
 }
 
-/* line 48 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
+/* line 49 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
 .editInPlaceInput.is-editing {
   padding-top: 0;
 }
 
-/* line 51 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
+/* line 52 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
 .editInPlaceInput.is-editing ._readOnlyText {
   display: none;
 }
 
-/* line 54 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
+/* line 55 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
 .editInPlaceInput.is-editing ._input {
   display: block;
 }
 
-/* line 57 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
+/* line 58 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
 .editInPlaceInput.is-editing ._editControls {
   display: block;
 }
 
-/* line 59 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
+/* line 60 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
 
-/* line 59 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/top_toolbar.styl */
+/* line 60 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/top_toolbar.styl */
 
 /* line 1 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/top_toolbar.styl */
 .topToolbar {
