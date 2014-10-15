@@ -2104,7 +2104,7 @@ html {
 
 /* line 4 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/base.styl */
 body {
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica neue", "Lucida Grande", Helvetica, Arial, sans-serif;
   line-height: 1;
   font-size: 100%;
   height: 100%;
@@ -2141,9 +2141,9 @@ body {
   -webkit-align-items: center;
   align-items: center;
   height: 28px;
-  font-size: 14px;
-  font-weight: 300;
-  color: #2c2c2c;
+  font-size: 15px;
+  font-weight: bold;
+  color: rgba(31,31,33,0.8);
   line-height: normal;
 }
 
@@ -2155,7 +2155,7 @@ body {
 /* line 14 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
 .editInPlaceInput ._input {
   display: none;
-  width: 100%;
+  width: calc(100% - 50px);
   border: none;
   outline: none;
   padding: 0;
@@ -2173,39 +2173,35 @@ body {
   font-size: 12px;
   cursor: pointer;
   position: absolute;
-  padding: 2px 4px;
-  top: 22px;
+  padding: 1px 7px;
+  top: 6px;
   height: 18px;
   background-color: #fff;
-  -webkit-transition: background 0.2s, color 0.2s;
-  -moz-transition: background 0.2s, color 0.2s;
-  -o-transition: background 0.2s, color 0.2s;
-  -ms-transition: background 0.2s, color 0.2s;
-  transition: background 0.2s, color 0.2s;
-  -webkit-box-shadow: 1px 1px 1px 1px #d7d7d7;
-  box-shadow: 1px 1px 1px 1px #d7d7d7;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid;
+  border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+  -webkit-transition: color 0.2s;
+  -moz-transition: color 0.2s;
+  -o-transition: color 0.2s;
+  -ms-transition: color 0.2s;
+  transition: color 0.2s;
+  color: rgba(0,0,0,0.6);
 }
 
-/* line 37 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
-.editInPlaceInput ._editControls ._save {
-  right: 18px;
-}
-
-/* line 39 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
-.editInPlaceInput ._editControls ._save:hover {
-  background-color: #4cd964;
-  color: #fff;
+/* line 40 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
+.editInPlaceInput ._editControls ._control:hover {
+  color: #000;
 }
 
 /* line 43 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
-.editInPlaceInput ._editControls ._cancel {
-  right: -1px;
+.editInPlaceInput ._editControls ._save {
+  right: 24px;
 }
 
-/* line 45 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
-.editInPlaceInput ._editControls ._cancel:hover {
-  background-color: #ff3b30;
-  color: #fff;
+/* line 46 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
+.editInPlaceInput ._editControls ._cancel {
+  right: -1px;
 }
 
 /* line 49 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
@@ -2360,14 +2356,6 @@ body {
 }
 
 /* line 18 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card_list.styl */
-.cardList ._header ._title {
-  display: none;
-  cursor: pointer;
-  color: #2c2c2c;
-  font-weight: 300;
-}
-
-/* line 24 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card_list.styl */
 .cardList ._addCardButton {
   opacity: 0.4;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
@@ -2384,16 +2372,16 @@ body {
   transition: opacity 0.3s;
 }
 
-/* line 33 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card_list.styl */
+/* line 27 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card_list.styl */
 .cardList ._addCardButton:hover {
   opacity: 1;
   -ms-filter: none;
   filter: none;
 }
 
-/* line 35 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card_list.styl */
+/* line 29 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card_list.styl */
 
-/* line 35 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card_label.styl */
+/* line 29 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card_label.styl */
 
 /* line 1 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card_label.styl */
 .cardLabel {
@@ -2519,66 +2507,16 @@ body {
 }
 
 /* line 10 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card.styl */
-.card .card__title {
+.card ._title {
   padding: 0.5rem;
   margin: 0;
   font-weight: normal;
-  font-size: 0.9rem;
+  font-size: 14px;
 }
 
-/* line 16 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card.styl */
-.card .card__description {
-  display: block;
-  padding: 0.5rem;
-  font-size: 0.8rem;
-}
+/* line 15 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card.styl */
 
-/* line 21 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card.styl */
-.card .card__remove {
-  opacity: 0;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  filter: alpha(opacity=0);
-  color: #d7d7d7;
-  position: absolute;
-  top: 0.2rem;
-  right: 0.5rem;
-  cursor: pointer;
-  -webkit-transition: color 0.5s, opacity 0.5s;
-  -moz-transition: color 0.5s, opacity 0.5s;
-  -o-transition: color 0.5s, opacity 0.5s;
-  -ms-transition: color 0.5s, opacity 0.5s;
-  transition: color 0.5s, opacity 0.5s;
-}
-
-/* line 30 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card.styl */
-.card .card__remove:hover {
-  color: #ff3b30;
-}
-
-/* line 33 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card.styl */
-
-/* line 34 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card.styl */
-.card:hover .card__remove {
-  opacity: 1;
-  -ms-filter: none;
-  filter: none;
-}
-
-/* line 37 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card.styl */
-.card input {
-  margin-top: 1rem;
-  border: none;
-  border-bottom: 1px solid #d7d7d7;
-}
-
-/* line 42 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card.styl */
-.card input:focus {
-  outline: none;
-}
-
-/* line 44 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card.styl */
-
-/* line 44 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card_form.styl */
+/* line 15 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card_form.styl */
 
 /* line 1 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card_form.styl */
 .cardForm {

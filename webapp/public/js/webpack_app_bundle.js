@@ -30,10 +30,10 @@ webpackJsonp([0],{
   \*******************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/** @jsx React.DOM */var _ = __webpack_require__(/*! underscore */ 4);
-	var React = __webpack_require__(/*! react */ 51);
-	var CardListContainer = __webpack_require__(/*! ./card_list_container */ 52);
-	var ListStore = __webpack_require__(/*! ../stores/list_store */ 53);
+	/** @jsx React.DOM */var _ = __webpack_require__(/*! underscore */ 5);
+	var React = __webpack_require__(/*! react */ 40);
+	var CardListContainer = __webpack_require__(/*! ./card_list_container */ 41);
+	var ListStore = __webpack_require__(/*! ../stores/list_store */ 42);
 	
 	window.listStore = ListStore;
 	
@@ -80,7 +80,7 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 51:
+/***/ 40:
 /*!**************************!*\
   !*** ./~/react/react.js ***!
   \**************************/
@@ -91,17 +91,17 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 52:
+/***/ 41:
 /*!***************************************************************!*\
   !*** ./webapp/client/src/board/views/card_list_container.jsx ***!
   \***************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 51);
-	var _ = __webpack_require__(/*! underscore */ 4);
-	var CardList = __webpack_require__(/*! ./card_list */ 114);
-	var ListActions = __webpack_require__(/*! ../actions/list_actions */ 116);
-	var ListsToolbar = __webpack_require__(/*! ./lists_toolbar */ 115);
+	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 40);
+	var _ = __webpack_require__(/*! underscore */ 5);
+	var CardList = __webpack_require__(/*! ./card_list */ 105);
+	var ListActions = __webpack_require__(/*! ../actions/list_actions */ 114);
+	var ListsToolbar = __webpack_require__(/*! ./lists_toolbar */ 106);
 	
 	var CardListContainer = React.createClass({displayName: 'CardListContainer',
 	
@@ -132,7 +132,7 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 53:
+/***/ 42:
 /*!******************************************************!*\
   !*** ./webapp/client/src/board/stores/list_store.js ***!
   \******************************************************/
@@ -142,8 +142,8 @@ webpackJsonp([0],{
 	var AppDispatcher = __webpack_require__(/*! ../dispatcher/app_dispatcher */ 117);
 	var EventEmitter = __webpack_require__(/*! events */ 119).EventEmitter;
 	var ListConstants = __webpack_require__(/*! ../constants/list_constants */ 118);
-	var merge = __webpack_require__(/*! react/lib/merge */ 40);
-	var _ = __webpack_require__(/*! underscore */ 4);
+	var merge = __webpack_require__(/*! react/lib/merge */ 45);
+	var _ = __webpack_require__(/*! underscore */ 5);
 	
 	var CHANGE_EVENT = 'change';
 	var DEFAULT_TITLE = 'Enter title (click me)';
@@ -239,19 +239,19 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 114:
+/***/ 105:
 /*!*****************************************************!*\
   !*** ./webapp/client/src/board/views/card_list.jsx ***!
   \*****************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 51);
+	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 40);
 	var Card = __webpack_require__(/*! ./card/card */ 150);
-	var _ = __webpack_require__(/*! underscore */ 4);
+	var _ = __webpack_require__(/*! underscore */ 5);
 	var EditInPlaceInput = __webpack_require__(/*! ./components/edit_in_place_input */ 151);
 	
-	var CardActions = __webpack_require__(/*! ../actions/card_actions */ 148);
-	var CardStore = __webpack_require__(/*! ../stores/card_store */ 149);
+	var CardActions = __webpack_require__(/*! ../actions/card_actions */ 147);
+	var CardStore = __webpack_require__(/*! ../stores/card_store */ 148);
 	
 	function getCardsState(listId) {
 	  return {allCardsForList: CardStore.allForList(listId)};
@@ -299,8 +299,7 @@ webpackJsonp([0],{
 	    return (
 	      React.DOM.div({className: "cardList"}, 
 	        React.DOM.div({className: "_header"}, 
-	          EditInPlaceInput({onEdit: this.updateTitle, text: this.props.list.title}), 
-	          React.DOM.span({className: "_title", onClick: this.updateTitle}, this.props.list.title)
+	          EditInPlaceInput({className: "_title", onEdit: this.updateTitle, text: this.props.list.title})
 	        ), 
 	        cards, 
 	        React.DOM.div({className: "_addCardButton", onClick: this.addCard}, "Add card...")
@@ -314,14 +313,14 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 115:
+/***/ 106:
 /*!*********************************************************!*\
   !*** ./webapp/client/src/board/views/lists_toolbar.jsx ***!
   \*********************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 51);
-	var ListActions = __webpack_require__(/*! ../actions/list_actions */ 116);
+	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 40);
+	var ListActions = __webpack_require__(/*! ../actions/list_actions */ 114);
 	
 	
 	var ListsToolbar = React.createClass({displayName: 'ListsToolbar',
@@ -344,7 +343,7 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 116:
+/***/ 114:
 /*!*********************************************************!*\
   !*** ./webapp/client/src/board/actions/list_actions.js ***!
   \*********************************************************/
@@ -391,8 +390,8 @@ webpackJsonp([0],{
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var Dispatcher = __webpack_require__(/*! flux */ 157).Dispatcher;
-	var copyProperties = __webpack_require__(/*! react/lib/copyProperties */ 50);
+	var Dispatcher = __webpack_require__(/*! flux */ 156).Dispatcher;
+	var copyProperties = __webpack_require__(/*! react/lib/copyProperties */ 53);
 	var AppDispatcher = copyProperties(new Dispatcher(), {
 	
 	  /**
@@ -741,7 +740,7 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 148:
+/***/ 147:
 /*!*********************************************************!*\
   !*** ./webapp/client/src/board/actions/card_actions.js ***!
   \*********************************************************/
@@ -749,7 +748,7 @@ webpackJsonp([0],{
 
 	"use strict";
 	var AppDispatcher = __webpack_require__(/*! ../dispatcher/app_dispatcher */ 117);
-	var CardConstants = __webpack_require__(/*! ../constants/card_constants */ 156);
+	var CardConstants = __webpack_require__(/*! ../constants/card_constants */ 157);
 	
 	var CardActions = {
 	
@@ -781,7 +780,7 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 149:
+/***/ 148:
 /*!******************************************************!*\
   !*** ./webapp/client/src/board/stores/card_store.js ***!
   \******************************************************/
@@ -790,9 +789,9 @@ webpackJsonp([0],{
 	"use strict";
 	var AppDispatcher = __webpack_require__(/*! ../dispatcher/app_dispatcher */ 117);
 	var EventEmitter = __webpack_require__(/*! events */ 119).EventEmitter;
-	var CardConstants = __webpack_require__(/*! ../constants/card_constants */ 156);
-	var merge = __webpack_require__(/*! react/lib/merge */ 40);
-	var _ = __webpack_require__(/*! underscore */ 4);
+	var CardConstants = __webpack_require__(/*! ../constants/card_constants */ 157);
+	var merge = __webpack_require__(/*! react/lib/merge */ 45);
+	var _ = __webpack_require__(/*! underscore */ 5);
 	
 	var CHANGE_EVENT = 'change';
 	
@@ -903,17 +902,13 @@ webpackJsonp([0],{
   \*****************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 51);
+	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 40);
 	var Label = __webpack_require__(/*! ./label */ 158);
 	var LabelsSelector = __webpack_require__(/*! ./labels_selector */ 159);
 	
 	var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
 	
 	var Card = React.createClass({displayName: 'Card',
-	
-	  getInitialState: function() {
-	    return {labelsSelectorShown: false};
-	  },
 	
 	  remove: function() {
 	    this.props.onRemove(this.props.card.id);
@@ -922,21 +917,11 @@ webpackJsonp([0],{
 	  render: function() {
 	    return (
 	      React.DOM.div({className: "card"}, 
-	        React.DOM.h4({className: "card__title"}, this.props.card.title), 
-	        React.DOM.span({className: "card__description"}, this.props.card.description), 
-	
-	        React.DOM.span({className: "card__remove", onClick: this.remove}, React.DOM.i({className: "fi-trash"})), 
-	
-	        Label({onClick: this.onLabelClick}), 
-	
-	        LabelsSelector({shown: this.state.labelsSelectorShown})
+	        React.DOM.h4({className: "_title"}, this.props.card.title)
 	      )
 	    );
-	  },
-	
-	  onLabelClick: function() {
-	    this.setState({labelsSelectorShown: !this.state.labelsSelectorShown});
 	  }
+	
 	});
 	
 	module.exports = Card;
@@ -950,7 +935,7 @@ webpackJsonp([0],{
   \**************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 51);
+	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 40);
 	
 	var EditInPlaceInput = React.createClass({displayName: 'EditInPlaceInput',
 	
@@ -960,6 +945,7 @@ webpackJsonp([0],{
 	
 	  render: function() {
 	    var clazz = this.state.editMode ? 'is-editing' : '';
+	    clazz = clazz + ' ' + this.props.className;
 	
 	    return (
 	      React.DOM.div({className: "editInPlaceInput " + clazz}, 
@@ -1013,22 +999,6 @@ webpackJsonp([0],{
 /***/ },
 
 /***/ 156:
-/*!*************************************************************!*\
-  !*** ./webapp/client/src/board/constants/card_constants.js ***!
-  \*************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var keyMirror = __webpack_require__(/*! react/lib/keyMirror */ 62);
-	
-	module.exports = keyMirror({
-	  CARD_CREATE: null,
-	  CARD_DESTROY: null
-	});
-
-/***/ },
-
-/***/ 157:
 /*!*************************!*\
   !*** ./~/flux/index.js ***!
   \*************************/
@@ -1048,13 +1018,29 @@ webpackJsonp([0],{
 
 /***/ },
 
+/***/ 157:
+/*!*************************************************************!*\
+  !*** ./webapp/client/src/board/constants/card_constants.js ***!
+  \*************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var keyMirror = __webpack_require__(/*! react/lib/keyMirror */ 62);
+	
+	module.exports = keyMirror({
+	  CARD_CREATE: null,
+	  CARD_DESTROY: null
+	});
+
+/***/ },
+
 /***/ 158:
 /*!******************************************************!*\
   !*** ./webapp/client/src/board/views/card/label.jsx ***!
   \******************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 51);
+	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 40);
 	
 	var Label = React.createClass({displayName: 'Label',
 	
@@ -1093,7 +1079,7 @@ webpackJsonp([0],{
   \****************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 51);
+	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 40);
 	
 	var LabelsSelector = React.createClass({displayName: 'LabelsSelector',
 	
@@ -1142,7 +1128,7 @@ webpackJsonp([0],{
 	
 	"use strict";
 	
-	var invariant = __webpack_require__(/*! ./invariant */ 164);
+	var invariant = __webpack_require__(/*! ./invariant */ 166);
 	
 	var _lastID = 1;
 	var _prefix = 'ID_';
@@ -1381,7 +1367,7 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 164:
+/***/ 166:
 /*!*********************************!*\
   !*** ./~/flux/lib/invariant.js ***!
   \*********************************/

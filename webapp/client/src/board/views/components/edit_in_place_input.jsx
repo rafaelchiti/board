@@ -8,6 +8,7 @@ var EditInPlaceInput = React.createClass({
 
   render: function() {
     var clazz = this.state.editMode ? 'is-editing' : '';
+    clazz = clazz + ' ' + this.props.className;
 
     return (
       <div className={"editInPlaceInput " + clazz}>

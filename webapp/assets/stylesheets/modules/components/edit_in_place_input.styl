@@ -3,9 +3,9 @@
   display flex
   align-items center
   height 28px
-  font-size 14px
-  font-weight 300
-  color app-dark-gray-2
+  font-size 15px
+  font-weight bold
+  color rgba(app-black, .8)
   line-height normal
 
   ._readOnlyText
@@ -13,7 +13,7 @@
 
   ._input
     display none
-    width 100%
+    width calc(100% - 50px)
     border none
     outline none
     padding 0
@@ -27,24 +27,24 @@
       font-size 12px
       cursor pointer
       position absolute
-      padding 2px 4px
-      top 22px
+      padding 1px 7px
+      top 6px
       height 18px
       background-color white
-      transition background .2s, color .2s
-      box-shadow 1px 1px 1px 1px app-gray
+      border-radius 3px
+      border 1px solid
+      border-color: #E5E6E9 #DFE0E4 #D0D1D5;
+      transition color .2s
+      color rgba(black, .6)
+
+      &:hover
+        color black
 
     ._save
-      right 18px
-      &:hover
-        background-color app-green
-        color white
+      right 24px
 
     ._cancel
       right -1px;
-      &:hover
-        background-color app-red
-        color white
 
 .editInPlaceInput.is-editing
   padding-top 0

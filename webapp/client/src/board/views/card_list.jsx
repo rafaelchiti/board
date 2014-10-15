@@ -52,8 +52,7 @@ var CardList = React.createClass({
     return (
       <div className="cardList">
         <div className="_header">
-          <EditInPlaceInput onEdit={this.updateTitle} text={this.props.list.title}/>
-          <span className="_title"  onClick={this.updateTitle}>{this.props.list.title}</span>
+          <EditInPlaceInput className="_title" onEdit={this.updateTitle} text={this.props.list.title}/>
         </div>
         {cards}
         <div className="_addCardButton" onClick={this.addCard}>Add card...</div>
