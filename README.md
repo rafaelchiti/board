@@ -15,8 +15,9 @@ I'm building a Cards app (like Trello) with the main motivation of trying the fo
 #### To run the app just:
 ```
 $ git clone git@github.com:rafaelchiti/board.git
-$ npm install
-$ gulp (you might need to install it globally if you don't have it yet)
+$ npm install -g webpack (if you don't have it already)
+$ webpack -d -w (to get webpack running and watching for changes)
+$ node app.js (to get the server running)
 ```
 
 #### Try it on heroku
