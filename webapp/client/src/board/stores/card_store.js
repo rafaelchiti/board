@@ -7,6 +7,7 @@ var _ = require('underscore');
 var CHANGE_EVENT = 'change';
 
 var _cards = {};
+var lastCardPosition;
 
 function randomId() {
   return (+new Date() + Math.floor(Math.random() * 999999)).toString(36);
@@ -16,7 +17,7 @@ function randomId() {
  * Create a Card item.
  * @param  {string} text The content of the Card
  */
-function create(listId, title, description) {
+function create(listId, position, title, description) {
 
   // Hand waving here -- not showing how this interacts with XHR or persistent
   // server-side storage.
@@ -24,6 +25,7 @@ function create(listId, title, description) {
   var id = randomId();
   _cards[id] = {
     id: id,
+    position: position,
     listId: listId,
     title: title,
     description: description
@@ -81,9 +83,17 @@ AppDispatcher.register(function(payload) {
 
   switch(action.actionType) {
     case CardConstants.CARD_CREATE:
-      title = action.title ? action.title.trim() : 'Enter title';
+      title = action.title ? action.title.trim() : 'Enter title ' + randomId();
       description = action.description ? action.description.trim() : 'Enter description';
-      create(action.listId, title, description);
+      var lastCard = _(_cards).last();
+
+      if (lastCardPosition === undefined) {
+        lastCardPosition = 0;
+      } else {
+        lastCardPosition++;
+      }
+
+      create(action.listId, lastCardPosition, title, description);
       break;
 
     case CardConstants.CARD_DESTROY:

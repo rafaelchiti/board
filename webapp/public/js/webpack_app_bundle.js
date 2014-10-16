@@ -30,10 +30,10 @@ webpackJsonp([0],{
   \*******************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/** @jsx React.DOM */var _ = __webpack_require__(/*! underscore */ 5);
-	var React = __webpack_require__(/*! react */ 40);
-	var CardListContainer = __webpack_require__(/*! ./card_list_container */ 41);
-	var ListStore = __webpack_require__(/*! ../stores/list_store */ 42);
+	/** @jsx React.DOM */var _ = __webpack_require__(/*! underscore */ 4);
+	var React = __webpack_require__(/*! react */ 51);
+	var CardListContainer = __webpack_require__(/*! ./card_list_container */ 52);
+	var ListStore = __webpack_require__(/*! ../stores/list_store */ 53);
 	
 	window.listStore = ListStore;
 	
@@ -80,7 +80,7 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 40:
+/***/ 51:
 /*!**************************!*\
   !*** ./~/react/react.js ***!
   \**************************/
@@ -91,17 +91,17 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 41:
+/***/ 52:
 /*!***************************************************************!*\
   !*** ./webapp/client/src/board/views/card_list_container.jsx ***!
   \***************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 40);
-	var _ = __webpack_require__(/*! underscore */ 5);
-	var CardList = __webpack_require__(/*! ./card_list */ 105);
-	var ListActions = __webpack_require__(/*! ../actions/list_actions */ 114);
-	var ListsToolbar = __webpack_require__(/*! ./lists_toolbar */ 106);
+	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 51);
+	var _ = __webpack_require__(/*! underscore */ 4);
+	var CardList = __webpack_require__(/*! ./card_list */ 114);
+	var ListActions = __webpack_require__(/*! ../actions/list_actions */ 116);
+	var ListsToolbar = __webpack_require__(/*! ./lists_toolbar */ 115);
 	
 	var CardListContainer = React.createClass({displayName: 'CardListContainer',
 	
@@ -132,7 +132,7 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 42:
+/***/ 53:
 /*!******************************************************!*\
   !*** ./webapp/client/src/board/stores/list_store.js ***!
   \******************************************************/
@@ -142,8 +142,8 @@ webpackJsonp([0],{
 	var AppDispatcher = __webpack_require__(/*! ../dispatcher/app_dispatcher */ 117);
 	var EventEmitter = __webpack_require__(/*! events */ 119).EventEmitter;
 	var ListConstants = __webpack_require__(/*! ../constants/list_constants */ 118);
-	var merge = __webpack_require__(/*! react/lib/merge */ 45);
-	var _ = __webpack_require__(/*! underscore */ 5);
+	var merge = __webpack_require__(/*! react/lib/merge */ 40);
+	var _ = __webpack_require__(/*! underscore */ 4);
 	
 	var CHANGE_EVENT = 'change';
 	var DEFAULT_TITLE = 'Enter title (click me)';
@@ -239,19 +239,19 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 105:
+/***/ 114:
 /*!*****************************************************!*\
   !*** ./webapp/client/src/board/views/card_list.jsx ***!
   \*****************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 40);
+	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 51);
 	var Card = __webpack_require__(/*! ./card/card */ 150);
-	var _ = __webpack_require__(/*! underscore */ 5);
+	var _ = __webpack_require__(/*! underscore */ 4);
 	var EditInPlaceInput = __webpack_require__(/*! ./components/edit_in_place_input */ 151);
 	
-	var CardActions = __webpack_require__(/*! ../actions/card_actions */ 147);
-	var CardStore = __webpack_require__(/*! ../stores/card_store */ 148);
+	var CardActions = __webpack_require__(/*! ../actions/card_actions */ 148);
+	var CardStore = __webpack_require__(/*! ../stores/card_store */ 149);
 	
 	function getCardsState(listId) {
 	  return {allCardsForList: CardStore.allForList(listId)};
@@ -291,17 +291,53 @@ webpackJsonp([0],{
 	    this.props.onUpdateTitle(this.props.list.id, title);
 	  },
 	
+	  dragStart: function() {
+	    this.setState({dragging: true});
+	  },
+	
+	  dragEnd: function() {
+	    this.setState({dragging: false, hoveredCardId: null});
+	  },
+	
+	  hovering: function(hoveredDetails) {
+	    if (this.state.dragging) {
+	      this.setState({hoveredCardId: hoveredDetails.id, hoveredCardZone: hoveredDetails.zone});
+	    }
+	  },
+	
 	  render: function() {
-	    var cards = _(this.state.allCardsForList).map(function(card)  {
-	      return Card({key: card.id, card: card, onRemove: this.onRemoveCard});
+	    var cards = this.state.allCardsForList.slice();
+	
+	    var hoveredCard = _(cards).findWhere({id: this.state.hoveredCardId});
+	    if (hoveredCard) {
+	      var indexOf = _(cards).indexOf(hoveredCard);
+	      if (this.state.hoveredCardZone === 'bottom') {
+	        indexOf++;
+	      }
+	
+	      cards.splice(indexOf, 0, {type: 'placeHolder'});
+	    }
+	
+	    var cardsNodes = _(cards).map(function(card)  {
+	      if (card.type && card.type === 'placeHolder') {
+	
+	        return React.DOM.div({key: "placeHolder", className: "cardPlaceHolder"})
+	
+	      } else {
+	
+	        return Card({key: card.id, card: card, onRemove: this.onRemoveCard, 
+	            onDragStart: this.dragStart, onDragEnd: this.dragEnd, hovering: this.hovering});
+	      }
+	
 	    }.bind(this), this);
+	
 	
 	    return (
 	      React.DOM.div({className: "cardList"}, 
 	        React.DOM.div({className: "_header"}, 
 	          EditInPlaceInput({className: "_title", onEdit: this.updateTitle, text: this.props.list.title})
 	        ), 
-	        cards, 
+	        cardsNodes, 
 	        React.DOM.div({className: "_addCardButton", onClick: this.addCard}, "Add card...")
 	      )
 	    );
@@ -313,14 +349,14 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 106:
+/***/ 115:
 /*!*********************************************************!*\
   !*** ./webapp/client/src/board/views/lists_toolbar.jsx ***!
   \*********************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 40);
-	var ListActions = __webpack_require__(/*! ../actions/list_actions */ 114);
+	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 51);
+	var ListActions = __webpack_require__(/*! ../actions/list_actions */ 116);
 	
 	
 	var ListsToolbar = React.createClass({displayName: 'ListsToolbar',
@@ -343,7 +379,7 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 114:
+/***/ 116:
 /*!*********************************************************!*\
   !*** ./webapp/client/src/board/actions/list_actions.js ***!
   \*********************************************************/
@@ -390,8 +426,8 @@ webpackJsonp([0],{
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var Dispatcher = __webpack_require__(/*! flux */ 156).Dispatcher;
-	var copyProperties = __webpack_require__(/*! react/lib/copyProperties */ 53);
+	var Dispatcher = __webpack_require__(/*! flux */ 157).Dispatcher;
+	var copyProperties = __webpack_require__(/*! react/lib/copyProperties */ 50);
 	var AppDispatcher = copyProperties(new Dispatcher(), {
 	
 	  /**
@@ -740,7 +776,7 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 147:
+/***/ 148:
 /*!*********************************************************!*\
   !*** ./webapp/client/src/board/actions/card_actions.js ***!
   \*********************************************************/
@@ -748,7 +784,7 @@ webpackJsonp([0],{
 
 	"use strict";
 	var AppDispatcher = __webpack_require__(/*! ../dispatcher/app_dispatcher */ 117);
-	var CardConstants = __webpack_require__(/*! ../constants/card_constants */ 157);
+	var CardConstants = __webpack_require__(/*! ../constants/card_constants */ 156);
 	
 	var CardActions = {
 	
@@ -780,7 +816,7 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 148:
+/***/ 149:
 /*!******************************************************!*\
   !*** ./webapp/client/src/board/stores/card_store.js ***!
   \******************************************************/
@@ -789,13 +825,14 @@ webpackJsonp([0],{
 	"use strict";
 	var AppDispatcher = __webpack_require__(/*! ../dispatcher/app_dispatcher */ 117);
 	var EventEmitter = __webpack_require__(/*! events */ 119).EventEmitter;
-	var CardConstants = __webpack_require__(/*! ../constants/card_constants */ 157);
-	var merge = __webpack_require__(/*! react/lib/merge */ 45);
-	var _ = __webpack_require__(/*! underscore */ 5);
+	var CardConstants = __webpack_require__(/*! ../constants/card_constants */ 156);
+	var merge = __webpack_require__(/*! react/lib/merge */ 40);
+	var _ = __webpack_require__(/*! underscore */ 4);
 	
 	var CHANGE_EVENT = 'change';
 	
 	var _cards = {};
+	var lastCardPosition;
 	
 	function randomId() {
 	  return (+new Date() + Math.floor(Math.random() * 999999)).toString(36);
@@ -805,7 +842,7 @@ webpackJsonp([0],{
 	 * Create a Card item.
 	 * @param  {string} text The content of the Card
 	 */
-	function create(listId, title, description) {
+	function create(listId, position, title, description) {
 	
 	  // Hand waving here -- not showing how this interacts with XHR or persistent
 	  // server-side storage.
@@ -813,6 +850,7 @@ webpackJsonp([0],{
 	  var id = randomId();
 	  _cards[id] = {
 	    id: id,
+	    position: position,
 	    listId: listId,
 	    title: title,
 	    description: description
@@ -870,9 +908,17 @@ webpackJsonp([0],{
 	
 	  switch(action.actionType) {
 	    case CardConstants.CARD_CREATE:
-	      title = action.title ? action.title.trim() : 'Enter title';
+	      title = action.title ? action.title.trim() : 'Enter title ' + randomId();
 	      description = action.description ? action.description.trim() : 'Enter description';
-	      create(action.listId, title, description);
+	      var lastCard = _(_cards).last();
+	
+	      if (lastCardPosition === undefined) {
+	        lastCardPosition = 0;
+	      } else {
+	        lastCardPosition++;
+	      }
+	
+	      create(action.listId, lastCardPosition, title, description);
 	      break;
 	
 	    case CardConstants.CARD_DESTROY:
@@ -902,13 +948,20 @@ webpackJsonp([0],{
   \*****************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 40);
-	var Label = __webpack_require__(/*! ./label */ 158);
-	var LabelsSelector = __webpack_require__(/*! ./labels_selector */ 159);
+	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 51);
+	var Label = __webpack_require__(/*! ./label */ 167);
+	var LabelsSelector = __webpack_require__(/*! ./labels_selector */ 168);
 	
 	var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
 	
+	var LEFT_BUTTON = 0;
+	var DRAG_THRESHOLD = 5; // pixels
+	
 	var Card = React.createClass({displayName: 'Card',
+	
+	  getInitialState: function() {
+	    return {mouseDown: false, dragging: false};
+	  },
 	
 	  remove: function() {
 	    this.props.onRemove(this.props.card.id);
@@ -916,10 +969,105 @@ webpackJsonp([0],{
 	
 	  render: function() {
 	    return (
-	      React.DOM.div({className: "card"}, 
-	        React.DOM.h4({className: "_title"}, this.props.card.title)
+	      React.DOM.div({style: this.style(), className: "card", onMouseEnter: this.mouseEnter, onMouseDown: this.onMouseDown}, 
+	
+	        React.DOM.h4({className: "_title"}, this.props.card.id)
 	      )
 	    );
+	  },
+	
+	  componentDidMount: function () {
+	      var cardWidth = this.getDOMNode().offsetWidth;
+	      this.setState({width: cardWidth});
+	  },
+	
+	  mouseEnter: function(event) {
+	    var elementRect = this.getDOMNode().getBoundingClientRect();
+	
+	    var mousePosition = event.clientY;
+	
+	    var topFromElement = mousePosition - elementRect.top;
+	
+	    var zone;
+	    if (topFromElement > (elementRect.height / 2)) {
+	      zone = 'top';
+	    } else {
+	      zone = 'bottom';
+	    }
+	
+	    this.props.hovering({id: this.props.card.id, zone: zone});
+	  },
+	
+	  style: function() {
+	    if (this.state.dragging) {
+	      return {
+	        position: 'fixed',
+	        left: this.state.left,
+	        top: this.state.top,
+	        width: this.state.width,
+	        zIndex: 1,
+	        transform: 'rotate(3deg)',
+	        pointerEvents: 'none',
+	        cursor: 'grabbing'
+	      };
+	    } else {
+	      return {};
+	    }
+	  },
+	
+	  onMouseDown: function(event) {
+	    if (event.button !== LEFT_BUTTON) {
+	      return;
+	    }
+	
+	    event.stopPropagation();
+	    this.addEvents();
+	    var pageOffset = this.getDOMNode().getBoundingClientRect();
+	
+	    this.setState({
+	      mouseDown: true,
+	      originX: event.pageX,
+	      originY: event.pageY,
+	      elementX: pageOffset.left,
+	      elementY: pageOffset.top
+	    });
+	  },
+	
+	  onMouseMove: function(event) {
+	    var deltaX = event.pageX - this.state.originX;
+	    var deltaY = event.pageY - this.state.originY;
+	    var distance = Math.abs(deltaX) + Math.abs(deltaY);
+	
+	    if (!this.state.dragging && distance > DRAG_THRESHOLD) {
+	      this.setState({dragging: true});
+	      this.props.onDragStart();
+	    }
+	
+	    if (this.state.dragging) {
+	      this.setState({
+	        left: this.state.elementX + deltaX + document.body.scrollLeft,
+	        top: this.state.elementY + deltaY + document.body.scrollTop
+	      });
+	    }
+	
+	  },
+	
+	  onMouseUp: function() {
+	    this.removeEvents();
+	    if (this.state.dragging) {
+	      this.props.onDragEnd()
+	      this.setState({dragging: false});
+	    }
+	  },
+	
+	  addEvents: function() {
+	    document.addEventListener('mousemove', this.onMouseMove);
+	    document.addEventListener('mouseup', this.onMouseUp);
+	  },
+	
+	  removeEvents: function() {
+	    document.removeEventListener('mousemove', this.onMouseMove);
+	    document.removeEventListener('mouseup', this.onMouseUp);
 	  }
 	
 	});
@@ -935,7 +1083,7 @@ webpackJsonp([0],{
   \**************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 40);
+	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 51);
 	
 	var EditInPlaceInput = React.createClass({displayName: 'EditInPlaceInput',
 	
@@ -999,26 +1147,6 @@ webpackJsonp([0],{
 /***/ },
 
 /***/ 156:
-/*!*************************!*\
-  !*** ./~/flux/index.js ***!
-  \*************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	/**
-	 * Copyright (c) 2014, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 */
-	
-	module.exports.Dispatcher = __webpack_require__(/*! ./lib/Dispatcher */ 162)
-
-/***/ },
-
-/***/ 157:
 /*!*************************************************************!*\
   !*** ./webapp/client/src/board/constants/card_constants.js ***!
   \*************************************************************/
@@ -1034,80 +1162,27 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 158:
-/*!******************************************************!*\
-  !*** ./webapp/client/src/board/views/card/label.jsx ***!
-  \******************************************************/
+/***/ 157:
+/*!*************************!*\
+  !*** ./~/flux/index.js ***!
+  \*************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 40);
+	"use strict";
+	/**
+	 * Copyright (c) 2014, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 */
 	
-	var Label = React.createClass({displayName: 'Label',
-	
-	  getInitialState: function() {
-	    return {selected: false};
-	  },
-	
-	  render: function() {
-	    var clazz;
-	    if (this.state.selected)
-	      clazz = 'selected';
-	    else
-	      clazz = '';
-	
-	    return (
-	      React.DOM.div({className: 'cardLabel ' + clazz, onClick: this.handleClick}
-	      )
-	    );
-	  },
-	
-	  handleClick: function() {
-	    this.setState({selected: !this.state.selected});
-	    this.props.onClick();
-	  }
-	
-	});
-	
-	module.exports = Label;
-
+	module.exports.Dispatcher = __webpack_require__(/*! ./lib/Dispatcher */ 160)
 
 /***/ },
 
-/***/ 159:
-/*!****************************************************************!*\
-  !*** ./webapp/client/src/board/views/card/labels_selector.jsx ***!
-  \****************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 40);
-	
-	var LabelsSelector = React.createClass({displayName: 'LabelsSelector',
-	
-	  render: function() {
-	    var clazz;
-	    if (this.props.shown)
-	      clazz = 'displayed';
-	    else
-	      clazz = '';
-	
-	    return (
-	      React.DOM.div({className: 'labelsSelector ' + clazz}, 
-	        React.DOM.span({className: "labelsSelector__label label1"}), 
-	        React.DOM.span({className: "labelsSelector__label label2"}), 
-	        React.DOM.span({className: "labelsSelector__label label3"}), 
-	        React.DOM.span({className: "labelsSelector__label label4"})
-	      )
-	    );
-	  }
-	
-	});
-	
-	module.exports = LabelsSelector;
-
-
-/***/ },
-
-/***/ 162:
+/***/ 160:
 /*!**********************************!*\
   !*** ./~/flux/lib/Dispatcher.js ***!
   \**********************************/
@@ -1128,7 +1203,7 @@ webpackJsonp([0],{
 	
 	"use strict";
 	
-	var invariant = __webpack_require__(/*! ./invariant */ 166);
+	var invariant = __webpack_require__(/*! ./invariant */ 162);
 	
 	var _lastID = 1;
 	var _prefix = 'ID_';
@@ -1367,7 +1442,7 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 166:
+/***/ 162:
 /*!*********************************!*\
   !*** ./~/flux/lib/invariant.js ***!
   \*********************************/
@@ -1427,6 +1502,79 @@ webpackJsonp([0],{
 	};
 	
 	module.exports = invariant;
+
+/***/ },
+
+/***/ 167:
+/*!******************************************************!*\
+  !*** ./webapp/client/src/board/views/card/label.jsx ***!
+  \******************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 51);
+	
+	var Label = React.createClass({displayName: 'Label',
+	
+	  getInitialState: function() {
+	    return {selected: false};
+	  },
+	
+	  render: function() {
+	    var clazz;
+	    if (this.state.selected)
+	      clazz = 'selected';
+	    else
+	      clazz = '';
+	
+	    return (
+	      React.DOM.div({className: 'cardLabel ' + clazz, onClick: this.handleClick}
+	      )
+	    );
+	  },
+	
+	  handleClick: function() {
+	    this.setState({selected: !this.state.selected});
+	    this.props.onClick();
+	  }
+	
+	});
+	
+	module.exports = Label;
+
+
+/***/ },
+
+/***/ 168:
+/*!****************************************************************!*\
+  !*** ./webapp/client/src/board/views/card/labels_selector.jsx ***!
+  \****************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	/** @jsx React.DOM */var React = __webpack_require__(/*! react */ 51);
+	
+	var LabelsSelector = React.createClass({displayName: 'LabelsSelector',
+	
+	  render: function() {
+	    var clazz;
+	    if (this.props.shown)
+	      clazz = 'displayed';
+	    else
+	      clazz = '';
+	
+	    return (
+	      React.DOM.div({className: 'labelsSelector ' + clazz}, 
+	        React.DOM.span({className: "labelsSelector__label label1"}), 
+	        React.DOM.span({className: "labelsSelector__label label2"}), 
+	        React.DOM.span({className: "labelsSelector__label label3"}), 
+	        React.DOM.span({className: "labelsSelector__label label4"})
+	      )
+	    );
+	  }
+	
+	});
+	
+	module.exports = LabelsSelector;
+
 
 /***/ }
 
