@@ -45,7 +45,7 @@ var Card = React.createClass({
       zone = 'bottom';
     }
 
-    this.props.hovering({id: this.props.card.id, zone: zone});
+    this.props.hovering({hoveredCard: hoveredCard});
   },
 
   style: function() {
@@ -90,7 +90,7 @@ var Card = React.createClass({
 
     if (!this.state.dragging && distance > DRAG_THRESHOLD) {
       this.setState({dragging: true});
-      this.props.onDragStart();
+      this.props.onDragStart(this.props.card);
     }
 
     if (this.state.dragging) {

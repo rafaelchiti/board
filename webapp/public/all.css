@@ -1,14 +1,14 @@
 
-/* line 20 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/all.styl */
+/* line 20 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/all.styl */
 
-/* line 1 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/stylus/lib/functions/index.styl */
+/* line 1 : /Users/rafaelchiti/Documents/development/code/board/node_modules/stylus/lib/functions/index.styl */
 
-/* line 293 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/stylus/lib/functions/index.styl */
+/* line 293 : /Users/rafaelchiti/Documents/development/code/board/node_modules/stylus/lib/functions/index.styl */
 
-/* line 293 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+/* line 293 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/normalize.styl */
 /* normalize.css v3.0.1 | MIT License | git.io/normalize */
 
-/* line 43 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+/* line 43 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/normalize.styl */
 html {
   font-family: sans-serif;
 /* 1 */
@@ -18,12 +18,12 @@ html {
 /* 2 */
 }
 
-/* line 53 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+/* line 53 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/normalize.styl */
 body {
   margin: 0;
 }
 
-/* line 66 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+/* line 66 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/normalize.styl */
 article,
 aside,
 details,
@@ -39,7 +39,7 @@ summary {
   display: block;
 }
 
-/* line 75 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+/* line 75 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/normalize.styl */
 audio,
 canvas,
 progress,
@@ -50,63 +50,63 @@ video {
 /* 2 */
 }
 
-/* line 85 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+/* line 85 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/normalize.styl */
 audio:not([controls]) {
   display: none;
   height: 0;
 }
 
-/* line 95 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+/* line 95 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/normalize.styl */
 [hidden],
 template {
   display: none;
 }
 
-/* line 106 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+/* line 106 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/normalize.styl */
 a {
   background: transparent;
 }
 
-/* line 114 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+/* line 114 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/normalize.styl */
 a:active,
 a:hover {
   outline: 0;
 }
 
-/* line 125 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+/* line 125 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/normalize.styl */
 abbr[title] {
   border-bottom: 1px dotted;
 }
 
-/* line 133 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+/* line 133 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/normalize.styl */
 b,
 strong {
   font-weight: bold;
 }
 
-/* line 141 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+/* line 141 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/normalize.styl */
 dfn {
   font-style: italic;
 }
 
-/* line 150 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+/* line 150 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/normalize.styl */
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
 
-/* line 159 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+/* line 159 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/normalize.styl */
 mark {
   background: #ff0;
   color: #000;
 }
 
-/* line 168 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+/* line 168 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/normalize.styl */
 small {
   font-size: 80%;
 }
 
-/* line 176 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+/* line 176 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/normalize.styl */
 sub,
 sup {
   font-size: 75%;
@@ -115,44 +115,44 @@ sup {
   vertical-align: baseline;
 }
 
-/* line 183 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+/* line 183 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/normalize.styl */
 sup {
   top: -0.5em;
 }
 
-/* line 187 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+/* line 187 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/normalize.styl */
 sub {
   bottom: -0.25em;
 }
 
-/* line 198 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+/* line 198 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/normalize.styl */
 img {
   border: 0;
 }
 
-/* line 206 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+/* line 206 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/normalize.styl */
 svg:not(:root) {
   overflow: hidden;
 }
 
-/* line 217 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+/* line 217 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/normalize.styl */
 figure {
   margin: 1em 40px;
 }
 
-/* line 225 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+/* line 225 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/normalize.styl */
 hr {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
 
-/* line 235 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+/* line 235 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/normalize.styl */
 pre {
   overflow: auto;
 }
 
-/* line 243 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+/* line 243 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/normalize.styl */
 code,
 kbd,
 pre,
@@ -161,7 +161,7 @@ samp {
   font-size: 1em;
 }
 
-/* line 263 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+/* line 263 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/normalize.styl */
 button,
 input,
 optgroup,
@@ -175,18 +175,18 @@ textarea {
 /* 3 */
 }
 
-/* line 273 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+/* line 273 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/normalize.styl */
 button {
   overflow: visible;
 }
 
-/* line 284 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+/* line 284 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/normalize.styl */
 button,
 select {
   text-transform: none;
 }
 
-/* line 296 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+/* line 296 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/normalize.styl */
 button,
 html input[type="button"],
 * 1 */,
@@ -198,25 +198,25 @@ input[type="submit"] {
 /* 3 */
 }
 
-/* line 306 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+/* line 306 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/normalize.styl */
 button[disabled],
 html input[disabled] {
   cursor: default;
 }
 
-/* line 314 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+/* line 314 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/normalize.styl */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
-/* line 324 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+/* line 324 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/normalize.styl */
 input {
   line-height: normal;
 }
 
-/* line 336 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+/* line 336 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/normalize.styl */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -225,13 +225,13 @@ input[type="radio"] {
 /* 2 */
 }
 
-/* line 347 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+/* line 347 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/normalize.styl */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
-/* line 357 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+/* line 357 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/normalize.styl */
 input[type="search"] {
   -webkit-appearance: textfield;
 /* 1 */
@@ -241,20 +241,20 @@ input[type="search"] {
   box-sizing: content-box;
 }
 
-/* line 370 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+/* line 370 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/normalize.styl */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-/* line 378 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+/* line 378 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/normalize.styl */
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
 }
 
-/* line 389 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+/* line 389 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/normalize.styl */
 legend {
   border: 0;
 /* 1 */
@@ -262,115 +262,115 @@ legend {
 /* 2 */
 }
 
-/* line 398 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+/* line 398 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/normalize.styl */
 textarea {
   overflow: auto;
 }
 
-/* line 407 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+/* line 407 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/normalize.styl */
 optgroup {
   font-weight: bold;
 }
 
-/* line 418 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+/* line 418 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/normalize.styl */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 423 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+/* line 423 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/normalize.styl */
 td,
 th {
   padding: 0;
 }
 
-/* line 426 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/normalize.styl */
+/* line 426 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/normalize.styl */
 
-/* line 14 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/index.styl */
+/* line 14 : /Users/rafaelchiti/Documents/development/code/board/node_modules/nib/lib/nib/index.styl */
 
-/* line 14 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/index.styl */
+/* line 14 : /Users/rafaelchiti/Documents/development/code/board/node_modules/nib/lib/nib/index.styl */
 
-/* line 2 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/border.styl */
+/* line 2 : /Users/rafaelchiti/Documents/development/code/board/node_modules/nib/lib/nib/border.styl */
 
-/* line 12 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/border.styl */
+/* line 12 : /Users/rafaelchiti/Documents/development/code/board/node_modules/nib/lib/nib/border.styl */
 
-/* line 3 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/clearfix.styl */
+/* line 3 : /Users/rafaelchiti/Documents/development/code/board/node_modules/nib/lib/nib/clearfix.styl */
 
-/* line 31 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/clearfix.styl */
+/* line 31 : /Users/rafaelchiti/Documents/development/code/board/node_modules/nib/lib/nib/clearfix.styl */
 
-/* line 2 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/color-image.styl */
+/* line 2 : /Users/rafaelchiti/Documents/development/code/board/node_modules/nib/lib/nib/color-image.styl */
 
-/* line 6 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/color-image.styl */
+/* line 6 : /Users/rafaelchiti/Documents/development/code/board/node_modules/nib/lib/nib/color-image.styl */
 
-/* line 6 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/flex.styl */
+/* line 6 : /Users/rafaelchiti/Documents/development/code/board/node_modules/nib/lib/nib/flex.styl */
 
-/* line 197 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/flex.styl */
+/* line 197 : /Users/rafaelchiti/Documents/development/code/board/node_modules/nib/lib/nib/flex.styl */
 
-/* line 94 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/gradients.styl */
+/* line 94 : /Users/rafaelchiti/Documents/development/code/board/node_modules/nib/lib/nib/gradients.styl */
 
-/* line 94 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/gradients.styl */
+/* line 94 : /Users/rafaelchiti/Documents/development/code/board/node_modules/nib/lib/nib/gradients.styl */
 
-/* line 94 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/config.styl */
+/* line 94 : /Users/rafaelchiti/Documents/development/code/board/node_modules/nib/lib/nib/config.styl */
 
-/* line 12 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/config.styl */
+/* line 12 : /Users/rafaelchiti/Documents/development/code/board/node_modules/nib/lib/nib/config.styl */
 
-/* line 2 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/iconic.styl */
+/* line 2 : /Users/rafaelchiti/Documents/development/code/board/node_modules/nib/lib/nib/iconic.styl */
 
-/* line 9 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/iconic.styl */
+/* line 9 : /Users/rafaelchiti/Documents/development/code/board/node_modules/nib/lib/nib/iconic.styl */
 
-/* line 2 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/image.styl */
+/* line 2 : /Users/rafaelchiti/Documents/development/code/board/node_modules/nib/lib/nib/image.styl */
 
-/* line 27 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/image.styl */
+/* line 27 : /Users/rafaelchiti/Documents/development/code/board/node_modules/nib/lib/nib/image.styl */
 
-/* line 27 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/overflow.styl */
+/* line 27 : /Users/rafaelchiti/Documents/development/code/board/node_modules/nib/lib/nib/overflow.styl */
 
-/* line 23 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/overflow.styl */
+/* line 23 : /Users/rafaelchiti/Documents/development/code/board/node_modules/nib/lib/nib/overflow.styl */
 
-/* line 9 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/positions.styl */
+/* line 9 : /Users/rafaelchiti/Documents/development/code/board/node_modules/nib/lib/nib/positions.styl */
 
-/* line 73 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/positions.styl */
+/* line 73 : /Users/rafaelchiti/Documents/development/code/board/node_modules/nib/lib/nib/positions.styl */
 
-/* line 15 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/reset.styl */
+/* line 15 : /Users/rafaelchiti/Documents/development/code/board/node_modules/nib/lib/nib/reset.styl */
 
-/* line 79 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/reset.styl */
+/* line 79 : /Users/rafaelchiti/Documents/development/code/board/node_modules/nib/lib/nib/reset.styl */
 
-/* line 6 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/text/index.styl */
+/* line 6 : /Users/rafaelchiti/Documents/development/code/board/node_modules/nib/lib/nib/text/index.styl */
 
-/* line 6 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/text/index.styl */
+/* line 6 : /Users/rafaelchiti/Documents/development/code/board/node_modules/nib/lib/nib/text/index.styl */
 
-/* line 2 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/text/aliases.styl */
+/* line 2 : /Users/rafaelchiti/Documents/development/code/board/node_modules/nib/lib/nib/text/aliases.styl */
 
-/* line 14 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/text/aliases.styl */
+/* line 14 : /Users/rafaelchiti/Documents/development/code/board/node_modules/nib/lib/nib/text/aliases.styl */
 
-/* line 2 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/text/ellipsis.styl */
+/* line 2 : /Users/rafaelchiti/Documents/development/code/board/node_modules/nib/lib/nib/text/ellipsis.styl */
 
-/* line 11 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/text/ellipsis.styl */
+/* line 11 : /Users/rafaelchiti/Documents/development/code/board/node_modules/nib/lib/nib/text/ellipsis.styl */
 
-/* line 11 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/text/hide-text.styl */
+/* line 11 : /Users/rafaelchiti/Documents/development/code/board/node_modules/nib/lib/nib/text/hide-text.styl */
 
-/* line 9 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/text/hide-text.styl */
+/* line 9 : /Users/rafaelchiti/Documents/development/code/board/node_modules/nib/lib/nib/text/hide-text.styl */
 
-/* line 9 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/text/replace-text.styl */
+/* line 9 : /Users/rafaelchiti/Documents/development/code/board/node_modules/nib/lib/nib/text/replace-text.styl */
 
-/* line 10 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/text/replace-text.styl */
+/* line 10 : /Users/rafaelchiti/Documents/development/code/board/node_modules/nib/lib/nib/text/replace-text.styl */
 
-/* line 1 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/text/shadow-stroke.styl */
+/* line 1 : /Users/rafaelchiti/Documents/development/code/board/node_modules/nib/lib/nib/text/shadow-stroke.styl */
 
-/* line 3 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/text/shadow-stroke.styl */
+/* line 3 : /Users/rafaelchiti/Documents/development/code/board/node_modules/nib/lib/nib/text/shadow-stroke.styl */
 
-/* line undefined : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/vendor.styl */
+/* line undefined : /Users/rafaelchiti/Documents/development/code/board/node_modules/nib/lib/nib/vendor.styl */
 
-/* line 576 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/vendor.styl */
+/* line 576 : /Users/rafaelchiti/Documents/development/code/board/node_modules/nib/lib/nib/vendor.styl */
 
-/* line 576 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/config.styl */
+/* line 576 : /Users/rafaelchiti/Documents/development/code/board/node_modules/nib/lib/nib/config.styl */
 
-/* line 12 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/config.styl */
+/* line 12 : /Users/rafaelchiti/Documents/development/code/board/node_modules/nib/lib/nib/config.styl */
 
-/* line 12 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/size.styl */
+/* line 12 : /Users/rafaelchiti/Documents/development/code/board/node_modules/nib/lib/nib/size.styl */
 
-/* line 33 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/size.styl */
+/* line 33 : /Users/rafaelchiti/Documents/development/code/board/node_modules/nib/lib/nib/size.styl */
 
-/* line 33 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 33 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 @font-face {
   font-family: "foundation-icons";
   src: url("foundation-icons/foundation-icons.eot");
@@ -379,7 +379,7 @@ th {
   font-style: normal;
 }
 
-/* line 300 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 300 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-address-book:before,
 .fi-alert:before,
 .fi-align-center:before,
@@ -674,1435 +674,1435 @@ th {
   text-decoration: inherit;
 }
 
-/* line 312 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 312 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-address-book:before {
   content: "\f100";
 }
 
-/* line 313 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 313 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-alert:before {
   content: "\f101";
 }
 
-/* line 314 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 314 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-align-center:before {
   content: "\f102";
 }
 
-/* line 315 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 315 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-align-justify:before {
   content: "\f103";
 }
 
-/* line 316 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 316 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-align-left:before {
   content: "\f104";
 }
 
-/* line 317 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 317 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-align-right:before {
   content: "\f105";
 }
 
-/* line 318 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 318 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-anchor:before {
   content: "\f106";
 }
 
-/* line 319 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 319 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-annotate:before {
   content: "\f107";
 }
 
-/* line 320 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 320 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-archive:before {
   content: "\f108";
 }
 
-/* line 321 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 321 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-arrow-down:before {
   content: "\f109";
 }
 
-/* line 322 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 322 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-arrow-left:before {
   content: "\f10a";
 }
 
-/* line 323 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 323 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-arrow-right:before {
   content: "\f10b";
 }
 
-/* line 324 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 324 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-arrow-up:before {
   content: "\f10c";
 }
 
-/* line 325 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 325 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-arrows-compress:before {
   content: "\f10d";
 }
 
-/* line 326 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 326 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-arrows-expand:before {
   content: "\f10e";
 }
 
-/* line 327 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 327 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-arrows-in:before {
   content: "\f10f";
 }
 
-/* line 328 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 328 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-arrows-out:before {
   content: "\f110";
 }
 
-/* line 329 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 329 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-asl:before {
   content: "\f111";
 }
 
-/* line 330 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 330 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-asterisk:before {
   content: "\f112";
 }
 
-/* line 331 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 331 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-at-sign:before {
   content: "\f113";
 }
 
-/* line 332 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 332 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-background-color:before {
   content: "\f114";
 }
 
-/* line 333 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 333 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-battery-empty:before {
   content: "\f115";
 }
 
-/* line 334 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 334 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-battery-full:before {
   content: "\f116";
 }
 
-/* line 335 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 335 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-battery-half:before {
   content: "\f117";
 }
 
-/* line 336 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 336 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-bitcoin-circle:before {
   content: "\f118";
 }
 
-/* line 337 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 337 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-bitcoin:before {
   content: "\f119";
 }
 
-/* line 338 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 338 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-blind:before {
   content: "\f11a";
 }
 
-/* line 339 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 339 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-bluetooth:before {
   content: "\f11b";
 }
 
-/* line 340 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 340 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-bold:before {
   content: "\f11c";
 }
 
-/* line 341 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 341 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-book-bookmark:before {
   content: "\f11d";
 }
 
-/* line 342 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 342 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-book:before {
   content: "\f11e";
 }
 
-/* line 343 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 343 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-bookmark:before {
   content: "\f11f";
 }
 
-/* line 344 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 344 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-braille:before {
   content: "\f120";
 }
 
-/* line 345 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 345 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-burst-new:before {
   content: "\f121";
 }
 
-/* line 346 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 346 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-burst-sale:before {
   content: "\f122";
 }
 
-/* line 347 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 347 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-burst:before {
   content: "\f123";
 }
 
-/* line 348 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 348 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-calendar:before {
   content: "\f124";
 }
 
-/* line 349 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 349 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-camera:before {
   content: "\f125";
 }
 
-/* line 350 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 350 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-check:before {
   content: "\f126";
 }
 
-/* line 351 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 351 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-checkbox:before {
   content: "\f127";
 }
 
-/* line 352 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 352 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-clipboard-notes:before {
   content: "\f128";
 }
 
-/* line 353 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 353 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-clipboard-pencil:before {
   content: "\f129";
 }
 
-/* line 354 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 354 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-clipboard:before {
   content: "\f12a";
 }
 
-/* line 355 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 355 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-clock:before {
   content: "\f12b";
 }
 
-/* line 356 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 356 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-closed-caption:before {
   content: "\f12c";
 }
 
-/* line 357 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 357 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-cloud:before {
   content: "\f12d";
 }
 
-/* line 358 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 358 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-comment-minus:before {
   content: "\f12e";
 }
 
-/* line 359 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 359 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-comment-quotes:before {
   content: "\f12f";
 }
 
-/* line 360 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 360 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-comment-video:before {
   content: "\f130";
 }
 
-/* line 361 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 361 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-comment:before {
   content: "\f131";
 }
 
-/* line 362 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 362 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-comments:before {
   content: "\f132";
 }
 
-/* line 363 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 363 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-compass:before {
   content: "\f133";
 }
 
-/* line 364 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 364 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-contrast:before {
   content: "\f134";
 }
 
-/* line 365 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 365 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-credit-card:before {
   content: "\f135";
 }
 
-/* line 366 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 366 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-crop:before {
   content: "\f136";
 }
 
-/* line 367 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 367 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-crown:before {
   content: "\f137";
 }
 
-/* line 368 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 368 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-css3:before {
   content: "\f138";
 }
 
-/* line 369 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 369 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-database:before {
   content: "\f139";
 }
 
-/* line 370 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 370 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-die-five:before {
   content: "\f13a";
 }
 
-/* line 371 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 371 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-die-four:before {
   content: "\f13b";
 }
 
-/* line 372 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 372 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-die-one:before {
   content: "\f13c";
 }
 
-/* line 373 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 373 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-die-six:before {
   content: "\f13d";
 }
 
-/* line 374 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 374 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-die-three:before {
   content: "\f13e";
 }
 
-/* line 375 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 375 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-die-two:before {
   content: "\f13f";
 }
 
-/* line 376 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 376 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-dislike:before {
   content: "\f140";
 }
 
-/* line 377 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 377 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-dollar-bill:before {
   content: "\f141";
 }
 
-/* line 378 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 378 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-dollar:before {
   content: "\f142";
 }
 
-/* line 379 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 379 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-download:before {
   content: "\f143";
 }
 
-/* line 380 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 380 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-eject:before {
   content: "\f144";
 }
 
-/* line 381 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 381 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-elevator:before {
   content: "\f145";
 }
 
-/* line 382 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 382 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-euro:before {
   content: "\f146";
 }
 
-/* line 383 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 383 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-eye:before {
   content: "\f147";
 }
 
-/* line 384 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 384 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-fast-forward:before {
   content: "\f148";
 }
 
-/* line 385 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 385 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-female-symbol:before {
   content: "\f149";
 }
 
-/* line 386 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 386 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-female:before {
   content: "\f14a";
 }
 
-/* line 387 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 387 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-filter:before {
   content: "\f14b";
 }
 
-/* line 388 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 388 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-first-aid:before {
   content: "\f14c";
 }
 
-/* line 389 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 389 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-flag:before {
   content: "\f14d";
 }
 
-/* line 390 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 390 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-folder-add:before {
   content: "\f14e";
 }
 
-/* line 391 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 391 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-folder-lock:before {
   content: "\f14f";
 }
 
-/* line 392 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 392 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-folder:before {
   content: "\f150";
 }
 
-/* line 393 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 393 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-foot:before {
   content: "\f151";
 }
 
-/* line 394 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 394 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-foundation:before {
   content: "\f152";
 }
 
-/* line 395 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 395 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-graph-bar:before {
   content: "\f153";
 }
 
-/* line 396 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 396 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-graph-horizontal:before {
   content: "\f154";
 }
 
-/* line 397 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 397 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-graph-pie:before {
   content: "\f155";
 }
 
-/* line 398 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 398 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-graph-trend:before {
   content: "\f156";
 }
 
-/* line 399 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 399 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-guide-dog:before {
   content: "\f157";
 }
 
-/* line 400 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 400 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-hearing-aid:before {
   content: "\f158";
 }
 
-/* line 401 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 401 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-heart:before {
   content: "\f159";
 }
 
-/* line 402 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 402 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-home:before {
   content: "\f15a";
 }
 
-/* line 403 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 403 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-html5:before {
   content: "\f15b";
 }
 
-/* line 404 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 404 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-indent-less:before {
   content: "\f15c";
 }
 
-/* line 405 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 405 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-indent-more:before {
   content: "\f15d";
 }
 
-/* line 406 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 406 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-info:before {
   content: "\f15e";
 }
 
-/* line 407 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 407 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-italic:before {
   content: "\f15f";
 }
 
-/* line 408 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 408 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-key:before {
   content: "\f160";
 }
 
-/* line 409 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 409 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-laptop:before {
   content: "\f161";
 }
 
-/* line 410 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 410 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-layout:before {
   content: "\f162";
 }
 
-/* line 411 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 411 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-lightbulb:before {
   content: "\f163";
 }
 
-/* line 412 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 412 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-like:before {
   content: "\f164";
 }
 
-/* line 413 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 413 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-link:before {
   content: "\f165";
 }
 
-/* line 414 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 414 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-list-bullet:before {
   content: "\f166";
 }
 
-/* line 415 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 415 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-list-number:before {
   content: "\f167";
 }
 
-/* line 416 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 416 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-list-thumbnails:before {
   content: "\f168";
 }
 
-/* line 417 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 417 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-list:before {
   content: "\f169";
 }
 
-/* line 418 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 418 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-lock:before {
   content: "\f16a";
 }
 
-/* line 419 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 419 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-loop:before {
   content: "\f16b";
 }
 
-/* line 420 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 420 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-magnifying-glass:before {
   content: "\f16c";
 }
 
-/* line 421 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 421 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-mail:before {
   content: "\f16d";
 }
 
-/* line 422 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 422 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-male-female:before {
   content: "\f16e";
 }
 
-/* line 423 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 423 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-male-symbol:before {
   content: "\f16f";
 }
 
-/* line 424 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 424 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-male:before {
   content: "\f170";
 }
 
-/* line 425 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 425 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-map:before {
   content: "\f171";
 }
 
-/* line 426 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 426 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-marker:before {
   content: "\f172";
 }
 
-/* line 427 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 427 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-megaphone:before {
   content: "\f173";
 }
 
-/* line 428 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 428 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-microphone:before {
   content: "\f174";
 }
 
-/* line 429 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 429 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-minus-circle:before {
   content: "\f175";
 }
 
-/* line 430 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 430 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-minus:before {
   content: "\f176";
 }
 
-/* line 431 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 431 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-mobile-signal:before {
   content: "\f177";
 }
 
-/* line 432 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 432 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-mobile:before {
   content: "\f178";
 }
 
-/* line 433 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 433 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-monitor:before {
   content: "\f179";
 }
 
-/* line 434 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 434 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-mountains:before {
   content: "\f17a";
 }
 
-/* line 435 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 435 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-music:before {
   content: "\f17b";
 }
 
-/* line 436 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 436 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-next:before {
   content: "\f17c";
 }
 
-/* line 437 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 437 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-no-dogs:before {
   content: "\f17d";
 }
 
-/* line 438 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 438 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-no-smoking:before {
   content: "\f17e";
 }
 
-/* line 439 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 439 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-page-add:before {
   content: "\f17f";
 }
 
-/* line 440 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 440 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-page-copy:before {
   content: "\f180";
 }
 
-/* line 441 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 441 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-page-csv:before {
   content: "\f181";
 }
 
-/* line 442 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 442 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-page-delete:before {
   content: "\f182";
 }
 
-/* line 443 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 443 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-page-doc:before {
   content: "\f183";
 }
 
-/* line 444 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 444 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-page-edit:before {
   content: "\f184";
 }
 
-/* line 445 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 445 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-page-export-csv:before {
   content: "\f185";
 }
 
-/* line 446 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 446 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-page-export-doc:before {
   content: "\f186";
 }
 
-/* line 447 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 447 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-page-export-pdf:before {
   content: "\f187";
 }
 
-/* line 448 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 448 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-page-export:before {
   content: "\f188";
 }
 
-/* line 449 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 449 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-page-filled:before {
   content: "\f189";
 }
 
-/* line 450 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 450 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-page-multiple:before {
   content: "\f18a";
 }
 
-/* line 451 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 451 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-page-pdf:before {
   content: "\f18b";
 }
 
-/* line 452 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 452 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-page-remove:before {
   content: "\f18c";
 }
 
-/* line 453 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 453 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-page-search:before {
   content: "\f18d";
 }
 
-/* line 454 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 454 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-page:before {
   content: "\f18e";
 }
 
-/* line 455 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 455 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-paint-bucket:before {
   content: "\f18f";
 }
 
-/* line 456 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 456 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-paperclip:before {
   content: "\f190";
 }
 
-/* line 457 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 457 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-pause:before {
   content: "\f191";
 }
 
-/* line 458 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 458 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-paw:before {
   content: "\f192";
 }
 
-/* line 459 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 459 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-paypal:before {
   content: "\f193";
 }
 
-/* line 460 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 460 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-pencil:before {
   content: "\f194";
 }
 
-/* line 461 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 461 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-photo:before {
   content: "\f195";
 }
 
-/* line 462 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 462 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-play-circle:before {
   content: "\f196";
 }
 
-/* line 463 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 463 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-play-video:before {
   content: "\f197";
 }
 
-/* line 464 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 464 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-play:before {
   content: "\f198";
 }
 
-/* line 465 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 465 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-plus:before {
   content: "\f199";
 }
 
-/* line 466 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 466 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-pound:before {
   content: "\f19a";
 }
 
-/* line 467 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 467 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-power:before {
   content: "\f19b";
 }
 
-/* line 468 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 468 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-previous:before {
   content: "\f19c";
 }
 
-/* line 469 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 469 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-price-tag:before {
   content: "\f19d";
 }
 
-/* line 470 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 470 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-pricetag-multiple:before {
   content: "\f19e";
 }
 
-/* line 471 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 471 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-print:before {
   content: "\f19f";
 }
 
-/* line 472 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 472 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-prohibited:before {
   content: "\f1a0";
 }
 
-/* line 473 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 473 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-projection-screen:before {
   content: "\f1a1";
 }
 
-/* line 474 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 474 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-puzzle:before {
   content: "\f1a2";
 }
 
-/* line 475 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 475 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-quote:before {
   content: "\f1a3";
 }
 
-/* line 476 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 476 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-record:before {
   content: "\f1a4";
 }
 
-/* line 477 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 477 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-refresh:before {
   content: "\f1a5";
 }
 
-/* line 478 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 478 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-results-demographics:before {
   content: "\f1a6";
 }
 
-/* line 479 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 479 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-results:before {
   content: "\f1a7";
 }
 
-/* line 480 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 480 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-rewind-ten:before {
   content: "\f1a8";
 }
 
-/* line 481 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 481 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-rewind:before {
   content: "\f1a9";
 }
 
-/* line 482 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 482 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-rss:before {
   content: "\f1aa";
 }
 
-/* line 483 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 483 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-safety-cone:before {
   content: "\f1ab";
 }
 
-/* line 484 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 484 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-save:before {
   content: "\f1ac";
 }
 
-/* line 485 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 485 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-share:before {
   content: "\f1ad";
 }
 
-/* line 486 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 486 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-sheriff-badge:before {
   content: "\f1ae";
 }
 
-/* line 487 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 487 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-shield:before {
   content: "\f1af";
 }
 
-/* line 488 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 488 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-shopping-bag:before {
   content: "\f1b0";
 }
 
-/* line 489 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 489 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-shopping-cart:before {
   content: "\f1b1";
 }
 
-/* line 490 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 490 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-shuffle:before {
   content: "\f1b2";
 }
 
-/* line 491 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 491 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-skull:before {
   content: "\f1b3";
 }
 
-/* line 492 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 492 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-500px:before {
   content: "\f1b4";
 }
 
-/* line 493 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 493 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-adobe:before {
   content: "\f1b5";
 }
 
-/* line 494 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 494 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-amazon:before {
   content: "\f1b6";
 }
 
-/* line 495 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 495 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-android:before {
   content: "\f1b7";
 }
 
-/* line 496 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 496 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-apple:before {
   content: "\f1b8";
 }
 
-/* line 497 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 497 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-behance:before {
   content: "\f1b9";
 }
 
-/* line 498 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 498 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-bing:before {
   content: "\f1ba";
 }
 
-/* line 499 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 499 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-blogger:before {
   content: "\f1bb";
 }
 
-/* line 500 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 500 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-delicious:before {
   content: "\f1bc";
 }
 
-/* line 501 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 501 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-designer-news:before {
   content: "\f1bd";
 }
 
-/* line 502 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 502 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-deviant-art:before {
   content: "\f1be";
 }
 
-/* line 503 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 503 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-digg:before {
   content: "\f1bf";
 }
 
-/* line 504 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 504 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-dribbble:before {
   content: "\f1c0";
 }
 
-/* line 505 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 505 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-drive:before {
   content: "\f1c1";
 }
 
-/* line 506 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 506 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-dropbox:before {
   content: "\f1c2";
 }
 
-/* line 507 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 507 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-evernote:before {
   content: "\f1c3";
 }
 
-/* line 508 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 508 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-facebook:before {
   content: "\f1c4";
 }
 
-/* line 509 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 509 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-flickr:before {
   content: "\f1c5";
 }
 
-/* line 510 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 510 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-forrst:before {
   content: "\f1c6";
 }
 
-/* line 511 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 511 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-foursquare:before {
   content: "\f1c7";
 }
 
-/* line 512 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 512 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-game-center:before {
   content: "\f1c8";
 }
 
-/* line 513 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 513 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-github:before {
   content: "\f1c9";
 }
 
-/* line 514 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 514 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-google-plus:before {
   content: "\f1ca";
 }
 
-/* line 515 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 515 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-hacker-news:before {
   content: "\f1cb";
 }
 
-/* line 516 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 516 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-hi5:before {
   content: "\f1cc";
 }
 
-/* line 517 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 517 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-instagram:before {
   content: "\f1cd";
 }
 
-/* line 518 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 518 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-joomla:before {
   content: "\f1ce";
 }
 
-/* line 519 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 519 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-lastfm:before {
   content: "\f1cf";
 }
 
-/* line 520 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 520 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-linkedin:before {
   content: "\f1d0";
 }
 
-/* line 521 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 521 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-medium:before {
   content: "\f1d1";
 }
 
-/* line 522 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 522 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-myspace:before {
   content: "\f1d2";
 }
 
-/* line 523 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 523 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-orkut:before {
   content: "\f1d3";
 }
 
-/* line 524 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 524 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-path:before {
   content: "\f1d4";
 }
 
-/* line 525 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 525 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-picasa:before {
   content: "\f1d5";
 }
 
-/* line 526 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 526 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-pinterest:before {
   content: "\f1d6";
 }
 
-/* line 527 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 527 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-rdio:before {
   content: "\f1d7";
 }
 
-/* line 528 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 528 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-reddit:before {
   content: "\f1d8";
 }
 
-/* line 529 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 529 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-skillshare:before {
   content: "\f1d9";
 }
 
-/* line 530 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 530 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-skype:before {
   content: "\f1da";
 }
 
-/* line 531 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 531 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-smashing-mag:before {
   content: "\f1db";
 }
 
-/* line 532 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 532 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-snapchat:before {
   content: "\f1dc";
 }
 
-/* line 533 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 533 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-spotify:before {
   content: "\f1dd";
 }
 
-/* line 534 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 534 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-squidoo:before {
   content: "\f1de";
 }
 
-/* line 535 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 535 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-stack-overflow:before {
   content: "\f1df";
 }
 
-/* line 536 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 536 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-steam:before {
   content: "\f1e0";
 }
 
-/* line 537 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 537 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-stumbleupon:before {
   content: "\f1e1";
 }
 
-/* line 538 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 538 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-treehouse:before {
   content: "\f1e2";
 }
 
-/* line 539 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 539 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-tumblr:before {
   content: "\f1e3";
 }
 
-/* line 540 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 540 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-twitter:before {
   content: "\f1e4";
 }
 
-/* line 541 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 541 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-vimeo:before {
   content: "\f1e5";
 }
 
-/* line 542 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 542 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-windows:before {
   content: "\f1e6";
 }
 
-/* line 543 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 543 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-xbox:before {
   content: "\f1e7";
 }
 
-/* line 544 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 544 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-yahoo:before {
   content: "\f1e8";
 }
 
-/* line 545 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 545 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-yelp:before {
   content: "\f1e9";
 }
 
-/* line 546 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 546 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-youtube:before {
   content: "\f1ea";
 }
 
-/* line 547 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 547 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-zerply:before {
   content: "\f1eb";
 }
 
-/* line 548 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 548 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-social-zurb:before {
   content: "\f1ec";
 }
 
-/* line 549 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 549 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-sound:before {
   content: "\f1ed";
 }
 
-/* line 550 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 550 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-star:before {
   content: "\f1ee";
 }
 
-/* line 551 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 551 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-stop:before {
   content: "\f1ef";
 }
 
-/* line 552 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 552 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-strikethrough:before {
   content: "\f1f0";
 }
 
-/* line 553 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 553 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-subscript:before {
   content: "\f1f1";
 }
 
-/* line 554 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 554 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-superscript:before {
   content: "\f1f2";
 }
 
-/* line 555 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 555 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-tablet-landscape:before {
   content: "\f1f3";
 }
 
-/* line 556 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 556 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-tablet-portrait:before {
   content: "\f1f4";
 }
 
-/* line 557 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 557 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-target-two:before {
   content: "\f1f5";
 }
 
-/* line 558 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 558 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-target:before {
   content: "\f1f6";
 }
 
-/* line 559 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 559 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-telephone-accessible:before {
   content: "\f1f7";
 }
 
-/* line 560 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 560 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-telephone:before {
   content: "\f1f8";
 }
 
-/* line 561 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 561 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-text-color:before {
   content: "\f1f9";
 }
 
-/* line 562 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 562 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-thumbnails:before {
   content: "\f1fa";
 }
 
-/* line 563 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 563 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-ticket:before {
   content: "\f1fb";
 }
 
-/* line 564 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 564 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-torso-business:before {
   content: "\f1fc";
 }
 
-/* line 565 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 565 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-torso-female:before {
   content: "\f1fd";
 }
 
-/* line 566 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 566 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-torso:before {
   content: "\f1fe";
 }
 
-/* line 567 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 567 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-torsos-all-female:before {
   content: "\f1ff";
 }
 
-/* line 568 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 568 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-torsos-all:before {
   content: "\f200";
 }
 
-/* line 569 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 569 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-torsos-female-male:before {
   content: "\f201";
 }
 
-/* line 570 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 570 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-torsos-male-female:before {
   content: "\f202";
 }
 
-/* line 571 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 571 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-torsos:before {
   content: "\f203";
 }
 
-/* line 572 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 572 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-trash:before {
   content: "\f204";
 }
 
-/* line 573 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 573 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-trees:before {
   content: "\f205";
 }
 
-/* line 574 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 574 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-trophy:before {
   content: "\f206";
 }
 
-/* line 575 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 575 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-underline:before {
   content: "\f207";
 }
 
-/* line 576 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 576 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-universal-access:before {
   content: "\f208";
 }
 
-/* line 577 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 577 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-unlink:before {
   content: "\f209";
 }
 
-/* line 578 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 578 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-unlock:before {
   content: "\f20a";
 }
 
-/* line 579 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 579 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-upload-cloud:before {
   content: "\f20b";
 }
 
-/* line 580 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 580 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-upload:before {
   content: "\f20c";
 }
 
-/* line 581 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 581 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-usb:before {
   content: "\f20d";
 }
 
-/* line 582 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 582 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-video:before {
   content: "\f20e";
 }
 
-/* line 583 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 583 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-volume-none:before {
   content: "\f20f";
 }
 
-/* line 584 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 584 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-volume-strike:before {
   content: "\f210";
 }
 
-/* line 585 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 585 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-volume:before {
   content: "\f211";
 }
 
-/* line 586 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 586 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-web:before {
   content: "\f212";
 }
 
-/* line 587 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 587 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-wheelchair:before {
   content: "\f213";
 }
 
-/* line 588 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 588 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-widget:before {
   content: "\f214";
 }
 
-/* line 589 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 589 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-wrench:before {
   content: "\f215";
 }
 
-/* line 590 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 590 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-x-circle:before {
   content: "\f216";
 }
 
-/* line 591 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 591 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-x:before {
   content: "\f217";
 }
 
-/* line 592 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 592 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-yen:before {
   content: "\f218";
 }
 
-/* line 593 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 593 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-zoom-in:before {
   content: "\f219";
 }
 
-/* line 594 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 594 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 .fi-zoom-out:before {
   content: "\f21a";
 }
 
-/* line 595 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
+/* line 595 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/vendor/foundation-icons/foundation-icons.styl */
 
-/* line 1 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/colors.styl */
+/* line 1 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/colors.styl */
 
-/* line 24 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/colors.styl */
+/* line 24 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/colors.styl */
 
-/* line 24 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/base.styl */
+/* line 24 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/base.styl */
 
-/* line 1 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/base.styl */
+/* line 1 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/base.styl */
 html {
   font-size: 100%;
 }
 
-/* line 4 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/base.styl */
+/* line 4 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/base.styl */
 body {
   font-family: "Helvetica neue", "Lucida Grande", Helvetica, Arial, sans-serif;
   line-height: 1;
@@ -2112,7 +2112,7 @@ body {
   background-color: #e9eaed;
 }
 
-/* line 12 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/base.styl */
+/* line 12 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/base.styl */
 *,
 *:before,
 *:after {
@@ -2121,11 +2121,11 @@ body {
   box-sizing: border-box;
 }
 
-/* line 14 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/base.styl */
+/* line 14 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/base.styl */
 
-/* line 14 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
+/* line 14 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
 
-/* line 1 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
+/* line 1 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
 .editInPlaceInput {
   position: relative;
   display: -webkit-box;
@@ -2147,12 +2147,12 @@ body {
   line-height: normal;
 }
 
-/* line 11 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
+/* line 11 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
 .editInPlaceInput ._readOnlyText {
   cursor: pointer;
 }
 
-/* line 14 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
+/* line 14 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
 .editInPlaceInput ._input {
   display: none;
   width: calc(100% - 50px);
@@ -2163,12 +2163,12 @@ body {
   color: #007aff;
 }
 
-/* line 23 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
+/* line 23 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
 .editInPlaceInput ._editControls {
   display: none;
 }
 
-/* line 26 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
+/* line 26 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
 .editInPlaceInput ._editControls ._control {
   font-size: 12px;
   cursor: pointer;
@@ -2189,46 +2189,46 @@ body {
   color: rgba(0,0,0,0.6);
 }
 
-/* line 40 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
+/* line 40 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
 .editInPlaceInput ._editControls ._control:hover {
   color: #000;
 }
 
-/* line 43 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
+/* line 43 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
 .editInPlaceInput ._editControls ._save {
   right: 24px;
 }
 
-/* line 46 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
+/* line 46 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
 .editInPlaceInput ._editControls ._cancel {
   right: -1px;
 }
 
-/* line 49 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
+/* line 49 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
 .editInPlaceInput.is-editing {
   padding-top: 0;
 }
 
-/* line 52 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
+/* line 52 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
 .editInPlaceInput.is-editing ._readOnlyText {
   display: none;
 }
 
-/* line 55 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
+/* line 55 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
 .editInPlaceInput.is-editing ._input {
   display: block;
 }
 
-/* line 58 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
+/* line 58 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
 .editInPlaceInput.is-editing ._editControls {
   display: block;
 }
 
-/* line 60 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
+/* line 60 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/components/edit_in_place_input.styl */
 
-/* line 60 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/top_toolbar.styl */
+/* line 60 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/top_toolbar.styl */
 
-/* line 1 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/top_toolbar.styl */
+/* line 1 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/top_toolbar.styl */
 .topToolbar {
   width: 100%;
   position: aboslute;
@@ -2237,7 +2237,7 @@ body {
   background-color: rgba(0,122,255,0.8);
 }
 
-/* line 8 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/top_toolbar.styl */
+/* line 8 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/top_toolbar.styl */
 .topToolbar .userMenu {
   position: absolute;
   width: 53px;
@@ -2256,25 +2256,25 @@ body {
   font-size: 16px;
 }
 
-/* line 21 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/top_toolbar.styl */
+/* line 21 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/top_toolbar.styl */
 
-/* line 21 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/cards_board.styl */
+/* line 21 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/cards_board.styl */
 
-/* line 1 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/cards_board.styl */
+/* line 1 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/cards_board.styl */
 .cardsBoard {
   padding: 1rem;
 }
 
-/* line 4 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/cards_board.styl */
+/* line 4 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/cards_board.styl */
 .cardsBoard .cadsBoard__toolbar {
   padding: 1rem;
 }
 
-/* line 6 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/cards_board.styl */
+/* line 6 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/cards_board.styl */
 
-/* line 6 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/lists_toolbar.styl */
+/* line 6 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/lists_toolbar.styl */
 
-/* line 1 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/lists_toolbar.styl */
+/* line 1 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/lists_toolbar.styl */
 .listsToolbar {
   cursor: pointer;
   float: left;
@@ -2293,17 +2293,17 @@ body {
   transition: background-color 0.2s, color 0.2s;
 }
 
-/* line 13 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/lists_toolbar.styl */
+/* line 13 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/lists_toolbar.styl */
 .listsToolbar:hover {
   background-color: #4cd964;
   color: #fff;
 }
 
-/* line 16 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/lists_toolbar.styl */
+/* line 16 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/lists_toolbar.styl */
 
-/* line 16 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card_list_container.styl */
+/* line 16 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/card_list_container.styl */
 
-/* line 1 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card_list_container.styl */
+/* line 1 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/card_list_container.styl */
 .cardListContainer {
   position: absolute;
   right: 10px;
@@ -2314,23 +2314,23 @@ body {
   zoom: 1;
 }
 
-/* line 24 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/clearfix.styl */
+/* line 24 : /Users/rafaelchiti/Documents/development/code/board/node_modules/nib/lib/nib/clearfix.styl */
 .cardListContainer:before,
 .cardListContainer:after {
   content: "";
   display: table;
 }
 
-/* line 28 : /Users/rafaelchiti/Documents/Development/Code/board/node_modules/nib/lib/nib/clearfix.styl */
+/* line 28 : /Users/rafaelchiti/Documents/development/code/board/node_modules/nib/lib/nib/clearfix.styl */
 .cardListContainer:after {
   clear: both;
 }
 
-/* line 9 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card_list_container.styl */
+/* line 9 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/card_list_container.styl */
 
-/* line 9 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card_list.styl */
+/* line 9 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/card_list.styl */
 
-/* line 1 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card_list.styl */
+/* line 1 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/card_list.styl */
 .cardList {
   width: 282px;
   height: 100%;
@@ -2342,7 +2342,7 @@ body {
   user-select: none;
 }
 
-/* line 8 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card_list.styl */
+/* line 8 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/card_list.styl */
 .cardList ._header {
   position: relative;
   width: 100%;
@@ -2355,7 +2355,7 @@ body {
   border-radius: 3px;
 }
 
-/* line 18 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card_list.styl */
+/* line 18 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/card_list.styl */
 .cardList ._addCardButton {
   opacity: 0.4;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
@@ -2372,14 +2372,14 @@ body {
   transition: opacity 0.3s;
 }
 
-/* line 27 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card_list.styl */
+/* line 27 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/card_list.styl */
 .cardList ._addCardButton:hover {
   opacity: 1;
   -ms-filter: none;
   filter: none;
 }
 
-/* line 30 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card_list.styl */
+/* line 30 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/card_list.styl */
 .cardList .cardPlaceHolder {
   height: 30px;
   -webkit-border-radius: 3px;
@@ -2388,13 +2388,14 @@ body {
   box-shadow: 0px 0px 4px 1px rgba(215,215,215,0.8) inset;
   background-color: rgba(215,215,215,0.5);
   width: 100%;
+  margin-top: 3px;
 }
 
-/* line 36 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card_list.styl */
+/* line 37 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/card_list.styl */
 
-/* line 36 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card_label.styl */
+/* line 37 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/card/card_label.styl */
 
-/* line 1 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card_label.styl */
+/* line 1 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/card/card_label.styl */
 .cardLabel {
   display: none;
   width: 1rem;
@@ -2413,7 +2414,7 @@ body {
   transition: transform 0.5s ease;
 }
 
-/* line 12 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card_label.styl */
+/* line 12 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/card/card_label.styl */
 .cardLabel.selected {
   -webkit-transform: rotate(180deg) scale(1.5) translate(0.2rem, -0.2rem);
   -moz-transform: rotate(180deg) scale(1.5) translate(0.2rem, -0.2rem);
@@ -2422,11 +2423,11 @@ body {
   transform: rotate(180deg) scale(1.5) translate(0.2rem, -0.2rem);
 }
 
-/* line 14 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card_label.styl */
+/* line 14 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/card/card_label.styl */
 
-/* line 14 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/labels_selector.styl */
+/* line 14 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/card/labels_selector.styl */
 
-/* line 1 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/labels_selector.styl */
+/* line 1 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/card/labels_selector.styl */
 .labelsSelector {
   position: absolute;
   bottom: -3rem;
@@ -2442,7 +2443,7 @@ body {
   width: 0;
 }
 
-/* line 9 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/labels_selector.styl */
+/* line 9 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/card/labels_selector.styl */
 .labelsSelector.displayed {
   opacity: 1;
   -ms-filter: none;
@@ -2455,7 +2456,7 @@ body {
   transform: translateX(1rem);
 }
 
-/* line 15 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/labels_selector.styl */
+/* line 15 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/card/labels_selector.styl */
 .labelsSelector__label {
   width: 100%;
   display: block;
@@ -2474,52 +2475,51 @@ body {
   cursor: pointer;
 }
 
-/* line 25 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/labels_selector.styl */
+/* line 25 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/card/labels_selector.styl */
 .labelsSelector__label:hover {
   opacity: 1;
   -ms-filter: none;
   filter: none;
 }
 
-/* line 28 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/labels_selector.styl */
+/* line 28 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/card/labels_selector.styl */
 .labelsSelector__label.label1 {
   background-color: #ff3b30;
 }
 
-/* line 30 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/labels_selector.styl */
+/* line 30 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/card/labels_selector.styl */
 .labelsSelector__label.label2 {
   background-color: #4cd964;
 }
 
-/* line 32 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/labels_selector.styl */
+/* line 32 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/card/labels_selector.styl */
 .labelsSelector__label.label3 {
   background-color: #fc0;
 }
 
-/* line 34 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/labels_selector.styl */
+/* line 34 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/card/labels_selector.styl */
 .labelsSelector__label.label4 {
   background-color: #007aff;
 }
 
-/* line 36 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/labels_selector.styl */
+/* line 36 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/card/labels_selector.styl */
 
-/* line 36 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card.styl */
+/* line 36 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/card/card.styl */
 
-/* line 1 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card.styl */
+/* line 1 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/card/card.styl */
 .card {
   position: relative;
   width: 100%;
   -webkit-border-radius: 5px;
   border-radius: 5px;
   background-color: #fff;
-  margin-top: 2px;
-  margin-bottom: 2px;
+  margin-top: 3px;
   border: 1px solid;
   border-color: #e5e6e9 #dfe0e4 #d0d1d5;
   cursor: pointer;
 }
 
-/* line 12 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card.styl */
+/* line 11 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/card/card.styl */
 .card ._title {
   padding: 0.5rem;
   margin: 0;
@@ -2527,11 +2527,11 @@ body {
   font-size: 14px;
 }
 
-/* line 17 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card/card.styl */
+/* line 16 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/card/card.styl */
 
-/* line 17 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card_form.styl */
+/* line 16 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/card_form.styl */
 
-/* line 1 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card_form.styl */
+/* line 1 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/card_form.styl */
 .cardForm {
   position: fixed;
   border: 1px solid #d7d7d7;
@@ -2550,7 +2550,7 @@ body {
   box-shadow: 0px 0px 1px 1px rgba(215,215,215,0.5);
 }
 
-/* line 14 : /Users/rafaelchiti/Documents/Development/Code/board/webapp/assets/stylesheets/modules/card_form.styl */
+/* line 14 : /Users/rafaelchiti/Documents/development/code/board/webapp/assets/stylesheets/modules/card_form.styl */
 .cardForm input[type="text"] {
   margin-right: 1rem;
   outline: none;

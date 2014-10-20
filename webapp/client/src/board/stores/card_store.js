@@ -32,6 +32,22 @@ function create(listId, position, title, description) {
   };
 }
 
+
+function moveToPosition(position, cardToMoveId) {
+  var cardsList = _(_cards).sortBy('position');
+
+  var cardToMove = _cards[cardToMoveId];
+
+  cardsList.splice(cardToMove.position, 1);
+
+  cardsList.splice(position, 0, cardToMove);
+
+  _(cardsList).each(function(card, index) {
+    card.position = index;
+  }, this);
+
+}
+
 /**
  * Delete a Card item.
  * @param  {string} id
@@ -48,13 +64,13 @@ var CardStore = merge(EventEmitter.prototype, {
    * @return {object}
    */
   all: function() {
-    return _cards;
+    return _(_cards).sortBy('position');
   },
 
   allForList: function(listId) {
     var cards = _(_cards).where({listId: listId});
 
-    return cards;
+    return _(cards).sortBy('position');
   },
 
   emitChange: function() {
@@ -98,6 +114,10 @@ AppDispatcher.register(function(payload) {
 
     case CardConstants.CARD_DESTROY:
       destroy(action.id);
+      break;
+
+    case CardConstants.CARD_MOVE_TO_POSITION:
+      moveToPosition(action.position, action.cardToMoveId);
       break;
 
     default:

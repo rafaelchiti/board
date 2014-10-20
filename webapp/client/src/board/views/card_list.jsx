@@ -7,7 +7,7 @@ var CardActions = require('../actions/card_actions');
 var CardStore = require('../stores/card_store');
 
 function getCardsState(listId) {
-  return {allCardsForList: CardStore.allForList(listId)};
+  return {allCards: CardStore.allForList(listId)};
 };
 
 var CardList = React.createClass({
@@ -44,44 +44,43 @@ var CardList = React.createClass({
     this.props.onUpdateTitle(this.props.list.id, title);
   },
 
-  dragStart: function() {
-    this.setState({dragging: true});
+  dragStart: function(draggingCard) {
+    this.setState({dragging: true, draggingCard: draggingCard});
   },
 
   dragEnd: function() {
-    this.setState({dragging: false, hoveredCardId: null});
+    // var position = this.refs.placeHolder.props.index;
+
+    // CardActions.moveToPosition(position, this.state.draggingCardId);
+
+    this.setState({
+      dragging: false,
+      hoveredCard: null
+    });
   },
 
-  hovering: function(hoveredDetails) {
+  hovering: function(hoveredCard) {
     if (this.state.dragging) {
-      this.setState({hoveredCardId: hoveredDetails.id, hoveredCardZone: hoveredDetails.zone});
+      this.setState({hoveredCard: hoveredCard});
     }
   },
 
   render: function() {
-    var cards = this.state.allCardsForList.slice();
+    var cards = this.state.allCards;
+    var hoveredCardIndexOf;
 
-    var hoveredCard = _(cards).findWhere({id: this.state.hoveredCardId});
-    if (hoveredCard) {
-      var indexOf = _(cards).indexOf(hoveredCard);
-      if (this.state.hoveredCardZone === 'bottom') {
-        indexOf++;
-      }
-
-      cards.splice(indexOf, 0, {type: 'placeHolder'});
+    if (this.state.dragging === true) {
+      hoveredCardIndexOf = cards.indexOf(this.state.hoveredCard);
+      cards = cards.without({id: this.state.draggingCard.id});
     }
 
-    var cardsNodes = _(cards).map(card => {
-      if (card.type && card.type === 'placeHolder') {
 
-        return <div key="placeHolder" className="cardPlaceHolder"></div>
-
-      } else {
-
-        return <Card key={card.id} card={card} onRemove={this.onRemoveCard}
-            onDragStart={this.dragStart} onDragEnd={this.dragEnd} hovering={this.hovering} />;
-      }
-
+    var cardsNodes = _(cards).map((card, index) => {
+        if (this.state.dragging === true && index === hoveredCardIndexOf) {
+          return <div className="cardPlaceHolder"></div>
+        } else {
+          return this.buildCard(card);
+        }
     }, this);
 
 
@@ -90,11 +89,18 @@ var CardList = React.createClass({
         <div className="_header">
           <EditInPlaceInput className="_title" onEdit={this.updateTitle} text={this.props.list.title}/>
         </div>
-        {cardsNodes}
+        <span ref="cards">{cardsNodes}</span>
+        <span>{draggingCard}</span>
         <div className="_addCardButton" onClick={this.addCard}>Add card...</div>
       </div>
     );
+  },
+
+  buildCard: function(card) {
+    return <Card key={card.id} card={card} onRemove={this.onRemoveCard}
+            onDragStart={this.dragStart} onDragEnd={this.dragEnd} hovering={this.hovering} />;
   }
+
 });
 
 module.exports = CardList;
